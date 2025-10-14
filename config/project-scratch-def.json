@@ -1,13 +1,25 @@
 {
-  "orgName": "Demo company",
+  "orgName": "REVO Scratch Org",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+    "EnableSetPasswordInApi",
+    "PersonAccounts",
+    "Communities",
+    "ServiceCloud",
+    "Knowledge"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": true
+    },
+    "caseSettings": {
+      "enableEarlyEscalationRuleTriggers": true
     }
   }
 }

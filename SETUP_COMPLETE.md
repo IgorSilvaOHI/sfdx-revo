@@ -9,13 +9,15 @@
 
 ### Salesforce Orgs Connected
 
-| Environment | Alias | Username | Org ID | Branch Mapping |
-|-------------|-------|----------|--------|----------------|
-| **Production** | `prod` | igor.silva@ohi.pt.revo.prod | 00D09000009i6B0EAI | `main`, `release/prod` |
-| **UAT** | `uat` | igor.silva@ohi.pt.uat | 00D89000003k1CIEAY | `release/uat` |
-| **Dev** 🍁 | `dev` | igor.silva@ohi.pt.revodevsales | 00D89000002x9pKEAQ | `develop`, `feature/*` |
+| Environment | Alias | Username | Org ID | Branch Mapping | Status |
+|-------------|-------|----------|--------|----------------|--------|
+| **Production** 🌳 | `prod` | igor.silva@ohi.pt.revo.prod | 00D09000009i6B0EAI | `main`, `release/prod` | DevHub |
+| **UAT** | `uat` | igor.silva@ohi.pt.uat | 00D89000003k1CIEAY | `release/uat` | Active |
+| **Dev** | `dev` | igor.silva@ohi.pt.revodevsales | 00D89000002x9pKEAQ | `develop`, `feature/*` | Shared (4 devs) |
+| **Scratch Org** 🍁 | `igor-scratch` | test-m7v5jnhflact@example.com | 00D89000004dNMiEAM | `feature/*` | Expires: 2025-10-21 |
 
 🍁 = Default org for development
+🌳 = DevHub (enables scratch org creation)
 
 ---
 
@@ -135,9 +137,12 @@ sf config set target-org dev
 
 ### Key Files
 - `WORKFLOW.md` - Complete development workflow guide
+- `MULTI_DEV_WORKFLOW.md` - Multi-developer safety guide (4 devs sharing dev sandbox)
+- `SCRATCH_ORG_GUIDE.md` - Personal scratch org development guide
 - `SALESFORCE_MCP_SETUP.md` - MCP integration setup
 - `manifest/package.xml` - Original metadata manifest
 - `manifest/package-enhanced.xml` - Enhanced metadata manifest
+- `config/project-scratch-def.json` - Scratch org configuration
 - `.gitignore` - Git ignore patterns
 - `sfdx-project.json` - Salesforce DX configuration
 
@@ -201,10 +206,12 @@ revo-dev/
 ## Next Steps
 
 ### Immediate
-1. ✅ All orgs connected
+1. ✅ All orgs connected (prod, uat, dev, scratch)
 2. ✅ Branches created and pushed
 3. ✅ Documentation complete
-4. ⏭️ **Start feature development**
+4. ✅ Scratch org created and configured
+5. ✅ Source code deployed to scratch org (73%)
+6. ⏭️ **Start feature development in scratch org**
 
 ### Short Term
 - Set up GitHub branch protection rules

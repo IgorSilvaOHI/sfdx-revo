@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>QAV</fullName>
+        <default>false</default>
+        <label>QAV</label>
+    </customValue>
+    <customValue>
+        <fullName>AVGAS</fullName>
+        <default>false</default>
+        <label>AVGAS</label>
+    </customValue>
+    <masterLabel>Tipo combustível</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>IATA</fullName>
+        <default>false</default>
+        <label>IATA</label>
+    </customValue>
+    <customValue>
+        <fullName>PETROBRAS</fullName>
+        <default>false</default>
+        <label>PETROBRAS</label>
+    </customValue>
+    <description>Categoria de atraso Global</description>
+    <masterLabel>Categoria de Atraso</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

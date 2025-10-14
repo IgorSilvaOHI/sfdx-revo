@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Afretamento</fullName>
+        <default>false</default>
+        <label>Afretamento</label>
+    </customValue>
+    <customValue>
+        <fullName>Transporte aéreo dentro do município</fullName>
+        <default>false</default>
+        <label>Transporte aéreo dentro do município</label>
+    </customValue>
+    <customValue>
+        <fullName>Transporte aéreo fora do município</fullName>
+        <default>false</default>
+        <label>Transporte aéreo fora do município</label>
+    </customValue>
+    <customValue>
+        <fullName>Compra Imobilizado</fullName>
+        <default>false</default>
+        <label>Compra Imobilizado</label>
+    </customValue>
+    <customValue>
+        <fullName>Compra de itens aeronáuticos</fullName>
+        <default>false</default>
+        <label>Compra de itens aeronáuticos</label>
+    </customValue>
+    <customValue>
+        <fullName>Compra de outros itens</fullName>
+        <default>false</default>
+        <label>Compra de outros itens</label>
+    </customValue>
+    <masterLabel>Atividade Contratada</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

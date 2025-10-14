@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Geral</fullName>
+        <default>true</default>
+        <label>Geral</label>
+    </customValue>
+    <customValue>
+        <fullName>Onshore</fullName>
+        <default>false</default>
+        <label>Onshore</label>
+    </customValue>
+    <customValue>
+        <fullName>Offshore</fullName>
+        <default>false</default>
+        <label>Offshore</label>
+    </customValue>
+    <masterLabel>Tipo de Portão</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

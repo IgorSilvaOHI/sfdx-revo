@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>6</fullName>
+        <default>false</default>
+        <label>Supervisor de Manutençao</label>
+    </customValue>
+    <customValue>
+        <fullName>7</fullName>
+        <default>false</default>
+        <label>Mecanico Master</label>
+    </customValue>
+    <customValue>
+        <fullName>8</fullName>
+        <default>false</default>
+        <label>Piloto Comandante PP</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>Gerente de Operações</label>
+    </customValue>
+    <customValue>
+        <fullName>20</fullName>
+        <default>false</default>
+        <label>Assistente Administrativo</label>
+    </customValue>
+    <customValue>
+        <fullName>21</fullName>
+        <default>false</default>
+        <label>Co-Piloto</label>
+    </customValue>
+    <customValue>
+        <fullName>22</fullName>
+        <default>false</default>
+        <label>Piloto Comandante</label>
+    </customValue>
+    <customValue>
+        <fullName>23</fullName>
+        <default>false</default>
+        <label>1º Oficial</label>
+    </customValue>
+    <customValue>
+        <fullName>24</fullName>
+        <default>false</default>
+        <label>Co-Piloto Junior</label>
+    </customValue>
+    <customValue>
+        <fullName>29</fullName>
+        <default>false</default>
+        <label>Coordenador(a) de Voo</label>
+    </customValue>
+    <customValue>
+        <fullName>31</fullName>
+        <default>false</default>
+        <label>Auxiliar de Manutençao</label>
+    </customValue>
+    <customValue>
+        <fullName>33</fullName>
+        <default>false</default>
+        <label>Gerente de Manutenção S/SE</label>
+    </customValue>
+    <customValue>
+        <fullName>47</fullName>
+        <default>false</default>
+        <label>Auxiliar de Manutençao I</label>
+    </customValue>
+    <customValue>
+        <fullName>48</fullName>
+        <default>false</default>
+        <label>Auxiliar de Manutençao II</label>
+    </customValue>
+    <customValue>
+        <fullName>60</fullName>
+        <default>false</default>
+        <label>Estagiário</label>
+    </customValue>
+    <customValue>
+        <fullName>70</fullName>
+        <default>false</default>
+        <label>Supervisor da Cood de Vôo</label>
+    </customValue>
+    <customValue>
+        <fullName>73</fullName>
+        <default>false</default>
+        <label>Almoxarife I</label>
+    </customValue>
+    <customValue>
+        <fullName>76</fullName>
+        <default>false</default>
+        <label>Rádio Técnico I</label>
+    </customValue>
+    <customValue>
+        <fullName>82</fullName>
+        <default>false</default>
+        <label>Piloto Especialista</label>
+    </customValue>
+    <customValue>
+        <fullName>85</fullName>
+        <default>false</default>
+        <label>Comprador Aeronáutico Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>90</fullName>
+        <default>false</default>
+        <label>Mestre de Carga</label>
+    </customValue>
+    <customValue>
+        <fullName>100</fullName>
+        <default>false</default>
+        <label>Gerente de Operações (100)</label>
+    </customValue>
+    <customValue>
+        <fullName>101</fullName>
+        <default>false</default>
+        <label>Motorista</label>
+    </customValue>
+    <customValue>
+        <fullName>102</fullName>
+        <default>false</default>
+        <label>Gerente de Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>105</fullName>
+        <default>false</default>
+        <label>Assistente de CTM II</label>
+    </customValue>
+    <customValue>
+        <fullName>108</fullName>
+        <default>false</default>
+        <label>Almoxarife II</label>
+    </customValue>
+    <customValue>
+        <fullName>109</fullName>
+        <default>false</default>
+        <label>Assistente de CTM I</label>
+    </customValue>
+    <customValue>
+        <fullName>116</fullName>
+        <default>false</default>
+        <label>Mecânico II</label>
+    </customValue>
+    <customValue>
+        <fullName>117</fullName>
+        <default>false</default>
+        <label>Mecânico III</label>
+    </customValue>
+    <customValue>
+        <fullName>118</fullName>
+        <default>false</default>
+        <label>Mecânico IV</label>
+    </customValue>
+    <customValue>
+        <fullName>120</fullName>
+        <default>false</default>
+        <label>Mecânico I</label>
+    </customValue>
+    <customValue>
+        <fullName>125</fullName>
+        <default>false</default>
+        <label>Aprendiz Administrativo</label>
+    </customValue>
+    <customValue>
+        <fullName>126</fullName>
+        <default>false</default>
+        <label>Piloto</label>
+    </customValue>
+    <customValue>
+        <fullName>129</fullName>
+        <default>false</default>
+        <label>Técnico de Enfermagem</label>
+    </customValue>
+    <customValue>
+        <fullName>141</fullName>
+        <default>false</default>
+        <label>Ger.de Proj. e novos negocios</label>
+    </customValue>
+    <customValue>
+        <fullName>154</fullName>
+        <default>false</default>
+        <label>Piloto Comandante GP</label>
+    </customValue>
+    <customValue>
+        <fullName>156</fullName>
+        <default>false</default>
+        <label>Mecânico VI</label>
+    </customValue>
+    <customValue>
+        <fullName>159</fullName>
+        <default>false</default>
+        <label>Chefe de Treinamento</label>
+    </customValue>
+    <customValue>
+        <fullName>160</fullName>
+        <default>false</default>
+        <label>Co-Piloto Trainee</label>
+    </customValue>
+    <customValue>
+        <fullName>161</fullName>
+        <default>false</default>
+        <label>Co-Piloto I</label>
+    </customValue>
+    <customValue>
+        <fullName>162</fullName>
+        <default>false</default>
+        <label>Co-Piloto II</label>
+    </customValue>
+    <customValue>
+        <fullName>163</fullName>
+        <default>false</default>
+        <label>Co-Piloto III</label>
+    </customValue>
+    <customValue>
+        <fullName>164</fullName>
+        <default>false</default>
+        <label>Co-Piloto IV</label>
+    </customValue>
+    <customValue>
+        <fullName>168</fullName>
+        <default>false</default>
+        <label>Gerente de Engª e Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>178</fullName>
+        <default>false</default>
+        <label>Rádio Técnico III</label>
+    </customValue>
+    <customValue>
+        <fullName>195</fullName>
+        <default>false</default>
+        <label>Diretor Comercial</label>
+    </customValue>
+    <customValue>
+        <fullName>212</fullName>
+        <default>false</default>
+        <label>Engenheiro</label>
+    </customValue>
+    <customValue>
+        <fullName>213</fullName>
+        <default>false</default>
+        <label>Assist. de Biblioteca Tecnica</label>
+    </customValue>
+    <customValue>
+        <fullName>220</fullName>
+        <default>false</default>
+        <label>Encarregado de Ferramentaria</label>
+    </customValue>
+    <customValue>
+        <fullName>224</fullName>
+        <default>false</default>
+        <label>Analista de ADM.de Pessoal JR.</label>
+    </customValue>
+    <customValue>
+        <fullName>240</fullName>
+        <default>false</default>
+        <label>Engenheiro II</label>
+    </customValue>
+    <customValue>
+        <fullName>241</fullName>
+        <default>false</default>
+        <label>Diretor de Engenharia e Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>258</fullName>
+        <default>false</default>
+        <label>Mestre de Carga (258)</label>
+    </customValue>
+    <customValue>
+        <fullName>269</fullName>
+        <default>false</default>
+        <label>Analista de Operações Pleno</label>
+    </customValue>
+    <customValue>
+        <fullName>273</fullName>
+        <default>false</default>
+        <label>Analista Aeronavegabilidade Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>277</fullName>
+        <default>false</default>
+        <label>Diretor de Operações</label>
+    </customValue>
+    <customValue>
+        <fullName>281</fullName>
+        <default>false</default>
+        <label>Agente de Atendimento</label>
+    </customValue>
+    <customValue>
+        <fullName>299</fullName>
+        <default>false</default>
+        <label>Analista de PCP Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>300</fullName>
+        <default>false</default>
+        <label>Médico do Trabalho</label>
+    </customValue>
+    <customValue>
+        <fullName>307</fullName>
+        <default>false</default>
+        <label>Agente de Atendimento I</label>
+    </customValue>
+    <customValue>
+        <fullName>308</fullName>
+        <default>false</default>
+        <label>Agente de Atendimento II</label>
+    </customValue>
+    <customValue>
+        <fullName>309</fullName>
+        <default>false</default>
+        <label>Agente de Atendimento III</label>
+    </customValue>
+    <customValue>
+        <fullName>310</fullName>
+        <default>false</default>
+        <label>Assistente da Coordenação I</label>
+    </customValue>
+    <customValue>
+        <fullName>311</fullName>
+        <default>false</default>
+        <label>Assistente da Coordenação II</label>
+    </customValue>
+    <customValue>
+        <fullName>312</fullName>
+        <default>false</default>
+        <label>Assistente da Coordenação III</label>
+    </customValue>
+    <customValue>
+        <fullName>313</fullName>
+        <default>false</default>
+        <label>Encarregado de Atendimento</label>
+    </customValue>
+    <customValue>
+        <fullName>314</fullName>
+        <default>false</default>
+        <label>Coordenador(a) de Voo (314)</label>
+    </customValue>
+    <customValue>
+        <fullName>317</fullName>
+        <default>false</default>
+        <label>Diretor de Engª e Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>320</fullName>
+        <default>false</default>
+        <label>Especialista em Planejamento da Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>325</fullName>
+        <default>false</default>
+        <label>Coordenador de Materiais</label>
+    </customValue>
+    <customValue>
+        <fullName>329</fullName>
+        <default>false</default>
+        <label>Coordenador Contabil</label>
+    </customValue>
+    <customValue>
+        <fullName>340</fullName>
+        <default>false</default>
+        <label>Comissário</label>
+    </customValue>
+    <customValue>
+        <fullName>341</fullName>
+        <default>false</default>
+        <label>Comissário II</label>
+    </customValue>
+    <customValue>
+        <fullName>342</fullName>
+        <default>false</default>
+        <label>Comissário III</label>
+    </customValue>
+    <customValue>
+        <fullName>351</fullName>
+        <default>false</default>
+        <label>Comprador Corporativo Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>358</fullName>
+        <default>false</default>
+        <label>Assistente de PCP</label>
+    </customValue>
+    <customValue>
+        <fullName>361</fullName>
+        <default>false</default>
+        <label>Analista de Materiais Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>365</fullName>
+        <default>false</default>
+        <label>Assistente de Materiais</label>
+    </customValue>
+    <customValue>
+        <fullName>366</fullName>
+        <default>false</default>
+        <label>Analista de Planejamento Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>372</fullName>
+        <default>false</default>
+        <label>Gerente de TI</label>
+    </customValue>
+    <customValue>
+        <fullName>393</fullName>
+        <default>false</default>
+        <label>Assistente de GAM</label>
+    </customValue>
+    <customValue>
+        <fullName>400</fullName>
+        <default>false</default>
+        <label>Auxiliar de Serviço de Pista</label>
+    </customValue>
+    <customValue>
+        <fullName>404</fullName>
+        <default>false</default>
+        <label>Analista de Logística Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>406</fullName>
+        <default>false</default>
+        <label>Especialista de Serviços a Terceiros</label>
+    </customValue>
+    <customValue>
+        <fullName>413</fullName>
+        <default>false</default>
+        <label>Auxiliar de Serviços Gerais de Aeronave</label>
+    </customValue>
+    <customValue>
+        <fullName>417</fullName>
+        <default>false</default>
+        <label>Analista de PCP Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>421</fullName>
+        <default>false</default>
+        <label>Auxiliar de Ferramentaria</label>
+    </customValue>
+    <customValue>
+        <fullName>425</fullName>
+        <default>false</default>
+        <label>Analista de Compras Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>431</fullName>
+        <default>false</default>
+        <label>Gerente de Operações de Solo</label>
+    </customValue>
+    <customValue>
+        <fullName>442</fullName>
+        <default>false</default>
+        <label>Assistente de Engenharia</label>
+    </customValue>
+    <customValue>
+        <fullName>446</fullName>
+        <default>false</default>
+        <label>Coordenador de PCP</label>
+    </customValue>
+    <customValue>
+        <fullName>454</fullName>
+        <default>false</default>
+        <label>Copiloto</label>
+    </customValue>
+    <customValue>
+        <fullName>456</fullName>
+        <default>false</default>
+        <label>Piloto Comandante SM</label>
+    </customValue>
+    <customValue>
+        <fullName>457</fullName>
+        <default>false</default>
+        <label>Analista de Competencias Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>471</fullName>
+        <default>false</default>
+        <label>Gerente de Engenharia</label>
+    </customValue>
+    <customValue>
+        <fullName>487</fullName>
+        <default>false</default>
+        <label>Gerente de Qualidade da Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>489</fullName>
+        <default>false</default>
+        <label>Gerente Tributário Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>496</fullName>
+        <default>false</default>
+        <label>Assessor Técnico</label>
+    </customValue>
+    <customValue>
+        <fullName>498</fullName>
+        <default>false</default>
+        <label>Auditor de Qualidade da Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>500</fullName>
+        <default>false</default>
+        <label>Coordenador de Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>504</fullName>
+        <default>false</default>
+        <label>Coordenador de Planejamento da Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>510</fullName>
+        <default>false</default>
+        <label>Ferramenteiro I</label>
+    </customValue>
+    <customValue>
+        <fullName>511</fullName>
+        <default>false</default>
+        <label>Web Designer</label>
+    </customValue>
+    <customValue>
+        <fullName>518</fullName>
+        <default>false</default>
+        <label>Ferramenteiro II</label>
+    </customValue>
+    <customValue>
+        <fullName>520</fullName>
+        <default>false</default>
+        <label>Capoteiro de Aeronaves</label>
+    </customValue>
+    <customValue>
+        <fullName>521</fullName>
+        <default>false</default>
+        <label>Pintor de Aeronave</label>
+    </customValue>
+    <customValue>
+        <fullName>529</fullName>
+        <default>false</default>
+        <label>Piloto Comandante (529)</label>
+    </customValue>
+    <customValue>
+        <fullName>530</fullName>
+        <default>false</default>
+        <label>Coordenador de Voo I</label>
+    </customValue>
+    <customValue>
+        <fullName>531</fullName>
+        <default>false</default>
+        <label>Coordenador de Voo II</label>
+    </customValue>
+    <customValue>
+        <fullName>532</fullName>
+        <default>false</default>
+        <label>Coordenador de Voo III</label>
+    </customValue>
+    <customValue>
+        <fullName>534</fullName>
+        <default>false</default>
+        <label>Copiloto (534)</label>
+    </customValue>
+    <customValue>
+        <fullName>535</fullName>
+        <default>false</default>
+        <label>Piloto (535)</label>
+    </customValue>
+    <customValue>
+        <fullName>536</fullName>
+        <default>false</default>
+        <label>Gerente executivo de Suporte de Frota</label>
+    </customValue>
+    <customValue>
+        <fullName>537</fullName>
+        <default>false</default>
+        <label>Gerente de Manutenção N/NE</label>
+    </customValue>
+    <customValue>
+        <fullName>538</fullName>
+        <default>false</default>
+        <label>Analista de Qualidade da Manutenção Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>548</fullName>
+        <default>false</default>
+        <label>Piloto de Avião</label>
+    </customValue>
+    <customValue>
+        <fullName>549</fullName>
+        <default>false</default>
+        <label>Copiloto de Avião</label>
+    </customValue>
+    <customValue>
+        <fullName>551</fullName>
+        <default>false</default>
+        <label>Comissário de Avião</label>
+    </customValue>
+    <customValue>
+        <fullName>552</fullName>
+        <default>false</default>
+        <label>Agente de Atendimento (552)</label>
+    </customValue>
+    <customValue>
+        <fullName>553</fullName>
+        <default>false</default>
+        <label>Líder de Atendimento</label>
+    </customValue>
+    <customValue>
+        <fullName>554</fullName>
+        <default>false</default>
+        <label>Almoxarife</label>
+    </customValue>
+    <customValue>
+        <fullName>555</fullName>
+        <default>false</default>
+        <label>Analista de Treinamento Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>557</fullName>
+        <default>false</default>
+        <label>Analista de Suporte de Frota Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>558</fullName>
+        <default>false</default>
+        <label>Comprador Aeronáutico Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>559</fullName>
+        <default>false</default>
+        <label>Analista de Treinamento Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>560</fullName>
+        <default>false</default>
+        <label>Assistente Operacional</label>
+    </customValue>
+    <customValue>
+        <fullName>561</fullName>
+        <default>false</default>
+        <label>Assistente de Suprimentos</label>
+    </customValue>
+    <customValue>
+        <fullName>562</fullName>
+        <default>false</default>
+        <label>Controlador Técnico de Manutenção Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>563</fullName>
+        <default>false</default>
+        <label>Controlador Técnico de Manutenção Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>564</fullName>
+        <default>false</default>
+        <label>Controlador Técnico de Manutenção Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>565</fullName>
+        <default>false</default>
+        <label>Supervisor Administrativo</label>
+    </customValue>
+    <customValue>
+        <fullName>566</fullName>
+        <default>false</default>
+        <label>Supervisor de Almoxarifado</label>
+    </customValue>
+    <customValue>
+        <fullName>567</fullName>
+        <default>false</default>
+        <label>Supervisor de Ferramentaria</label>
+    </customValue>
+    <customValue>
+        <fullName>568</fullName>
+        <default>false</default>
+        <label>Líder de Comissários</label>
+    </customValue>
+    <customValue>
+        <fullName>569</fullName>
+        <default>false</default>
+        <label>Coordenador de Voo</label>
+    </customValue>
+    <customValue>
+        <fullName>570</fullName>
+        <default>false</default>
+        <label>Coordenador de Voo Líder</label>
+    </customValue>
+    <customValue>
+        <fullName>571</fullName>
+        <default>false</default>
+        <label>Supervisor de Atendimento</label>
+    </customValue>
+    <customValue>
+        <fullName>575</fullName>
+        <default>false</default>
+        <label>Gerente de Suporte de Frota</label>
+    </customValue>
+    <customValue>
+        <fullName>576</fullName>
+        <default>false</default>
+        <label>Gerente de GSE e Ferramentaria</label>
+    </customValue>
+    <customValue>
+        <fullName>578</fullName>
+        <default>false</default>
+        <label>Coordenador de Operações Aéreas</label>
+    </customValue>
+    <customValue>
+        <fullName>579</fullName>
+        <default>false</default>
+        <label>Técnico de Segurança do Trabalho II</label>
+    </customValue>
+    <customValue>
+        <fullName>580</fullName>
+        <default>false</default>
+        <label>Técnico de Segurança do Trabalho I</label>
+    </customValue>
+    <customValue>
+        <fullName>581</fullName>
+        <default>false</default>
+        <label>Analista de Treinamento Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>582</fullName>
+        <default>false</default>
+        <label>Gerente de Manutenção de Base e Oficina</label>
+    </customValue>
+    <customValue>
+        <fullName>590</fullName>
+        <default>false</default>
+        <label>Analista de Sup. de Frota Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>598</fullName>
+        <default>false</default>
+        <label>Suprimentista</label>
+    </customValue>
+    <customValue>
+        <fullName>612</fullName>
+        <default>false</default>
+        <label>Analista de Sup. de Frota Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>613</fullName>
+        <default>false</default>
+        <label>Auxiliar de GSE</label>
+    </customValue>
+    <customValue>
+        <fullName>614</fullName>
+        <default>false</default>
+        <label>Supervisor de GSE</label>
+    </customValue>
+    <customValue>
+        <fullName>617</fullName>
+        <default>false</default>
+        <label>Analista de Qualidade de Manutenção Pl</label>
+    </customValue>
+    <customValue>
+        <fullName>620</fullName>
+        <default>false</default>
+        <label>Especialista da Qualid. de MNT</label>
+    </customValue>
+    <customValue>
+        <fullName>625</fullName>
+        <default>false</default>
+        <label>Analista de PCP Sr</label>
+    </customValue>
+    <customValue>
+        <fullName>630</fullName>
+        <default>false</default>
+        <label>Supervisora de publicações tecnicas</label>
+    </customValue>
+    <customValue>
+        <fullName>631</fullName>
+        <default>false</default>
+        <label>Analista de Publicações Tecnicas Jr</label>
+    </customValue>
+    <customValue>
+        <fullName>632</fullName>
+        <default>false</default>
+        <label>Gerente Executivo de Operações</label>
+    </customValue>
+    <customValue>
+        <fullName>634</fullName>
+        <default>false</default>
+        <label>Gerente de CTM</label>
+    </customValue>
+    <customValue>
+        <fullName>642</fullName>
+        <default>false</default>
+        <label>Piloto Comandante (642)</label>
+    </customValue>
+    <customValue>
+        <fullName>656</fullName>
+        <default>false</default>
+        <label>Técnico de manutenção GSE</label>
+    </customValue>
+    <customValue>
+        <fullName>657</fullName>
+        <default>false</default>
+        <label>Especialista de Suporte de Frota</label>
+    </customValue>
+    <customValue>
+        <fullName>658</fullName>
+        <default>false</default>
+        <label>Estagiário Técnico</label>
+    </customValue>
+    <customValue>
+        <fullName>660</fullName>
+        <default>false</default>
+        <label>Supervisor Técnico de Materiais</label>
+    </customValue>
+    <masterLabel>Cargo Funcionario</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

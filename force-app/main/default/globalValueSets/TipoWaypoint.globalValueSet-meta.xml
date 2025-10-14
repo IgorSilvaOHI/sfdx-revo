@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aerodromo</fullName>
+        <default>false</default>
+        <label>Aeródromo</label>
+    </customValue>
+    <customValue>
+        <fullName>Plataforma_fixa</fullName>
+        <default>false</default>
+        <label>Plataforma fixa</label>
+    </customValue>
+    <customValue>
+        <fullName>Heliporto</fullName>
+        <default>false</default>
+        <label>Heliporto</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixo</fullName>
+        <default>false</default>
+        <label>Fixo</label>
+    </customValue>
+    <customValue>
+        <fullName>Plataforma_flutuante</fullName>
+        <default>false</default>
+        <label>Plataforma flutuante</label>
+    </customValue>
+    <customValue>
+        <fullName>FPSO</fullName>
+        <default>false</default>
+        <label>FPSO</label>
+    </customValue>
+    <customValue>
+        <fullName>NS</fullName>
+        <default>false</default>
+        <label>NS</label>
+    </customValue>
+    <customValue>
+        <fullName>Outros</fullName>
+        <default>false</default>
+        <label>Outros</label>
+    </customValue>
+    <masterLabel>Tipo de Waypoint</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

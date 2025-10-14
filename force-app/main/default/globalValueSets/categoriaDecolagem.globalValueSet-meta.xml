@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HDK</fullName>
+        <default>false</default>
+        <label>Helideck</label>
+    </customValue>
+    <customValue>
+        <fullName>RWY</fullName>
+        <default>false</default>
+        <label>Runway</label>
+    </customValue>
+    <masterLabel>Categoria da decolagem</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

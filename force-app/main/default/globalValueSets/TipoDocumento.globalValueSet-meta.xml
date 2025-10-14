@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>RG</fullName>
+        <default>false</default>
+        <label>RG</label>
+    </customValue>
+    <customValue>
+        <fullName>CPF</fullName>
+        <default>false</default>
+        <label>CPF</label>
+    </customValue>
+    <customValue>
+        <fullName>CNPJ</fullName>
+        <default>false</default>
+        <label>CNPJ</label>
+    </customValue>
+    <customValue>
+        <fullName>CNH</fullName>
+        <default>false</default>
+        <label>CNH</label>
+    </customValue>
+    <customValue>
+        <fullName>RNE</fullName>
+        <default>false</default>
+        <label>RNE</label>
+    </customValue>
+    <customValue>
+        <fullName>Passaporte</fullName>
+        <default>false</default>
+        <label>Passaporte</label>
+    </customValue>
+    <masterLabel>Tipo de Documento</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

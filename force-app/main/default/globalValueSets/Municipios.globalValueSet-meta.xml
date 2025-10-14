@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Rio de Janeiro</fullName>
+        <default>false</default>
+        <label>Rio de Janeiro</label>
+    </customValue>
+    <customValue>
+        <fullName>Campos dos Goytacazes</fullName>
+        <default>false</default>
+        <label>Campos dos Goytacazes</label>
+    </customValue>
+    <masterLabel>Municípios</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

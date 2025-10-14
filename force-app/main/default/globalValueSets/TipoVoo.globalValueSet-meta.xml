@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ShuttleSeat</fullName>
+        <default>false</default>
+        <label>Shuttle Seat</label>
+    </customValue>
+    <customValue>
+        <fullName>Charter</fullName>
+        <default>false</default>
+        <label>Charter</label>
+    </customValue>
+    <customValue>
+        <fullName>FullCabin</fullName>
+        <default>false</default>
+        <label>Full Cabin</label>
+    </customValue>
+    <customValue>
+        <fullName>Sanitário</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sanitário</label>
+    </customValue>
+    <customValue>
+        <fullName>Treinamento</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Treinamento</label>
+    </customValue>
+    <customValue>
+        <fullName>SAR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SAR</label>
+    </customValue>
+    <customValue>
+        <fullName>Passageiros</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Passageiros</label>
+    </customValue>
+    <customValue>
+        <fullName>Manutenção</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Manutenção</label>
+    </customValue>
+    <customValue>
+        <fullName>Treinamento NDC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Treinamento NDC</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDVAC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MEDVAC</label>
+    </customValue>
+    <customValue>
+        <fullName>Cargueiro</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cargueiro</label>
+    </customValue>
+    <customValue>
+        <fullName>Passageiros e Cargas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Passageiros e Cargas</label>
+    </customValue>
+    <masterLabel>Tipo de voo</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

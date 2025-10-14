@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>AtribuicaoTodoCaso</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Atendimento</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>Tabulacao__r.CodigoAtribuicao__c = &apos;Atendimento&apos;</formula>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>CampoPesquisa</name>
+        <dataType>String</dataType>
+        <expression>IF(LEN({!CampoPesquisaFull}) &gt; 250 , LEFT({!CampoPesquisaFull},250), {!CampoPesquisaFull})</expression>
+    </formulas>
+    <formulas>
+        <name>CampoPesquisaFull</name>
+        <dataType>String</dataType>
+        <expression>{!Busca_Contato.Name} &amp; &apos; | &apos; &amp; {!Busca_Contato.NumeroDocumento__c} &amp; &apos; | &apos; &amp; {!Busca_Contato.Email} &amp; &apos; | &apos; &amp; {!$Record.Trecho__r.Name} &amp; &apos; | &apos; &amp; {!$Record.Trecho__r.Voo__r.Name}</expression>
+    </formulas>
+    <interviewLabel>[Passageiro] Atualiza Campo Pesquisa {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Passageiro] Atualiza Campo Pesquisa</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Busca_Contato</name>
+        <label>Busca Contato</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Atualiza_Campo_Pesquisa</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Contato__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Atualiza_Campo_Pesquisa</name>
+        <label>Atualiza Campo Pesquisa</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>CampoPesquisa__c</field>
+            <value>
+                <elementReference>CampoPesquisa</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Busca_Contato</targetReference>
+        </connector>
+        <object>Passageiro__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

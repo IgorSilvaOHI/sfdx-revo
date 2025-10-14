@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuantidadeCargas__c</fullName>
+    <description>Resumo do total de cargas inclusas no trecho</description>
+    <label>Quantidade de Cargas</label>
+    <summaryForeignKey>Carga__c.Trecho__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

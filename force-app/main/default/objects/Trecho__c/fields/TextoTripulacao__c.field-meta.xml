@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TextoTripulacao__c</fullName>
+    <description>Espelha em texto os nomes da tripulação para templeta de email</description>
+    <externalId>false</externalId>
+    <formula>&apos;Cmte. &apos; &amp;  Voo__r.Comandante__c &amp; &apos; / Copiloto &apos; &amp;  Voo__r.Copiloto__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Texto Tripulação</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<template>
+    <nav class="title">
+        <div class="title-back">
+            <template if:true={mostrarVoltar}>
+                <lightning-button-icon class="voltar" onclick={voltar} icon-name="utility:back" variant="bare"
+                    alternative-text="Voltar" icon-class="slds-button_icon-inverse slds-button__icon_large"
+                    size={closeSize}>
+                </lightning-button-icon>
+            </template>
+            <h1 class="slds-text-heading_large">{tituloHeader}</h1>
+        </div>
+        <template if:true={mostrarTextoCentral}>
+            <div class="texto-central">
+                {textoCentral}
+            </div>
+        </template>
+        <lightning-button-icon onclick={closeQuickAction} icon-name="utility:close" variant="bare"
+            alternative-text="Fechar" icon-class="slds-button_icon-inverse slds-button__icon_large" size={closeSize}>
+        </lightning-button-icon>
+    </nav>
+</template>

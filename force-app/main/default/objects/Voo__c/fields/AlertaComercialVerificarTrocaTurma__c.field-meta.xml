@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AlertaComercialVerificarTrocaTurma__c</fullName>
+    <description>Campo setado com a data/hora de informar ao Comercial que alguma prazo antes ele tem que verificar um voo de sísmica com troca de turma</description>
+    <label>Alerta comercial verificar troca turma</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

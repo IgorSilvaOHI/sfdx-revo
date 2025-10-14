@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DistanciaPontoSuporte__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(PontoSuporte__c),0,DISTANCE(PontoSuporte__r.Coordenadas__c,Coordenadas__c,&apos;km&apos;)/1.852)</formula>
+    <label>Distancia do Ponto de Suporte (nm)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

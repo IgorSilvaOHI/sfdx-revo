@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InicioVoo__c</fullName>
+    <description>Quando o trecho não possuir a hora de acionamento do motor, usar a hora do início do vôo</description>
+    <formula>IF(ISNULL(Ligado__c) , Voo__r.DataVoo__c , Ligado__c)</formula>
+    <inlineHelpText>Quando o trecho não possuir a hora de acionamento do motor, usar a hora do início do vôo</inlineHelpText>
+    <label>InicioVoo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>NomeConta__c</columns>
+    <columns>Contrato__c</columns>
+    <columns>Tipo_de_Aeronave__c</columns>
+    <columns>Aeronave__c</columns>
+    <columns>IdExternoSigtrip__c</columns>
+    <columns>Ativo__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tudo</label>
+</ListView>

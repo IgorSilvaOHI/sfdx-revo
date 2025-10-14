@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IdGrupoOperacoesJpa__c</fullName>
+    <description>Id de grupo público de Operações de Jacarepaguá</description>
+    <externalId>false</externalId>
+    <label>IdGrupoOperacoesJpa</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

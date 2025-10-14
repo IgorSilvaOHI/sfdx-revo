@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_Cancelamento</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED(Status__c),
+TEXT(Status__c) == &apos;Cancelado&apos;,
+ISBLANK( MotivoCancelamento__c ))</errorConditionFormula>
+    <errorDisplayField>MotivoCancelamento__c</errorDisplayField>
+    <errorMessage>Campo obrigatório</errorMessage>
+</ValidationRule>

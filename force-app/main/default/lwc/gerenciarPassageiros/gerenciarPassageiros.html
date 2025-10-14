@@ -1,0 +1,35 @@
+<template>
+  <div class="container">
+    <c-navigation-header onvoltar={handleVoltar} onclosequickaction={closeQuickAction}
+      titulo-header={customLabel.gerenciarPassageiros} mostrar-voltar={mostrarVoltar}>
+    </c-navigation-header>
+    <div class="conteudo">
+      <c-header-gerenciamento class="header-gerenciamento" voo-wrapper={vooWrapper}>
+      </c-header-gerenciamento>
+      <section class="lista-container">
+        <template if:true={loading}>
+          <div class="spinner-container">
+            <lightning-spinner style="background: none;" class="slds-spinner_container slds-align_absolute-center"
+              variant="brand" size="small" alternative-text={customLabel.carregando}>
+            </lightning-spinner>
+          </div>
+        </template>
+        <template if:false={loading}>
+          <c-lista-passageiros numero-trechos={numeroTrechos} numero-assentos-max={numeroAssentosMax}
+            voo-wrapper={vooWrapper} lista-principal={listaPrincipal} lista-secundaria={listaSecundaria}
+            onclicklistaprincipal={handleClickListaPrincipal} onclicklistasecundaria={handleClickListaSecundaria}
+            onfilterfocus={handleFilterFocus} trecho-selecionado={trechoSelecionado} filter-focus={filterFocus}
+            screen-size={screenSize} onnovopassageiro={handleNovoPassageiro} onfilterchanged={handleFilterChanged} 
+            filter-loading={filterLoading}>
+          </c-lista-passageiros>
+        </template>
+      </section>
+    </div>
+    <template if:false={filterFocus}>
+      <c-footer-gerenciamento avancar-disabled={avancarDisabled} screen-size={screenSize} ultimo-trecho={ultimoTrecho}
+        onvoltar={handleVoltar} onavancar={handleAvancar} trecho-selecionado={trechoSelecionado}
+        label-novo={customLabel.novoPassageiro} onnovo={handleNovoPassageiro} mostrar-novo={mostrarNovo}>
+      </c-footer-gerenciamento>
+    </template>
+  </div>
+</template>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Padrao</label>
+    <protected>false</protected>
+    <values>
+        <field>PesoBagagem__c</field>
+        <value xsi:type="xsd:double">20.0</value>
+    </values>
+    <values>
+        <field>PesoComissario__c</field>
+        <value xsi:type="xsd:double">180.0</value>
+    </values>
+    <values>
+        <field>PesoCopiloto__c</field>
+        <value xsi:type="xsd:double">180.0</value>
+    </values>
+    <values>
+        <field>PesoPassageiro__c</field>
+        <value xsi:type="xsd:double">180.0</value>
+    </values>
+    <values>
+        <field>PesoPiloto__c</field>
+        <value xsi:type="xsd:double">180.0</value>
+    </values>
+    <values>
+        <field>TempoAjustePadrao__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>TempoReservaPadrao__c</field>
+        <value xsi:type="xsd:double">0.5</value>
+    </values>
+</CustomMetadata>

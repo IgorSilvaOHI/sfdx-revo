@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotificacaoInicioVooComTranslado__c</fullName>
+    <description>Minutos antes do início do voo para enviar uma notificação de alerta do voo se aproximando onde o voo possui traslado</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Minutos antes do início do voo para enviar uma notificação de alerta do voo se aproximando onde o voo possui traslado</inlineHelpText>
+    <label>Notificação início voo com translado</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

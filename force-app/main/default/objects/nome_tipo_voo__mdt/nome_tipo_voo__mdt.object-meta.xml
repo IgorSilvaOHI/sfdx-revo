@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Utilizado para armazenar os ids do Sistema OSS relativos a Nome Tipo Voo.</description>
+    <label>nome tipo voo</label>
+    <pluralLabel>nomes tipos voo</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aguardando Execução</fullName>
+                <default>false</default>
+                <label>Aguardando Execução</label>
+            </value>
+            <value>
+                <fullName>PreReservado</fullName>
+                <default>false</default>
+                <label>Pré-Reservado</label>
+            </value>
+            <value>
+                <fullName>Pago</fullName>
+                <default>false</default>
+                <label>Pago</label>
+            </value>
+            <value>
+                <fullName>Executado</fullName>
+                <default>false</default>
+                <label>Executado</label>
+            </value>
+            <value>
+                <fullName>No-Show</fullName>
+                <default>false</default>
+                <label>No-Show</label>
+            </value>
+            <value>
+                <fullName>Faturado</fullName>
+                <default>false</default>
+                <label>Faturado</label>
+            </value>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <label>Cancelado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

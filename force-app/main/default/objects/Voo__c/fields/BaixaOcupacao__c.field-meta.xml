@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BaixaOcupacao__c</fullName>
+    <description>Voos especiais que tiveram como ocupação uma quantidade menor que o Pax mínimo.</description>
+    <formula>IF(OR(AND(ISPICKVAL(Status__c, &quot;Executado&quot;),  ContadorPassageiros__c &lt;  PAD__r.MinimoPax__c * 2, ISPICKVAL(TipoPAD__c, &apos;Especial&apos;)), 
+						AND(ISPICKVAL(Status__c, &quot;Executado&quot; ),  ContadorPassageiros__c = NULL, ISPICKVAL(TipoPAD__c, &apos;Especial&apos;)),
+						AND(ISPICKVAL(Status__c, &quot;Em Faturamento&quot;),  ContadorPassageiros__c &lt;  PAD__r.MinimoPax__c * 2, ISPICKVAL(TipoPAD__c, &apos;Especial&apos;)), 
+						AND(ISPICKVAL(Status__c, &quot;Em Faturamento&quot; ),  ContadorPassageiros__c = NULL, ISPICKVAL(TipoPAD__c, &apos;Especial&apos;)),
+						AND(ISPICKVAL(Status__c, &quot;Faturado&quot;),  ContadorPassageiros__c &lt;  PAD__r.MinimoPax__c * 2, ISPICKVAL(TipoPAD__c, &apos;Especial&apos;)), 
+						AND(ISPICKVAL(Status__c, &quot;Faturado&quot; ),  ContadorPassageiros__c = NULL, ISPICKVAL(TipoPAD__c, &apos;Especial&apos;))),
+			true, false)</formula>
+    <inlineHelpText>Voos especiais que tiveram como ocupação uma quantidade menor que o Pax mínimo.</inlineHelpText>
+    <label>Baixa Ocupação</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

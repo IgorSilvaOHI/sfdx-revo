@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoTreinamento</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT(Status__c) == &apos;Reservado&apos;,
+TEXT(Tipo__c) == &apos;Treinamento&apos;,
+ISBLANK(TEXT(SAR2__c)))</errorConditionFormula>
+    <errorDisplayField>SAR2__c</errorDisplayField>
+    <errorMessage>Preencha o tipo de treinamento</errorMessage>
+</ValidationRule>

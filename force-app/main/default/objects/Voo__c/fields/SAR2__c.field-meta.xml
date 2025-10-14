@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAR2__c</fullName>
+    <label>Tipo de treinamento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SAR</fullName>
+                <default>false</default>
+                <label>SAR</label>
+            </value>
+            <value>
+                <fullName>NDC</fullName>
+                <default>false</default>
+                <label>NDC</label>
+            </value>
+            <value>
+                <fullName>FAMILIARIZAÇÃO</fullName>
+                <default>false</default>
+                <label>FAMILIARIZAÇÃO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

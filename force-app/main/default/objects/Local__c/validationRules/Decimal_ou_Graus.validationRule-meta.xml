@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decimal_ou_Graus</fullName>
+    <active>false</active>
+    <description>Não permite alteração de campos de coordenadas decimais e em graus ao mesmo tempo. Ou um ou outro.</description>
+    <errorConditionFormula>OR(
+	AND(
+		OR(
+		 ISCHANGED(CoordenadasLatitudeGraus__c),
+			ISCHANGED(CoordenadasLatitudeMinutos__c),
+			ISCHANGED(CoordenadasLatitudeSegundos__c),
+			ISCHANGED(CoordenadasLatitudeDirecao__c)),  
+			ISCHANGED(Coordenadas__Latitude__s)),
+	AND(
+		OR(
+		 ISCHANGED(CoordenadasLongitudeGraus__c),
+			ISCHANGED(CoordenadasLongitudeMinutos__c),
+			ISCHANGED(CoordenadasLongitudeSegundos__c),
+			ISCHANGED(CoordenadasLongitudeDirecao__c)),
+			ISCHANGED(Coordenadas__Longitude__s)))</errorConditionFormula>
+    <errorMessage>As coordenadas só podem ser alteradas em um formato.</errorMessage>
+</ValidationRule>

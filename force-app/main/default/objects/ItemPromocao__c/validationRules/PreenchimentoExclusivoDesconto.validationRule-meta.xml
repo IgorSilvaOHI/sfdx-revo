@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PreenchimentoExclusivoDesconto</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(DescontoUnitario__c != 0, PercDesconto__c != 0)</errorConditionFormula>
+    <errorMessage>Preencher somente o % Desconto ou o Valor de desconto Unitário!</errorMessage>
+</ValidationRule>

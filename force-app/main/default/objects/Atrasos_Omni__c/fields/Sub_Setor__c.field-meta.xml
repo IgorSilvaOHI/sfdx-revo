@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Setor__c</fullName>
+    <label>Sub-Setor</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Setor__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DOCUMENTAÇÃO DO VOO</fullName>
+                <default>false</default>
+                <label>DOCUMENTAÇÃO DO VOO</label>
+            </value>
+            <value>
+                <fullName>INDISP AERONAVE</fullName>
+                <default>false</default>
+                <label>INDISP AERONAVE</label>
+            </value>
+            <value>
+                <fullName>VIA DE SERVIÇO CONGESTIONADA</fullName>
+                <default>false</default>
+                <label>VIA DE SERVIÇO CONGESTIONADA</label>
+            </value>
+            <value>
+                <fullName>CONTROLE AÉREO</fullName>
+                <default>false</default>
+                <label>CONTROLE AÉREO</label>
+            </value>
+            <value>
+                <fullName>FALTA DE ENERGIA</fullName>
+                <default>false</default>
+                <label>FALTA DE ENERGIA</label>
+            </value>
+            <value>
+                <fullName>RADAR</fullName>
+                <default>false</default>
+                <label>RADAR</label>
+            </value>
+            <value>
+                <fullName>SECURITY</fullName>
+                <default>false</default>
+                <label>SECURITY</label>
+            </value>
+            <value>
+                <fullName>SALA DE EMBARQUE</fullName>
+                <default>false</default>
+                <label>SALA DE EMBARQUE</label>
+            </value>
+            <value>
+                <fullName>EXCESSO DE VOO</fullName>
+                <default>false</default>
+                <label>EXCESSO DE VOO</label>
+            </value>
+            <value>
+                <fullName>BRIEFING</fullName>
+                <default>false</default>
+                <label>BRIEFING</label>
+            </value>
+            <value>
+                <fullName>BALCÃO DE CHECKIN</fullName>
+                <default>false</default>
+                <label>BALCÃO DE CHECKIN</label>
+            </value>
+            <value>
+                <fullName>VAN / ÔNIBUS</fullName>
+                <default>false</default>
+                <label>VAN / ÔNIBUS</label>
+            </value>
+            <value>
+                <fullName>LEITURA HUMS</fullName>
+                <default>false</default>
+                <label>LEITURA HUMS</label>
+            </value>
+            <value>
+                <fullName>GPU INOP</fullName>
+                <default>false</default>
+                <label>GPU INOP</label>
+            </value>
+            <value>
+                <fullName>TRATOR INOP</fullName>
+                <default>false</default>
+                <label>TRATOR INOP</label>
+            </value>
+            <value>
+                <fullName>CONFIGURAÇÃO AERONAVE</fullName>
+                <default>false</default>
+                <label>CONFIGURAÇÃO AERONAVE</label>
+            </value>
+            <value>
+                <fullName>AG. EQUIPAMENTO</fullName>
+                <default>false</default>
+                <label>AG. EQUIPAMENTO</label>
+            </value>
+            <value>
+                <fullName>METEREOLOGIA NA UNIDADE</fullName>
+                <default>false</default>
+                <label>METEREOLOGIA NA UNIDADE</label>
+            </value>
+            <value>
+                <fullName>METEROLOGIA NO AEROPORTO</fullName>
+                <default>false</default>
+                <label>METEROLOGIA NO AEROPORTO</label>
+            </value>
+            <value>
+                <fullName>PROGRAMAÇÃO ANTERIOR</fullName>
+                <default>false</default>
+                <label>PROGRAMAÇÃO ANTERIOR</label>
+            </value>
+            <value>
+                <fullName>OUTRA EMPRESA</fullName>
+                <default>false</default>
+                <label>OUTRA EMPRESA</label>
+            </value>
+            <value>
+                <fullName>VISTORIA</fullName>
+                <default>false</default>
+                <label>VISTORIA</label>
+            </value>
+            <value>
+                <fullName>MUDANÇA PREFIXO</fullName>
+                <default>false</default>
+                <label>MUDANÇA PREFIXO</label>
+            </value>
+            <value>
+                <fullName>MUDANÇA PROGRAMAÇÃO</fullName>
+                <default>false</default>
+                <label>MUDANÇA PROGRAMAÇÃO</label>
+            </value>
+            <value>
+                <fullName>WEATHER REPORT</fullName>
+                <default>false</default>
+                <label>WEATHER REPORT</label>
+            </value>
+            <value>
+                <fullName>MÉDICO / SAÚDE</fullName>
+                <default>false</default>
+                <label>MÉDICO / SAÚDE</label>
+            </value>
+            <value>
+                <fullName>HELIPONTO</fullName>
+                <default>false</default>
+                <label>HELIPONTO</label>
+            </value>
+            <value>
+                <fullName>INCLUSÃO / EXCLUSÃO DE PAX / POUSO</fullName>
+                <default>false</default>
+                <label>INCLUSÃO / EXCLUSÃO DE PAX / POUSO</label>
+            </value>
+            <value>
+                <fullName>UNIDADE</fullName>
+                <default>false</default>
+                <label>UNIDADE</label>
+            </value>
+            <value>
+                <fullName>SISTEMA</fullName>
+                <default>false</default>
+                <label>SISTEMA</label>
+            </value>
+            <value>
+                <fullName>PAX/CARGA ATRASADO</fullName>
+                <default>false</default>
+                <label>PAX/CARGA ATRASADO</label>
+            </value>
+            <value>
+                <fullName>PLANO DE VOO</fullName>
+                <default>false</default>
+                <label>PLANO DE VOO</label>
+            </value>
+            <value>
+                <fullName>FALTA DE POSIÇÃO NO PATIO</fullName>
+                <default>false</default>
+                <label>FALTA DE POSIÇÃO NO PATIO</label>
+            </value>
+            <value>
+                <fullName>ENTREVOOS</fullName>
+                <default>false</default>
+                <label>ENTREVOOS</label>
+            </value>
+            <value>
+                <fullName>PESQUISA PANE</fullName>
+                <default>false</default>
+                <label>PESQUISA PANE</label>
+            </value>
+            <value>
+                <fullName>FALTA DE STAFF</fullName>
+                <default>false</default>
+                <label>FALTA DE STAFF</label>
+            </value>
+            <value>
+                <fullName>FALTA QAV</fullName>
+                <default>false</default>
+                <label>FALTA QAV</label>
+            </value>
+            <value>
+                <fullName>CAMINHÃO QAV INOPERANTE</fullName>
+                <default>false</default>
+                <label>CAMINHÃO QAV INOPERANTE</label>
+            </value>
+            <value>
+                <fullName>FALTA CAMINHÃO</fullName>
+                <default>false</default>
+                <label>FALTA CAMINHÃO</label>
+            </value>
+            <value>
+                <fullName>SALDO ZERADO</fullName>
+                <default>false</default>
+                <label>SALDO ZERADO</label>
+            </value>
+            <value>
+                <fullName>ATENDIMENTO SIMULTÂNEO</fullName>
+                <default>false</default>
+                <label>ATENDIMENTO SIMULTÂNEO</label>
+            </value>
+            <value>
+                <fullName>SEQUÊNCIAMENTO</fullName>
+                <default>false</default>
+                <label>SEQUÊNCIAMENTO</label>
+            </value>
+            <value>
+                <fullName>COMPLEMENTO DE QAV</fullName>
+                <default>false</default>
+                <label>COMPLEMENTO DE QAV</label>
+            </value>
+            <value>
+                <fullName>REGULAMENTAÇÃO ALMOÇO</fullName>
+                <default>false</default>
+                <label>REGULAMENTAÇÃO ALMOÇO</label>
+            </value>
+            <value>
+                <fullName>JORNADA DE TRAB</fullName>
+                <default>false</default>
+                <label>JORNADA DE TRAB</label>
+            </value>
+            <value>
+                <fullName>CHEGADA NA ANV</fullName>
+                <default>false</default>
+                <label>CHEGADA NA ANV</label>
+            </value>
+            <value>
+                <fullName>APRESENTAÇÃO</fullName>
+                <default>false</default>
+                <label>APRESENTAÇÃO</label>
+            </value>
+            <value>
+                <fullName>AG. BAGAGEM</fullName>
+                <default>false</default>
+                <label>AG. BAGAGEM</label>
+            </value>
+            <value>
+                <fullName>ORGANIZAÇÃO</fullName>
+                <default>false</default>
+                <label>ORGANIZAÇÃO</label>
+            </value>
+            <value>
+                <fullName>CARREGAMENTO AERONAVE</fullName>
+                <default>false</default>
+                <label>CARREGAMENTO AERONAVE</label>
+            </value>
+            <value>
+                <fullName>TI HARWARE</fullName>
+                <default>false</default>
+                <label>TI HARWARE</label>
+            </value>
+            <value>
+                <fullName>TI INTERNET</fullName>
+                <default>false</default>
+                <label>TI INTERNET</label>
+            </value>
+            <value>
+                <fullName>TI SISTEMAS</fullName>
+                <default>false</default>
+                <label>TI SISTEMAS</label>
+            </value>
+            <value>
+                <fullName>COORDENAÇÃO CLIENTE</fullName>
+                <default>false</default>
+                <label>COORDENAÇÃO CLIENTE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>TI</controllingFieldValue>
+            <valueName>TI HARWARE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TI</controllingFieldValue>
+            <valueName>TI INTERNET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TI</controllingFieldValue>
+            <valueName>TI SISTEMAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>VIA DE SERVIÇO CONGESTIONADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <controllingFieldValue>CONTROLE DE VOO</controllingFieldValue>
+            <valueName>CONTROLE AÉREO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>FALTA DE ENERGIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>RADAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>SECURITY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>SALA DE EMBARQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>EXCESSO DE VOO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>BRIEFING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>BALCÃO DE CHECKIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>VAN / ÔNIBUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AEROPORTO</controllingFieldValue>
+            <valueName>FALTA DE POSIÇÃO NO PATIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIPULAÇÃO</controllingFieldValue>
+            <controllingFieldValue>ATENDIMENTO</controllingFieldValue>
+            <controllingFieldValue>COORDENAÇÃO</controllingFieldValue>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <controllingFieldValue>REBOQUE</controllingFieldValue>
+            <valueName>FALTA DE STAFF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIPULAÇÃO</controllingFieldValue>
+            <valueName>COMPLEMENTO DE QAV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIPULAÇÃO</controllingFieldValue>
+            <valueName>REGULAMENTAÇÃO ALMOÇO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIPULAÇÃO</controllingFieldValue>
+            <valueName>JORNADA DE TRAB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIPULAÇÃO</controllingFieldValue>
+            <valueName>CHEGADA NA ANV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIPULAÇÃO</controllingFieldValue>
+            <valueName>APRESENTAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ATENDIMENTO</controllingFieldValue>
+            <valueName>AG. BAGAGEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ATENDIMENTO</controllingFieldValue>
+            <valueName>ORGANIZAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ATENDIMENTO</controllingFieldValue>
+            <valueName>CARREGAMENTO AERONAVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <controllingFieldValue>COORDENAÇÃO</controllingFieldValue>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>DOCUMENTAÇÃO DO VOO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <controllingFieldValue>COORDENAÇÃO</controllingFieldValue>
+            <controllingFieldValue>METEREOLOGIA</controllingFieldValue>
+            <valueName>PROGRAMAÇÃO ANTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>OUTRA EMPRESA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>VISTORIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <controllingFieldValue>COMERCIAL</controllingFieldValue>
+            <valueName>MUDANÇA PREFIXO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>MUDANÇA PROGRAMAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>WEATHER REPORT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>MÉDICO / SAÚDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>HELIPONTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>INCLUSÃO / EXCLUSÃO DE PAX / POUSO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>UNIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>SISTEMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLIENTE</controllingFieldValue>
+            <valueName>PAX/CARGA ATRASADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COMERCIAL</controllingFieldValue>
+            <valueName>COORDENAÇÃO CLIENTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONTROLE DE VOO</controllingFieldValue>
+            <valueName>PLANO DE VOO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO</controllingFieldValue>
+            <valueName>SEQUÊNCIAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORNECEDOR QAV</controllingFieldValue>
+            <valueName>FALTA QAV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORNECEDOR QAV</controllingFieldValue>
+            <valueName>CAMINHÃO QAV INOPERANTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORNECEDOR QAV</controllingFieldValue>
+            <valueName>SALDO ZERADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FORNECEDOR QAV</controllingFieldValue>
+            <valueName>ATENDIMENTO SIMULTÂNEO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>INDISP AERONAVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>LEITURA HUMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>GPU INOP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>TRATOR INOP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>CONFIGURAÇÃO AERONAVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>AG. EQUIPAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>ENTREVOOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MANUTENÇÃO</controllingFieldValue>
+            <valueName>PESQUISA PANE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>METEREOLOGIA</controllingFieldValue>
+            <valueName>METEREOLOGIA NA UNIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>METEREOLOGIA</controllingFieldValue>
+            <valueName>METEROLOGIA NO AEROPORTO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

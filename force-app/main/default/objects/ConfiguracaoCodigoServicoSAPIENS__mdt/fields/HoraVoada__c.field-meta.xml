@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HoraVoada__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>A ser marcado caso seja o que representa hora voada e não um produto</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>A ser marcado caso seja o que representa hora voada e não um produto</inlineHelpText>
+    <label>É Hora Voada?</label>
+    <type>Checkbox</type>
+</CustomField>

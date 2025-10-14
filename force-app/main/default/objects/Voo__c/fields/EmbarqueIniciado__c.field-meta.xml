@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmbarqueIniciado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check marca a inclusão do primeiro passageiro no voo, abrindo o processo de check in e notificando o interessado no embarque</description>
+    <label>Embarque Iniciado</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

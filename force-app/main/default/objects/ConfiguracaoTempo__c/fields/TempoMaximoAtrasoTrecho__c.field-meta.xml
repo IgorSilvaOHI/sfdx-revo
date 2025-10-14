@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoMaximoAtrasoTrecho__c</fullName>
+    <description>Tempo em minutos de tolerância de atraso do trecho. Se atingir o valor será enviada uma notificação de atraso.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tempo em minutos de tolerância de atraso do trecho. Se atingir o valor será enviada uma notificação de atraso.</inlineHelpText>
+    <label>Tempo máximo de atraso do trecho</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

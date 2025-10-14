@@ -1,0 +1,1 @@
+public enum StatusIntegraVoo { CANCELADO, RESERVADO, CONFIRMADO, ROTA, EXECUTADO }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompartilhadoContrato__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica aeronave pode ser compartilhada em outros contratos</description>
+    <inlineHelpText>Indica aeronave pode ser compartilhada em outros contratos</inlineHelpText>
+    <label>Compartilhado contrato</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

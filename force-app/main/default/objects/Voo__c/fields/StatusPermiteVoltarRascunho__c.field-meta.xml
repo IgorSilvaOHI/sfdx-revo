@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusPermiteVoltarRascunho__c</fullName>
+    <description>Verdadeiro se possui um Status que pode voltar diretamente para rascunho.</description>
+    <formula>OR(
+    ISPICKVAL(Status__c, &apos;Pré-reservado&apos;),
+				ISPICKVAL(Status__c, &apos;Rascunho&apos;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Verdadeiro se possui um Status que pode voltar diretamente para rascunho.</inlineHelpText>
+    <label>Status Permite Voltar Rascunho</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

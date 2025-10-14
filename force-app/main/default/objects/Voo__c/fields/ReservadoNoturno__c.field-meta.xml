@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReservadoNoturno__c</fullName>
+    <description>Verdade se a reserva for feita após às 18 e antes das 6h</description>
+    <formula>OR(
+HOUR( TIMEVALUE( HorarioVooReservado2__c ) ) &gt;= $Setup.ConfiguracaoTempo__c.HoraInicioAprovacaoNoturna__c,
+HOUR( TIMEVALUE( HorarioVooReservado2__c ) ) &lt; $Setup.ConfiguracaoTempo__c.HoraFimAprovacaoNoturna__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ReservadoNoturno</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IcaoData__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Chave para update e insert. 
+Codigo ICAO + &apos; &apos; + data em formato &apos;dd/MM/yyyy&apos;</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Chave para update e insert. 
+Codigo ICAO + &apos; &apos; + data em formato &apos;dd/MM/yyyy&apos;</inlineHelpText>
+    <label>ICAO e Data</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

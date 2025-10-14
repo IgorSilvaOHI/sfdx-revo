@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MinutosVoeOMNISigTrip__c</fullName>
+    <defaultValue>5</defaultValue>
+    <description>Quantidade de minutos de tolerância entre o voo cadastrado no Voe Omni e o Voo cadastrado no SIG Trip.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Quantidade de minutos de tolerância entre o voo cadastrado no Voe Omni e o Voo cadastrado no SIG Trip.</inlineHelpText>
+    <label>Minutos Aceitáveis VoeOMNI X SigTrip</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

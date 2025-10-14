@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LayoutCompactoPoliticaDesconto</fullName>
+    <fields>Name</fields>
+    <fields>Desconto__c</fields>
+    <fields>Validade__c</fields>
+    <fields>Ativo__c</fields>
+    <fields>LastModifiedById</fields>
+    <label>Política de Desconto Compacto</label>
+</CompactLayout>

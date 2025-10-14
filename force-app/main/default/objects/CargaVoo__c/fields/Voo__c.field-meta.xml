@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voo__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Voo em que a carga vai estar presente</description>
+    <inlineHelpText>Voo em que a carga vai estar presente</inlineHelpText>
+    <label>Voo</label>
+    <referenceTo>Voo__c</referenceTo>
+    <relationshipLabel>Cargas do Voo</relationshipLabel>
+    <relationshipName>CargasVoo</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

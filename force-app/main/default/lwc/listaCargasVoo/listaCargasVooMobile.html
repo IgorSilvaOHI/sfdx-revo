@@ -1,0 +1,139 @@
+<template>
+  <div class="lista-cargas-voo">
+    <div class="header">
+      <h1 class="slds-text-heading_medium slds-text-align_center">
+        {customLabel.cargasVoo}
+      </h1>
+      <template if:true={possuiCargasVoo}>
+        <lightning-button
+          class="nova-carga"
+          variant="brand"
+          label={customLabel.nova}
+          icon-name="utility:add"
+          icon-position="right"
+          onclick={handleNovaCarga}
+        >
+        </lightning-button>
+      </template>
+    </div>
+    <!-- carga voo item feito dessa forma para manter alinhamento do grid -->
+    <div class="lista">
+      <template if:true={possuiCargasVoo}>
+        <div class="carga-voo-item">
+          <template for:each={cargasVoo} for:item="cargaVoo" for:index="index">
+            <!-- identificacao -->
+            <div
+              key={cargaVoo.Id}
+              class="header-item slds-text-heading_small ident-label"
+            >
+              {customLabel.identificacao}
+            </div>
+            <div key={cargaVoo.Id} class="item ident">{cargaVoo.Name}</div>
+            <div key={cargaVoo.Id} class="acoes">
+              <div class="icon-button slds-button slds-button_brand">
+                <lightning-button-icon
+                  data-carga-id={cargaVoo.Id}
+                  icon-name="utility:edit"
+                  alternative-text="Editar"
+                  variant="bare-inverse"
+                  onclick={handleEditCarga}
+                ></lightning-button-icon>
+              </div>
+              <div class="icon-button slds-button slds-button_destructive">
+                <lightning-button-icon
+                  data-carga-id={cargaVoo.Id}
+                  icon-name="utility:delete"
+                  alternative-text="Remover"
+                  variant="bare-inverse"
+                  onclick={handleDeleteCarga}
+                ></lightning-button-icon>
+              </div>
+            </div>
+            <!-- identificacao -->
+            <!-- profundidade -->
+            <div
+              key={cargaVoo.Id}
+              class="header-item slds-text-heading_small prof-label"
+            >
+              {customLabel.profundidade}
+            </div>
+            <div key={cargaVoo.Id} class="item prof">
+              <lightning-formatted-number
+                value={cargaVoo.Profundidade__c}
+                maximum-fraction-digits="2"
+              ></lightning-formatted-number>
+            </div>
+            <div key={cargaVoo.Id} class="espaco-acoes espaco-prof"></div>
+            <!-- profundidade -->
+            <!-- largura -->
+            <div
+              key={cargaVoo.Id}
+              class="header-item slds-text-heading_small larg-label"
+            >
+              {customLabel.largura}
+            </div>
+            <div key={cargaVoo.Id} class="item larg">
+              <lightning-formatted-number
+                value={cargaVoo.Largura__c}
+                maximum-fraction-digits="2"
+              ></lightning-formatted-number>
+            </div>
+            <div key={cargaVoo.Id} class="espaco-acoes espaco-larg"></div>
+            <!-- largura -->
+            <!-- altura -->
+            <div
+              key={cargaVoo.Id}
+              class="header-item slds-text-heading_small alt-label"
+            >
+              {customLabel.altura}
+            </div>
+            <div key={cargaVoo.Id} class="item alt">
+              <lightning-formatted-number
+                value={cargaVoo.Altura__c}
+                maximum-fraction-digits="2"
+              ></lightning-formatted-number>
+            </div>
+            <div key={cargaVoo.Id} class="espaco-acoes espaco-alt"></div>
+            <!-- altura -->
+            <!-- peso -->
+            <div
+              key={cargaVoo.Id}
+              class="header-item slds-text-heading_small peso-label"
+            >
+              {customLabel.peso}
+            </div>
+            <div key={cargaVoo.Id} class="item peso">
+              <lightning-formatted-number
+                value={cargaVoo.Peso__c}
+                maximum-fraction-digits="2"
+              ></lightning-formatted-number>
+            </div>
+            <div key={cargaVoo.Id} class="espaco-acoes espaco-peso"></div>
+            <div key={cargaVoo.Id}></div>
+            <div key={cargaVoo.Id}></div>
+            <div key={cargaVoo.Id}></div>
+            <!-- peso -->
+          </template>
+        </div>
+      </template>
+
+      <template if:false={possuiCargasVoo}>
+        <div
+          style="display: flex; align-items: center; justify-content: center; flex-flow: column; margin-top: 4rem;"
+        >
+          <p style="margin-bottom: 1rem;">
+            {customLabel.vooNaoPossuiCarga}
+          </p>
+          <lightning-button
+            variant="brand"
+            label={customLabel.cadastrarNovaCarga}
+            icon-name="utility:add"
+            icon-position="right"
+            onclick={handleNovaCarga}
+          >
+          </lightning-button>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DecolagemDif__c</fullName>
+    <description>Exibe os tempos de decolagem do voe omni e sig caso sejam diferentes</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(ISNULL(Decolagem__c), ISNULL(DecolagemSig__c)), &apos;&apos;,
+IF(OR(Decolagem__c != DecolagemSig__c, ISNULL(Decolagem__c), ISNULL(DecolagemSig__c)), 
+			IF(ISNULL(Decolagem__c), &apos;-&apos;,
+			&apos;OMNI: &apos; &amp; RIGHT(LEFT(TEXT(Decolagem__c),16),5))
+			&amp; &apos; / &apos; &amp;
+			IF(ISNULL(DecolagemSig__c), &apos;-&apos;,
+			&apos;Sig: &apos; &amp; RIGHT(LEFT(TEXT(DecolagemSig__c),16),5)), &apos;&apos;))</formula>
+    <inlineHelpText>Exibe os tempos de decolagem do voe omni e sig caso sejam diferentes</inlineHelpText>
+    <label>Decolagem Dif</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,17 @@
+button
+{
+    width: 100%;
+    background-color: var(--dark-gray, #706F6D);
+    height: 48px;
+    border: none;
+    border-top: .3rem solid var(--dark-gray, #706F6D);
+    border-bottom: .3rem solid var(--dark-gray, #706F6D);
+	color: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+.selected
+{
+    border-bottom: .3rem solid var(--dark-blue, #006196);
+}

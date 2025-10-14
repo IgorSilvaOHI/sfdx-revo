@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrigemDestinoDiferente</fullName>
+    <active>true</active>
+    <errorConditionFormula>Origem__c  = Destino__c</errorConditionFormula>
+    <errorDisplayField>Destino__c</errorDisplayField>
+    <errorMessage>Uma aerovia deve possui a origem diferente do destino</errorMessage>
+</ValidationRule>

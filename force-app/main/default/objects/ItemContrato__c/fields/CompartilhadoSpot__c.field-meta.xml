@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompartilhadoSpot__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica se o prefixo pode ser compartilhado com voos spot</description>
+    <inlineHelpText>Indica se o prefixo pode ser compartilhado com voos spot</inlineHelpText>
+    <label>Compartilhado spot</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

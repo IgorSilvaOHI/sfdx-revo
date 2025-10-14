@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TabulacaoPai__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Tabulação Pai</label>
+    <referenceTo>Tabulacao__c</referenceTo>
+    <relationshipLabel>Fluxos Tabulação</relationshipLabel>
+    <relationshipName>FluxosTabulacao</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

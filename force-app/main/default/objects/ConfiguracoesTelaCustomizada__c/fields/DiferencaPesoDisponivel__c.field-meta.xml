@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DiferencaPesoDisponivel__c</fullName>
+    <description>Diferença percentual de peso disponível para separar aeronaves de um mesmo modelo em um novo grupo a ser exibido na tela de solicitação de voo</description>
+    <inlineHelpText>Diferença percentual de peso disponível para separar aeronaves de um mesmo modelo em um novo grupo a ser exibido na tela de solicitação de voo</inlineHelpText>
+    <label>Diferença de Peso Disponível</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

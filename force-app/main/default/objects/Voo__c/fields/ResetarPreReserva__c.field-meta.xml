@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResetarPreReserva__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo auxiliar para cancelar o agendamento de exclusão de voo do process builder</description>
+    <inlineHelpText>Campo auxiliar para cancelar o agendamento de exclusão de voo do process builder</inlineHelpText>
+    <label>Resetar Pré-reserva</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

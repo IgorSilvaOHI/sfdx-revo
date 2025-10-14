@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataAtualizacaoAtraso__c</fullName>
+    <description>Data de atualização do campo de atraso.</description>
+    <formula>PrevisaoDecolagem__c + (60 + $Setup.ConfiguracaoTempo__c.TempoMaximoAtrasoTrecho__c )/1440</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Data de atualização do campo de atraso.</inlineHelpText>
+    <label>Data de atualização atraso</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

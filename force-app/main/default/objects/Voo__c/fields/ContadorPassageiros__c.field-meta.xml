@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContadorPassageiros__c</fullName>
+    <description>Contador de Passageiro no Voo</description>
+    <inlineHelpText>Contador de Passageiro no Voo</inlineHelpText>
+    <label>Contador Passageiros</label>
+    <summarizedField>Trecho__c.QtdPassageiros__c</summarizedField>
+    <summaryForeignKey>Trecho__c.Voo__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

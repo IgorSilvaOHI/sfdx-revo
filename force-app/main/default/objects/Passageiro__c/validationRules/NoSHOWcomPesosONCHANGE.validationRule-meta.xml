@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoSHOWcomPesosONCHANGE</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(NoShow__c),
+OR(
+Peso__c &gt; 0,
+Bagagem__c &gt; 0, 
+QtdBagagem__c&gt; 0))</errorConditionFormula>
+    <errorDisplayField>NoShow__c</errorDisplayField>
+    <errorMessage>Limpe os dados de peso e bagagem</errorMessage>
+</ValidationRule>

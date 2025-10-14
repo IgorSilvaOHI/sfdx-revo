@@ -1,0 +1,59 @@
+:host {
+  height: auto;
+}
+.full-header {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.header-filter {
+  display: grid;
+  height: 40px;
+  align-items: center;
+  grid-template-areas: "header filtro";
+}
+
+.header {
+  grid-area: header;
+}
+
+.filtro {
+  grid-area: filtro;
+}
+
+.novo-passageiro {
+  display: none;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.total-passageiros {
+  font-size: small;
+  color: var(--dark-gray, #706f6d);
+}
+
+@media screen and (max-width: 767px) {
+  .header-filter {
+    display: grid;
+    height: auto;
+    align-items: center;
+    grid-template-areas:
+      "header novo-passageiro"
+      "filtro filtro";
+  }
+  .novo-passageiro {
+    display: block;
+    grid-area: novo-passageiro;
+    justify-self: flex-end;
+  }
+
+  .filtro {
+    margin-top: 0.25rem;
+  }
+}

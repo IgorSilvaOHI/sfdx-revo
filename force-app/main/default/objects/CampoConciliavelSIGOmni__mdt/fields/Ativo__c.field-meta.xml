@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ativo__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag para identificar se a configuração do campo a conciliar está ativa ou não.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Flag para identificar se a configuração do campo a conciliar está ativa ou não.</inlineHelpText>
+    <label>Ativo</label>
+    <type>Checkbox</type>
+</CustomField>

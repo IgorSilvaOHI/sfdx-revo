@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusPagamento__c</fullName>
+    <label>Status do Pagamento</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pendente</fullName>
+                <default>true</default>
+                <label>Pendente</label>
+            </value>
+            <value>
+                <fullName>Efetuado</fullName>
+                <default>false</default>
+                <label>Efetuado</label>
+            </value>
+            <value>
+                <fullName>Devolvido</fullName>
+                <default>false</default>
+                <label>Devolvido</label>
+            </value>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <label>Cancelado</label>
+            </value>
+            <value>
+                <fullName>Faturado</fullName>
+                <default>false</default>
+                <label>Faturado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

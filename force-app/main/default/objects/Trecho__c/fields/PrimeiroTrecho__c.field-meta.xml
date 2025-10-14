@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimeiroTrecho__c</fullName>
+    <description>Marca de o trecho é o primeiro a ser executado descartando translados</description>
+    <formula>OrdemExecucao__c  =  Voo__r.PrimeiroTrecho__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Marca de o trecho é o primeiro a ser executado descartando translados</inlineHelpText>
+    <label>Primeiro Trecho</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

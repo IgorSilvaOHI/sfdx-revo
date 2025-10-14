@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UsuarioComunidadeNaoTrocaProprietario</fullName>
+    <active>true</active>
+    <description>O usuário da comunidade não tem permissão para trocar o proprietário do Voo</description>
+    <errorConditionFormula>NOT(ISNEW()) &amp;&amp;
+ISCHANGED(OwnerId) &amp;&amp;
+$User.ProfileId == &apos;00e3F000000V0Fj&apos;</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>O usuário da comunidade não tem permissão para alterar o proprietário do Voo. Se necessário, contate o Comercial para alterar o Proprietário do Voo</errorMessage>
+</ValidationRule>

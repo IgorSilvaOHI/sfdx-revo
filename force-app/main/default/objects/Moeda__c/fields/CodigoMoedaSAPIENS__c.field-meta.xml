@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CodigoMoedaSAPIENS__c</fullName>
+    <description>Código da Moeda para a integração com o SAPIENS.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Código da Moeda para a integração com o SAPIENS.</inlineHelpText>
+    <label>Código Moeda (SAPIENS)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

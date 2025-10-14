@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Servico</fullName>
+    <fields>Name</fields>
+    <fields>NumeroVoo__c</fields>
+    <fields>QtdsMalasGrandes__c</fields>
+    <fields>QtdsMalasMedias__c</fields>
+    <fields>QtdsMalasPequenas__c</fields>
+    <label>Servico</label>
+</CompactLayout>

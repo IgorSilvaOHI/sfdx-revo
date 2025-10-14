@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "salesforce": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@salesforce/mcp",
+        "--orgs",
+        "mySandbox",
+        "--toolsets",
+        "orgs,metadata,data,users",
+        "--allow-non-ga-tools"
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+<aura:component controller="VooController" implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+    <aura:html tag="style">
+        
+        div.backgroundSpinner{
+        background: rgba(0, 0, 0, 0) !important;
+        }
+        div.slds-spinner_container{
+        background: rgba(0, 0, 0, 0) !important;
+        }
+        div.modal-body {
+        background: rgba(0, 0, 0, 0) !important;
+        box-shadow: none !important;
+        }
+        div.closeIcon {
+        display:none !important;
+        }
+        div.desktop {
+        overflow: visible !important;
+        }
+        div.slds-modal__header--empty{
+        display:none !important;
+        }
+        div.slds-modal__container{
+        width: 100%;
+        max-width: 100%;
+        min-width: 20rem;
+        margin: auto;
+        padding:0;
+        }
+        div.cuf-scroller-inside{
+        padding:0px !important;
+        }
+        div.uiPanel{
+        border: none !important;
+        }
+        .slds-p-around--medium{
+        padding: 0 !important;
+        }
+        .cuf-content{
+        padding: 0 !important;
+        }
+        div.slds-modal__header_empty + .slds-modal__content, .slds-modal__header--empty + .slds-modal__content {
+        border-radius: 0 !important;
+        }
+        .forceChatterBasePublisher.baseDefault .container {
+        	width: inherit !important;
+        }
+        input{
+        	font-size: 13px !important;
+        }
+        .slds-button__icon {
+            width: 14px !important;
+            height: 14px !important;
+        }
+        
+    </aura:html>
+    
+    <aura:attribute name="recordId" type="Id"/>    
+    
+    <aura:attribute name="loading" type="Boolean" default="false"/>
+    <aura:attribute name="acaoSelecionada" type="Boolean" default="false"/>
+    
+    <aura:attribute type="Aura.Component[]" name="panelGerenciar" />
+    
+    <aura:attribute name="showVoo" type="Boolean" default="false"/>
+    <aura:attribute name="showPassageirosCargas" type="Boolean" default="false"/>
+    <aura:attribute name="vooNaoGerenciavel" type="Boolean" default="false"/>    
+    <aura:attribute name="contaBloqueada" type="Boolean" default="false"/>    
+    
+    <!--<aura:attribute name="voo" type="Voo__c"/>
+    <aura:attribute name="trechos" type="Trecho__c[]"/>
+    <aura:attribute name="passageiros" type="Passageiro__c[]"/>
+    <aura:attribute name="cargas" type="Carga__c[]"/>  -->  
+    <aura:attribute name="vooWrapper" type="Object"/>    
+    
+    <aura:attribute name="abrirGerenciar" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.abrirGerenciar}">
+        {!v.panelGerenciar}
+        <aura:set attribute="else">
+            <div class="divPai" style="height:100vh">
+                <section role="dialog" class="slds-modal slds-fade-in-open sectionClass">
+                    <div class="slds-modal__container divSectionClass">
+                        <header class="slds-modal__header">
+                            <lightning:buttonIcon onclick="{!c.closeQuickAction}" size="large" class="slds-modal__close" iconName="utility:close"  variant="bare-inverse" title="close" alternativeText="Close window"/>
+                            <h2 class="slds-modal__title slds-hyphenate">{! $Label.c.Gerenciar }</h2>
+                        </header>
+                        <aura:if isTrue="{! v.contaBloqueada }">
+                        	<div class="conta-bloqueada">
+                                <span class="conta-bloqueada-header"><b>{! $Label.c.HeaderBloqueioContaSolicitacaoVoo }</b></span>
+                                <span>{! $Label.c.SubheaderBloqueioContaSolicitacaoVoo }</span>
+                            </div>
+                            <aura:set attribute="else">
+                                <div class="{! and(v.showVoo, v.showPassageirosCargas)  ? 'slds-modal__content slds-p-around_medium modal-content showAllButtons': and(v.showVoo, !v.showPassageirosCargas) || and(!v.showVoo, !v.showPassageirosCargas) ? 'slds-modal__content slds-p-around_medium modal-content showOnlyVoo' :'slds-modal__content slds-p-around_medium modal-content showButtonPassageiroCargas'}">
+                                    <!--<div class="slds-grid slds-wrap slds-grid_align-center">-->
+                                    <aura:if isTrue="{!v.vooNaoGerenciavel}">
+                                        {! $Label.c.StatusVooNaoPermiteGerenciamento }
+                                        <aura:set attribute="else">
+                                            <aura:if isTrue="{! v.loading }">
+                                                <lightning:spinner class="spinnerClass"/>
+                                            </aura:if>
+                                        </aura:set>
+                                    </aura:if>
+                                    <!--</div>-->
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                        
+                        
+                        <div class="slds-modal__footer modal-footer">        
+                            <lightning:button variant="neutral" label="Cancelar" onclick="{!c.closeQuickAction}"/>      
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

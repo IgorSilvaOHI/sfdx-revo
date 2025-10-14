@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tarifa__c</fullName>
+    <label>Tarifa</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>landing</fullName>
+                <default>false</default>
+                <label>Tarifa de Pouso (TPO)</label>
+            </value>
+            <value>
+                <fullName>maneuvering_area</fullName>
+                <default>false</default>
+                <label>Tarifa de Permanência no Pátio de Manobras (PPM)</label>
+            </value>
+            <value>
+                <fullName>aircraft_stand</fullName>
+                <default>false</default>
+                <label>Tarifa de Permanência na Área de Estadia (PPE)</label>
+            </value>
+            <value>
+                <fullName>route_navigation</fullName>
+                <default>false</default>
+                <label>Tarifa de Uso das Comunicações e dos Auxílios à Navegação Aérea em Rota (PAN)</label>
+            </value>
+            <value>
+                <fullName>airport_control</fullName>
+                <default>false</default>
+                <label>Tarifa de Uso das Comunicações e dos Auxílios-Rádio à Navegação Aérea em Área de Controle de Aeródromo (TAT ADR)</label>
+            </value>
+            <value>
+                <fullName>approach_control</fullName>
+                <default>false</default>
+                <label>Tarifa de Uso das Comunicações e dos Auxílios-Rádio à Navegação Aérea em Área de Controle de Aproximação (TAT APP)</label>
+            </value>
+            <value>
+                <fullName>Landing Fees</fullName>
+                <default>false</default>
+                <label>Landing Fees</label>
+            </value>
+            <value>
+                <fullName>Passenger Departure Fees Adults</fullName>
+                <default>false</default>
+                <label>Passenger Departure Fees Adults</label>
+            </value>
+            <value>
+                <fullName>Cargo Charges</fullName>
+                <default>false</default>
+                <label>Cargo Charges</label>
+            </value>
+            <value>
+                <fullName>Electricity charge</fullName>
+                <default>false</default>
+                <label>Electricity charge</label>
+            </value>
+            <value>
+                <fullName>AW139 Off shore charges</fullName>
+                <default>false</default>
+                <label>AW139 Off shore charges</label>
+            </value>
+            <value>
+                <fullName>S92 Off shore charges</fullName>
+                <default>false</default>
+                <label>S92 Off shore charges</label>
+            </value>
+            <value>
+                <fullName>AW139 Air Navigation Fees</fullName>
+                <default>false</default>
+                <label>AW139 Air Navigation Fees</label>
+            </value>
+            <value>
+                <fullName>S92 Air Navigation Fees</fullName>
+                <default>false</default>
+                <label>S92 Air Navigation Fees</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

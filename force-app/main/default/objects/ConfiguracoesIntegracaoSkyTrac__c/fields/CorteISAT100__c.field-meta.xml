@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CorteISAT100__c</fullName>
+    <defaultValue>101</defaultValue>
+    <description>Código de corte para ISAT - 100</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Código de corte para ISAT - 100</inlineHelpText>
+    <label>Corte - ISAT-100</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

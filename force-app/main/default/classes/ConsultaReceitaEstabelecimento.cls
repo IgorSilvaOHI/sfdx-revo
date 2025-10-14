@@ -1,0 +1,34 @@
+public class ConsultaReceitaEstabelecimento {
+    @AuraEnabled public String cnpj;
+    @AuraEnabled public List<ConsultaReceitaAtividade> atividades_secundarias;
+    @AuraEnabled public String cnpj_raiz;
+    @AuraEnabled public String cnpj_ordem;
+    @AuraEnabled public String cnpj_digito_verificador;
+	@AuraEnabled public String tipo;
+	@AuraEnabled public String nome_fantasia;
+	@AuraEnabled public String situacao_cadastral;
+	@AuraEnabled public String data_situacao_cadastral;
+	@AuraEnabled public String data_inicio_atividade;
+	@AuraEnabled public String nome_cidade_exterior;
+	@AuraEnabled public String tipo_logradouro;
+	@AuraEnabled public String logradouro;
+	@AuraEnabled public String numero;
+	@AuraEnabled public String complemento;
+	@AuraEnabled public String bairro;
+	@AuraEnabled public String cep;
+	@AuraEnabled public String ddd1;
+	@AuraEnabled public String telefone1;
+	@AuraEnabled public String ddd2;
+	@AuraEnabled public String telefone2;
+	@AuraEnabled public String ddd_fax;
+	@AuraEnabled public String fax;
+	@AuraEnabled public String email;
+	@AuraEnabled public String situacao_especial;
+	@AuraEnabled public String data_situacao_especial;
+	@AuraEnabled public ConsultaReceitaAtividade atividade_principal;
+	@AuraEnabled public ConsultaReceitaPais pais;
+	@AuraEnabled public ConsultaReceitaEstado estado;
+	@AuraEnabled public ConsultaReceitaCidade cidade;
+	@AuraEnabled public ConsultaReceitaSituacaoCadastral motivo_situacao_cadastral;
+	@AuraEnabled public List<ConsultaReceitaInscricaoEstadual> inscricoes_estaduais;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IntervaloEmDiasBuscaEventos__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Intervalo em dias para buscar eventos relacionados a uma data.
+Ex:. Se um voo vai ser inserido, e o intervalo é 15, irá buscar 15 dias antes e 15 dias depois de eventos para analisar referente ao voo</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Intervalo em dias para buscar eventos relacionados a uma data.</inlineHelpText>
+    <label>Intervalo em Dias de Busca de Eventos</label>
+    <precision>3</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

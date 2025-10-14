@@ -1,0 +1,66 @@
+<template>
+    <lightning-card title="Programação das Aeronaves" icon-name="action:new_custom20">
+        <div class="controls">
+            <span class="data-label">{dataFormatada}</span>
+            <lightning-input type="date" value={dataReferenciaISO} onchange={handleDataChange} label="" variant="label-hidden"></lightning-input>
+            <button class="buttonAnt" onclick={handleRefresh} title="Atualizar">
+                <lightning-icon icon-name='utility:refresh' alternative-text='refresh' size='small' title='refresh'></lightning-icon>
+            </button>
+            <!-- <lightning-button variant="brand" label="Anterior" class="buttonAnt" onclick={handleDiaAnterior}></lightning-button> -->
+            <button class="buttonAnt" onclick={handleDiaAnterior}>
+                <lightning-icon icon-name='utility:chevronleft' alternative-text='chevronleft' size='small' title='chevronleft'></lightning-icon>
+                <!-- &nbsp; &nbsp; Anterior -->
+            </button>
+            <!-- <lightning-button variant="brand" label="Seguinte" onclick={handleProximoDia}></lightning-button> -->
+            <button class="buttonSeg" onclick={handleProximoDia}>
+                <!-- Seguinte &nbsp; &nbsp; -->
+                <lightning-icon icon-name='utility:chevronright' alternative-text='chevronright' size='small' title='chevronright'></lightning-icon>
+            </button>
+        </div>
+
+        <template if:true={isLoading}>
+            <div class="loading-container">
+                <lightning-spinner alternative-text="Carregando..." size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:true={showTimeline}>
+            <div class="timeline-container">
+                <div class="timeline-header">
+                    <div class="aeronave-col">Aeronave</div>
+                    <div class="horarios-col">
+                        <template for:each={horarios} for:item="hora">
+                            <div key={hora} class="hora">{hora}</div>
+                        </template>
+                    </div>
+                </div>
+
+                <template for:each={aeronaves} for:item="a">
+                    <div key={a.id} class="linha-aeronave">
+                        <div class="aeronave-col">{a.nome}</div>
+                        <div class="horarios-col-container">
+                            <div class="horarios-col">
+                                <template for:each={a.voos} for:item="v">
+                                    <div
+                                    key={v.id}
+                                    class="bloco-voo"
+                                    style={v.style}
+                                    data-id={v.id}
+                                    title={v.nome}
+                                    onclick={handleAbrirVoo}
+                                    >
+                                    {v.nome}
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <template if:true={showNoDataMessage}>
+            <p class="slds-p-around_small slds-text-color_weak">Nenhum voo encontrado neste dia.</p>
+        </template>
+    </lightning-card>
+</template>

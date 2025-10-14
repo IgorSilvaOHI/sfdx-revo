@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataAtualMaiorQuePreVoo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+not( IgnorarTrigger__c ),
+OR(ISNEW() , ISCHANGED(DataVoo__c)),
+        abs(UNIXTIMESTAMP(DataVoo__c) - UNIXTIMESTAMP(DataVooOriginal__c))&gt; 59,
+        NOT(ISNULL(DataVooOriginal__c)),
+        IF($Permission.AgendarVooRetroativo,
+        DataVoo__c -  ($Setup.ConfiguracaoTempo__c.EntreVoosRetroativo__c / 1440)  ,
+        DataVoo__c -  ((
+            CASE(Tipo__c,
+                &apos;Charter&apos;, $Setup.ConfiguracaoTempo__c.EntreVoosCharterPre__c,
+                &apos;FullCabin&apos;, $Setup.ConfiguracaoTempo__c.EntreVoosFullCabinPre__c,
+                $Setup.ConfiguracaoTempo__c.TempoPlanejamentoPre__c
+            )
+        )  / 1440)) &lt;= 
+        now()
+				
+)</errorConditionFormula>
+    <errorDisplayField>DataVoo__c</errorDisplayField>
+    <errorMessage>Horário de início do entre voos não pode ser anterior a criação de voo.</errorMessage>
+</ValidationRule>

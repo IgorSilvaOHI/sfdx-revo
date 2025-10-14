@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trecho__c</fullName>
+    <description>Trecho o qual a carga pertence</description>
+    <inlineHelpText>Trecho o qual a carga pertence</inlineHelpText>
+    <label>Trecho</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Trecho Em Rota ou Finalizado</errorMessage>
+        <filterItems>
+            <field>Trecho__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Não Iniciado</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Trecho__c</referenceTo>
+    <relationshipLabel>Cargas</relationshipLabel>
+    <relationshipName>Cargas</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

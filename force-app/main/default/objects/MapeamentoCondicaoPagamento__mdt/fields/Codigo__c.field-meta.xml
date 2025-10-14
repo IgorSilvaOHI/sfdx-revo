@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Codigo__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Código a ser integrado com o sapiens de acordo com a condição</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Código a ser integrado com o sapiens de acordo com a condição</inlineHelpText>
+    <label>Código</label>
+    <length>10</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

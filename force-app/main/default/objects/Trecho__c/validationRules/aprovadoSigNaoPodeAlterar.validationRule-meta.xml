@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aprovadoSigNaoPodeAlterar</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(Voo__r.StatusSig__c &gt; 1,
+OR(ISCHANGED(Ligado__c),
+ISCHANGED(Decolagem__c),
+ISCHANGED(Pouso__c),
+ISCHANGED(Cut__c)),
+$Profile.Name != $Label.AdministradorDoSistema)</errorConditionFormula>
+    <errorMessage>Esse registro não pode ser editado. Voo está em processo de aprovação no SIG.</errorMessage>
+</ValidationRule>

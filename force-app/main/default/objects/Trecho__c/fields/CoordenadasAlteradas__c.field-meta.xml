@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CoordenadasAlteradas__c</fullName>
+    <formula>OR(
+				CoordenadasOrigemAlteracao__c,
+				CoordenadasDestinoAlteracao__c 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Coordenadas Alteradas</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

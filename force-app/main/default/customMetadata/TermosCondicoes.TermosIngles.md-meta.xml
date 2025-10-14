@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Termos Inglês</label>
+    <protected>false</protected>
+    <values>
+        <field>Idioma__c</field>
+        <value xsi:type="xsd:string">en_US</value>
+    </values>
+    <values>
+        <field>Prioridade__c</field>
+        <value xsi:type="xsd:double">10.0</value>
+    </values>
+    <values>
+        <field>Termos__c</field>
+        <value xsi:type="xsd:string">Pelo presente instrumento de termos e condições o usuário ao se cadastrar se
+responsabiliza pelas informações aqui prestadas bem como declara o comprometimento
+em manter o mais absoluto sigilo sobre toda e qualquer informação, material ou documento
+da OMNI a que venha a ter acesso.
+Este cadastro não gera qualquer vínculo empregatício entre as Partes, permanecendo
+estas sociedades independentes, sendo de sua responsabilidade exclusiva todas a
+obrigações decorrentes de sua posição de empregadora, não se estabelecendo com a
+OMNI qualquer tipo de sociedade.
+Declara, sob as penas da lei, não oferecer, dar ou se comprometer a dar a quem quer que
+seja, aceitar ou se comprometer a aceitar de quem quer que seja, tanto por conta própria
+quanto por meio de outrem, qualquer pagamento, doação, compensação, vantagens
+financeiras ou não financeiras, bem como benefícios de qualquer espécie que constituam a
+prática ilegal ou de corrupção, sob as leis de qualquer país, seja de forma direta ou
+indireta, garantindo categoricamente que seus prepostos e colaboradores ajam da mesma
+forma ou similar, cientes das sanções administrativas e/ou judiciais que poderão
+desencadear pela atitude ilegal praticada, responsabilizando-se integralmente.
+Declara, ainda, não possuir no quadro de pessoal empregados menores de 18 (dezoito)
+anos em trabalho noturno, perigoso ou insalubre, e de menores de 16 (dezesseis) anos em
+qualquer trabalho, salvo na condição de aprendizes, a partir de 14 (quatorze) anos, nos
+termos do inciso XXXIII do art. 7º da Constituição Federal (Emenda Constitucional nº 20,
+de 1998).
+A Parte concorda que responderá por lucros cessantes e danos indiretos a que der
+causa em razão do descumprimento da Legislação de Proteção de Dados e em
+decorrência da violação de direitos de propriedade intelectual da OMNI e terceiros.
+Declara, para fins de direito, sob as penas da lei, que as informações acima são
+verdadeiras, ficando ciente que a falsidade dessa declaração e das informações prestadas
+no cadastro configuram crime previsto no Código Penal Brasileiro, e passível de apuração
+na forma da Lei.
+Declara, ainda que está ciente e de acordo com as condições comerciais abaixo:
+- As horas de voo são contadas do momento do acionamento dos motores até a sua
+parada total no retorno da aeronave ao aeroporto de origem;
+
+- No caso de haver necessidade de traslado de aeronaves para realizarem voos em bases
+que não são a sua base de operação, o traslado de ida e de volta até a sua base será de
+responsabilidade da contratante; 
+
+- Após o término de cada programação os tripulantes emitirão o relatório de voo com o
+tempo final que será utilizado para efeitos de cobrança;
+
+- Despesas com combustíveis inclusas no valor da hora voada;
+
+- Os documentos de cobrança serão emitidos utilizando-se para cálculo o valor da hora,
+multiplicado pelo tempo total dos voos e convertido à PTAX oficial emitida pelo Banco
+Central Brasileiro no dia da realização do voo. Caso isto ocorra no final de semana ou
+feriado, a PTAX utilizada será aquela referente ao dia útil anterior;
+
+-As NF serão emitidas com prazo de 30 dias para pagamento.
+
+POLÍTICA DE CANCELAMENTO DE VOOS
+- Voos cancelados com menos de 24h de antecedência - será cobrado o valor integral da programação prevista;
+- Voos cancelados entre 48h e 24h de antecedência - será cobrado o valor equivalente a uma hora de voo;
+- Voos cancelados com até 48h de antecedência - não haverá custo.</value>
+    </values>
+</CustomMetadata>

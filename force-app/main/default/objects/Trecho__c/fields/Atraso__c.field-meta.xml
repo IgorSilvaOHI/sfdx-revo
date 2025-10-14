@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atraso__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISNULL(DataOriginalVoo__c)),
+IF(PrimeiroTrechoFixo__c,
+IF(TEXT(TipoAtrasoContrato__c) = &apos;&apos; || TEXT(TipoAtrasoContrato__c) = &apos;Decolagem&apos;,
+(Decolagem__c - DataOriginalVoo__c)*24*60,
+IF(ISNULL(Ligado__c),
+(Decolagem__c - DataOriginalVoo__c)*24*60,
+(Ligado__c - DataOriginalVoo__c)*24*60)),(Decolagem__c - PrevisaoDecolagem__c)*24*60),(Decolagem__c - PrevisaoDecolagem__c)*24*60)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Atraso</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

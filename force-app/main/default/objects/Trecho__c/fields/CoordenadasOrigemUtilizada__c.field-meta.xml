@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CoordenadasOrigemUtilizada__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;latitude: &quot; &amp; 
+IF(CoordenadasOrigemAlteracao__c, TEXT(CoordenadasLatitudeOrigemDecimal__c), TEXT(Origem__r.Coordenadas__Latitude__s)) &amp;
+&quot; longitude: &quot; &amp; IF(CoordenadasOrigemAlteracao__c, TEXT(CoordenadasLongitudeOrigemDecimal__c), TEXT(Origem__r.Coordenadas__Longitude__s))</formula>
+    <label>Coordenadas Origem - Utilizada</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

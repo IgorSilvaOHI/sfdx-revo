@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ISOCode__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Código iso da moeda</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Código iso da moeda</inlineHelpText>
+    <label>ISO code</label>
+    <length>3</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EntreVoosFullCabinPre__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Número inteiro que representa o tempo em minutos mínimo para que a aeronave esteja pronta para efetuar um voo</inlineHelpText>
+    <label>Entre Voos - FullCabin (Pré)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

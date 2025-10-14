@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CorEtiqueta__c</fullName>
+    <label>Etiqueta</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amarela</fullName>
+                <default>false</default>
+                <label>Amarela</label>
+            </value>
+            <value>
+                <fullName>Preta</fullName>
+                <default>false</default>
+                <label>Preta</label>
+            </value>
+            <value>
+                <fullName>Verde</fullName>
+                <default>false</default>
+                <label>Verde</label>
+            </value>
+            <value>
+                <fullName>Vermelha</fullName>
+                <default>false</default>
+                <label>Vermelha</label>
+            </value>
+            <value>
+                <fullName>Lilás</fullName>
+                <default>false</default>
+                <label>Lilás</label>
+            </value>
+            <value>
+                <fullName>Rosa</fullName>
+                <default>false</default>
+                <label>Rosa</label>
+            </value>
+            <value>
+                <fullName>Marrom</fullName>
+                <default>false</default>
+                <label>Marrom</label>
+            </value>
+            <value>
+                <fullName>Azul claro</fullName>
+                <default>false</default>
+                <label>Azul claro</label>
+            </value>
+            <value>
+                <fullName>Cinza</fullName>
+                <default>false</default>
+                <label>Cinza</label>
+            </value>
+            <value>
+                <fullName>Laranja</fullName>
+                <default>false</default>
+                <label>Laranja</label>
+            </value>
+            <value>
+                <fullName>Azul escuro</fullName>
+                <default>false</default>
+                <label>Azul escuro</label>
+            </value>
+            <value>
+                <fullName>Branca</fullName>
+                <default>false</default>
+                <label>Branca</label>
+            </value>
+            <value>
+                <fullName>Verde escura</fullName>
+                <default>false</default>
+                <label>Verde escura</label>
+            </value>
+            <value>
+                <fullName>Mostarda</fullName>
+                <default>false</default>
+                <label>Mostarda</label>
+            </value>
+            <value>
+                <fullName>Bordô</fullName>
+                <default>false</default>
+                <label>Bordô</label>
+            </value>
+            <value>
+                <fullName>Nenhuma</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Nenhuma</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

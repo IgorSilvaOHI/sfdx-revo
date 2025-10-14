@@ -1,0 +1,98 @@
+<apex:component controller="EnvelopeAeronaveController">
+    <apex:attribute name="envelopeList" type="GoogleChartData[]" description="List of weight x arm data of the aircraft" assignTo="{!envelopes}"/>
+    <apex:attribute name="fuelWeightList" type="Map" description="List of weight x arm data of the aircraft with fuel" assignTo="{!fuelWeights}"/>
+    <head>
+      <style type="text/css">
+        .center {
+          margin: 0;
+          width:100%;
+        }
+      </style>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          
+          function drawChart() 
+          { 
+            const envelopeStr = '{"data": '+('{!envelopes}').replaceAll('GoogleChartData:[arm', '{"arm"').replaceAll('=', ':')
+                                        .replaceAll('weight', '"weight"').replaceAll('], {"arm"', '}, {"arm"').replaceAll(']]', '}]')+'}';
+            let envelopes = JSON.parse(envelopeStr);
+            const fuelWeightStr = ('{!fuelWeights}').replaceAll('GoogleChartData:[arm', '{"arm"').replaceAll('=', ':').replaceAll('weight', '"weight"').replaceAll('], {"arm"', '}, {"arm"')
+                                                    .replaceAll(']}', '}}').replace('atual', '"atual"').replace('], zero','}, "zero"');
+            let fuelWeights = JSON.parse(fuelWeightStr);
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', '{!braco}');
+            data.addColumn('number', '{!envelope}');
+            data.addColumn({type:'string', role:'style'});
+            data.addColumn('number', '{!passeio}');
+            data.addColumn({type:'string', role:'style'});
+            data.addColumn( { type: 'string', role: 'annotation' });
+            let rows = [];
+            let minArm = 99999;
+            let maxArm = 0;
+            for(envelope of envelopes.data)
+            {
+                rows.push([envelope.arm, envelope.weight, 'point { size: 1; shape-type: circle; fill-color: black; }', null, null, null]);
+                if(envelope.arm > maxArm) maxArm = envelope.arm;
+                if(envelope.arm < minArm) minArm = envelope.arm;
+            }
+            if(envelopes.data.length > 0)
+            {
+              rows.push([envelopes.data[0].arm, envelopes.data[0].weight,  'point { size: 1; shape-type: circle; fill-color: black; }', null, null, null]);
+            }
+            if(Object.keys(fuelWeights).length == 2)
+            {
+                rows.push([fuelWeights['atual']['arm'], null, null, fuelWeights['atual']['weight'], 'point { shape-type: star; shape-sides: 5; fill-color: red; shape-rotation: 45;}', '{!cgAtual}']);
+                rows.push([fuelWeights['zero']['arm'], null, null, fuelWeights['zero']['weight'], 'point { size: 8; shape-type: star; shape-sides: 5; fill-color: black; shape-rotation: 45;}', '{!cgZeroComb}']);
+            }
+            data.addRows(rows);
+            var options = 
+            {
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'in millions of dollars (USD)'
+                },
+                legend: { position: 'bottom' },
+                height: 400,
+                hAxis: {
+                  title: '{!braco}',
+                  minValue: minArm-5, 
+                  maxValue: maxArm+5
+                },
+                vAxis: {
+                  title: '{!peso}'
+                },
+                pointSize: 15,
+                series: 
+                {
+                  0 : 
+                  {
+                    color: '#68FF64'
+                  },
+                  1 : 
+                  {
+                    color: 'red',
+                    pointShape: 'star'
+                  },
+                  2 : 
+                  {
+                    color: 'black',
+                    pointShape: 'star'
+                  },
+                  3 : 
+                  {
+                    color: '#2B277D',
+                    pointShape: 'star'
+                  }
+                }
+            };
+            var chart = new google.visualization.LineChart(document.getElementById('chart'));
+            chart.draw(data, options);
+          }
+        </script>
+      </head>
+      <body>
+        <div class="center" id="chart"></div>
+      </body>
+</apex:component>

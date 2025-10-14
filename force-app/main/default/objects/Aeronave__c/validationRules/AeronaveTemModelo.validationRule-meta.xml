@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AeronaveTemModelo</fullName>
+    <active>true</active>
+    <description>Aeronave deve possuir modelo, regra criada para tratar o fato de não poder criar um mestre detalhes com produto</description>
+    <errorConditionFormula>ISBLANK( ModeloAeronave__c )</errorConditionFormula>
+    <errorMessage>Uma aeronave deve possuir um modelo</errorMessage>
+</ValidationRule>

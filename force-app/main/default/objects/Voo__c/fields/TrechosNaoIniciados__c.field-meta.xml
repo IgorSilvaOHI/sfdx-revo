@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrechosNaoIniciados__c</fullName>
+    <description>Indica a quantidade trechos do voo que ainda não foram iniciados e permitem a atualização de dados</description>
+    <inlineHelpText>Indica a quantidade trechos do voo que ainda não foram iniciados</inlineHelpText>
+    <label>Trechos Não Iniciados</label>
+    <summaryFilterItems>
+        <field>Trecho__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Não Iniciado</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Trecho__c.Voo__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

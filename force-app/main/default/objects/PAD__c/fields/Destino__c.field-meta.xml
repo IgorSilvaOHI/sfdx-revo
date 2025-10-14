@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Destino__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Local de destino para os voos do PAD</description>
+    <inlineHelpText>Local de destino para os voos do PAD</inlineHelpText>
+    <label>Destino</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Local__c.Tipo__c</field>
+            <operation>equals</operation>
+            <value>Offshore</value>
+        </filterItems>
+        <infoMessage>Pesquise  uma unidade marítima de destino</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Local__c</referenceTo>
+    <relationshipLabel>Destino PAD</relationshipLabel>
+    <relationshipName>DestinoPAD</relationshipName>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

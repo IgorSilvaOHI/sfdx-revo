@@ -1,0 +1,36 @@
+.table-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.slds-button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  .documento {
+    line-height: 1;
+    display: block;
+  }
+
+  .nome {
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-size: 0.7rem;
+  }
+
+  .tipo-documento {
+    font-weight: 600;
+    font-size: 0.6rem;
+  }
+
+  .numero-documento {
+    font-weight: 500;
+    font-size: 0.7rem;
+  }
+}

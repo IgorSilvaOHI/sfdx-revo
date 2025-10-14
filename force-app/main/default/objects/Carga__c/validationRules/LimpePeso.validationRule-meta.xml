@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LimpePeso</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED( NoShow__c ),
+NoShow__c,
+NOT(ISBLANK(Peso__c)))</errorConditionFormula>
+    <errorDisplayField>NoShow__c</errorDisplayField>
+    <errorMessage>Limpe o campo Peso</errorMessage>
+</ValidationRule>

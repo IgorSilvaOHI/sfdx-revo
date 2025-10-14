@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RaioConsiderado__c</fullName>
+    <description>Qualquer ponto que venha do log que esteja localizado, no máximo, nesse raio de distância de um local, será considerado que o log é referente a aquele local.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Qualquer ponto que venha do log que esteja localizado, no máximo, nesse raio de distância de um local, será considerado que o log é referente a aquele local.</inlineHelpText>
+    <label>Raio considerado (Milhas náuticas)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

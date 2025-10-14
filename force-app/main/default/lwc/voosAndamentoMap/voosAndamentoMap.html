@@ -1,0 +1,17 @@
+<template>
+  <template if:true={showMap}>
+    <div class="map-container">
+      <lightning-button-icon
+        class="expand-button"
+        onclick={handleMap}
+        icon-name={utilityMapIcon}
+        variant="brand"
+        size="medium"
+        alternative-text="Expand/Contract"
+      ></lightning-button-icon>
+      <iframe class="frame" style="width: 100%;" src={iframeUrl}></iframe>
+
+      <!-- <div class="map-root" lwc:dom="manual"></div> -->
+    </div>
+  </template>
+</template>

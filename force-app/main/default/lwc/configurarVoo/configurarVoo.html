@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-is-relative">
+        <lightning-datatable
+            key-field="Position"
+            data={data}
+            columns={getColums}
+            selected-rows={selectedRows}
+            onrowselection={onrowselected}
+            onsave={handleSave}
+            draft-values={draftValues}
+            oncellchange={handleCellChange}>
+        </lightning-datatable>
+        <template if:true={isLoading}>
+            <div class="grid-area-height">
+                <div class="slds-spinner_container">
+                    <lightning-spinner variant="brand" alternative-text="Loading...">
+                    </lightning-spinner>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

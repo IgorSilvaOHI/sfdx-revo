@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckinFinalizadoPesoPassageiros</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(StatusAtendimento__c),
+TEXT(StatusAtendimento__c) == &apos;Pesagem Finalizada&apos;,
+ (QtdPassageirosEmbarcando__c &lt;&gt;
+ QtdCheckIn__c -(QtdNoShow__c + QtdPassageirosTransferidos__c + QtdRetirado__c)))</errorConditionFormula>
+    <errorMessage>Informe o peso dos passageiros</errorMessage>
+</ValidationRule>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campo__c</fullName>
+    <label>Campo</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Antecedencia</fullName>
+                <default>false</default>
+                <label>Antecedência (em dias)</label>
+            </value>
+            <value>
+                <fullName>CatalogoPrecos</fullName>
+                <default>false</default>
+                <label>Catálogo de Preços</label>
+            </value>
+            <value>
+                <fullName>Cliente</fullName>
+                <default>false</default>
+                <label>Cliente</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data do Voo</label>
+            </value>
+            <value>
+                <fullName>Destino1</fullName>
+                <default>false</default>
+                <label>Destino 1</label>
+            </value>
+            <value>
+                <fullName>Destino2</fullName>
+                <default>false</default>
+                <label>Destino 2</label>
+            </value>
+            <value>
+                <fullName>Destino3</fullName>
+                <default>false</default>
+                <label>Destino 3</label>
+            </value>
+            <value>
+                <fullName>DiaSemana</fullName>
+                <default>false</default>
+                <label>Dia da Semana</label>
+            </value>
+            <value>
+                <fullName>Duracao</fullName>
+                <default>false</default>
+                <label>Duração do Voo</label>
+            </value>
+            <value>
+                <fullName>Hora</fullName>
+                <default>false</default>
+                <label>Hora de Início</label>
+            </value>
+            <value>
+                <fullName>Modelo</fullName>
+                <default>false</default>
+                <label>Modelo da Aeronave</label>
+            </value>
+            <value>
+                <fullName>Origem</fullName>
+                <default>false</default>
+                <label>Origem</label>
+            </value>
+            <value>
+                <fullName>Retorno</fullName>
+                <default>false</default>
+                <label>Retorno</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-tabset>
+        <template for:each={previewData} for:item="sheet">
+            <lightning-tab key={sheet.id} label={sheet.label}>
+                <div class="slds-scrollable_y" style="height: 250px;">
+                    <lightning-datatable
+                        key-field="id"
+                        data={sheet.data}
+                        columns={sheet.columns}
+                        column-widths-mode="auto"
+                        hide-checkbox-column
+                    ></lightning-datatable>
+                </div>
+            </lightning-tab>
+        </template>
+    </lightning-tabset>
+</template>

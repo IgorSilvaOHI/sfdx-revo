@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personalizada</fullName>
+    <fields>Name</fields>
+    <fields>TabulacaoPai__c</fields>
+    <fields>ProximaTabulacao__c</fields>
+    <label>Personalizada</label>
+</CompactLayout>

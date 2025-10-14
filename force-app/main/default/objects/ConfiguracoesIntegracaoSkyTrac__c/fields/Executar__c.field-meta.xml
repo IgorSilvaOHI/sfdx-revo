@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executar__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Define se vai executar o agendamento para verificar se voo foi finalizado ao fim do rastreamento</description>
+    <inlineHelpText>Define se vai executar o agendamento para verificar se voo foi finalizado ao fim do rastreamento</inlineHelpText>
+    <label>Executar</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

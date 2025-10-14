@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multas_com_Defesa_Recusada</fullName>
+    <columns>NAME</columns>
+    <columns>DataOcorrencia__c</columns>
+    <columns>Base__c</columns>
+    <columns>Aeronave__c</columns>
+    <columns>ValorReal__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Defesa Recusada</value>
+    </filters>
+    <label>Multas com Defesa Recusada</label>
+</ListView>

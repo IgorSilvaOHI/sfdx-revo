@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataRemocaoPreReserva__c</fullName>
+    <description>Data para disparo da ação agendada que retorna um voo do status pré-reserva para rascunho considerando configuração personalizada de tempo e 1 hora adicional para agendar no process builder</description>
+    <inlineHelpText>Data para disparo da ação agendada que retorna um voo do status pré-reserva para rascunho</inlineHelpText>
+    <label>Data de remoção da pré-reserva</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Idioma__c</fullName>
+    <description>Idiomas para o texto de termos e condições.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Idiomas para o texto de termos e condições.</inlineHelpText>
+    <label>Idioma</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>pt_BR</fullName>
+                <default>true</default>
+                <label>Português (Brasil)</label>
+            </value>
+            <value>
+                <fullName>en_US</fullName>
+                <default>false</default>
+                <label>Inglês</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

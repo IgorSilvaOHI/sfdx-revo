@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoAtribuicao__c</fullName>
+    <label>Tipo Atribuição</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Criador do Caso</fullName>
+                <default>false</default>
+                <label>Criador do Caso</label>
+            </value>
+            <value>
+                <fullName>Fila Salesforce</fullName>
+                <default>false</default>
+                <label>Fila Salesforce</label>
+            </value>
+            <value>
+                <fullName>Regra de Atribuição</fullName>
+                <default>false</default>
+                <label>Regra de Atribuição</label>
+            </value>
+            <value>
+                <fullName>Proprietário da Conta</fullName>
+                <default>false</default>
+                <label>Proprietário da Conta</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

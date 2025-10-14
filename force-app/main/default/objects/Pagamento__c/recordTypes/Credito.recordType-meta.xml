@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credito</fullName>
+    <active>true</active>
+    <label>Crédito</label>
+    <picklistValues>
+        <picklist>StatusPagamento__c</picklist>
+        <values>
+            <fullName>Cancelado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Efetuado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faturado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoVoucher__c</picklist>
+        <values>
+            <fullName>Valor Aberto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valor Fechado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

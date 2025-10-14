@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TemLocalMovel__c</fullName>
+    <description>Informa de tem locais móveis no trecho</description>
+    <formula>OR(
+				ISPICKVAL(Origem__r.Categoria__c, &apos;Sonda&apos;),
+				ISPICKVAL(Origem__r.Categoria__c, &apos;Sísmica&apos;),
+				ISPICKVAL(Destino__r.Categoria__c, &apos;Sonda&apos;),
+				ISPICKVAL(Destino__r.Categoria__c, &apos;Sísmica&apos;),
+				ISPICKVAL(Origem__r.Categoria__c, &apos;PLSV&apos;),
+				ISPICKVAL(Origem__r.Categoria__c, &apos;UMS&apos;),
+				ISPICKVAL(Destino__r.Categoria__c, &apos;PLSV&apos;),
+				ISPICKVAL(Destino__r.Categoria__c, &apos;UMS&apos;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tem Local Móvel</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

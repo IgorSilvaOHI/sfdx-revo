@@ -1,0 +1,30 @@
+<template>
+    <div class="custom-datatable-no-hover slds-is-relative">
+        <lightning-tabset>
+            <template for:each={voosModeloPorData} for:item="voosModelo">
+                <lightning-tab label={voosModelo.dataFormatada} key={voosModelo.data}>
+                    <c-malha-voo-datatable
+                        key-field="modeloCode"
+                        data={voosModelo.voos}
+                        column-widths-mode="auto"
+                        columns={voosModelo.colunas}
+                        hide-checkbox-column="true"
+                        class="slds-no-row-hover"
+                        oncellevent={handleCellEvent}>
+                    </c-malha-voo-datatable>
+                </lightning-tab>
+            </template>
+        </lightning-tabset>
+        <template if:true={gridLoadedEmpty}>
+            <c-svg-search-data text="Nenhum voo encontrado..."> </c-svg-search-data>
+        </template>
+        <template if:false={gridLoaded}>
+            <div class="grid-area-height">
+                <div class="slds-spinner_container">
+                    <lightning-spinner variant="brand" alternative-text="Loading...">
+                    </lightning-spinner>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>preenchaPeso</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED( CheckIn__c ),
+CheckIn__c ,
+ISBLANK(Peso__c))</errorConditionFormula>
+    <errorDisplayField>CheckIn__c</errorDisplayField>
+    <errorMessage>Preencha o campo Peso</errorMessage>
+</ValidationRule>

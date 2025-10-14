@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL_Pesquisa_Passageiro__c</fullName>
+    <description>Link para Pesquisa de Satisfação do Passageiro</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link para Pesquisa de Satisfação do Passageiro</inlineHelpText>
+    <label>URL Pesquisa Passageiro</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

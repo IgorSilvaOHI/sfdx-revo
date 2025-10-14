@@ -1,0 +1,5 @@
+<aura:component
+  implements="force:lightningQuickActionWithoutHeader,lightning:availableForFlowActions"
+>
+  <aura:attribute name="availableActions" type="String[]" />
+</aura:component>

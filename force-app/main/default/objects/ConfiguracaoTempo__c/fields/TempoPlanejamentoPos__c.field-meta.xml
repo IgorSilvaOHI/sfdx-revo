@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoPlanejamentoPos__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Número inteiro que representa em minutos o tempo mínimo para que aquela aeronave esteja pronta para efetuar um novo voo</inlineHelpText>
+    <label>Entre Voos - ShuttleSeat (Pós)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

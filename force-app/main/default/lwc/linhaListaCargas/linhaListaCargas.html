@@ -1,0 +1,28 @@
+<template>
+  <div class="linha-lista-cargas">
+    <div class="table-item" title={carga.Name}>
+      {carga.Identificacao__c} - {carga.Profundidade__c}cm x {carga.Largura__c}cm x
+      {carga.Altura__c}cm, {carga.Peso__c}kg
+    </div>
+    <template if:true={principal}>
+      <div></div>
+    </template>
+    <template if:false={principal}>
+      <div class="quantidade">
+        <input type="number" value={carga.Quantidade__c} class="slds-input" onchange={handleQuantidade} />
+      </div>
+    </template>
+    <div class="action-button">
+      <template if:false={smallScreen}>
+        <lightning-button icon-position="right" icon-name={buttonIcon} label={buttonLabel} title={buttonTitle}
+          variant={buttonVariant} onclick={handleClick}></lightning-button>
+      </template>
+      <template if:true={smallScreen}>
+        <div class={iconClass}>
+          <lightning-button-icon icon-name={buttonIcon} alternative-text={buttonLabel} variant="bare-inverse"
+            onclick={handleClick}></lightning-button-icon>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

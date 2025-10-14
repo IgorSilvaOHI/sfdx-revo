@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QtdDiasEnvioNovaPesquisaSatisfacao__c</fullName>
+    <description>Quantos dias devo esperar até que deva enviar uma nova pesquisa de satisfação ao contratante</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Quantos dias devo esperar até que deva enviar uma nova pesquisa de satisfação ao contratante</inlineHelpText>
+    <label>Qtd Dias Envio Nova Pesquisa Satisfação</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

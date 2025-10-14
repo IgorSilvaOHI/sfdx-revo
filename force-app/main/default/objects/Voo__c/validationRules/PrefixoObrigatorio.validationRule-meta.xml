@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrefixoObrigatorio</fullName>
+    <active>true</active>
+    <description>Se o status do voo for diferente de cancelado, rascunho, pré-reservado ou reservado, é obrigatório o voo ter um prefixo definido.</description>
+    <errorConditionFormula>AND(TEXT(Status__c) != &apos;Cancelado&apos;,
+     TEXT(Status__c) != &apos;Rascunho&apos;,
+				 TEXT(Status__c) != &apos;Pré-reservado&apos;,
+     TEXT(Status__c) != &apos;Reservado&apos;,
+     ISBLANK( Prefixo__c ),
+     ISBLANK(  DescricaoIndisponibilidade__c )
+)</errorConditionFormula>
+    <errorMessage>Se o status do voo for diferente de cancelado, rascunho ou reservado, é obrigatório o voo ter um prefixo definido.</errorMessage>
+</ValidationRule>

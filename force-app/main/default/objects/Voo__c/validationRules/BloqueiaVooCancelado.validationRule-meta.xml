@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BloqueiaVooCancelado</fullName>
+    <active>true</active>
+    <description>Não permite reativar um voo que foi cancelado</description>
+    <errorConditionFormula>AND(
+NOT(IgnorarTrigger__c),			
+ISPICKVAL(PRIORVALUE(Status__c), &apos;Cancelado&apos;),
+NOT(ISPICKVAL(Status__c, &apos;Cancelado&apos;))
+    )</errorConditionFormula>
+    <errorMessage>Este voo foi cancelado</errorMessage>
+</ValidationRule>

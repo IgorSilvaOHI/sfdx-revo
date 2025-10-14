@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusAtendimento__c</fullName>
+    <label>Status do atendimento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nao Iniciado</fullName>
+                <default>true</default>
+                <label>Não Iniciado</label>
+            </value>
+            <value>
+                <fullName>Pesagem Iniciada</fullName>
+                <default>false</default>
+                <label>Checkin Aberto</label>
+            </value>
+            <value>
+                <fullName>Pesagem Finalizada</fullName>
+                <default>false</default>
+                <label>Checkin Finalizado</label>
+            </value>
+            <value>
+                <fullName>Ajuste Solicitado</fullName>
+                <default>false</default>
+                <label>Ajuste Solicitado</label>
+            </value>
+            <value>
+                <fullName>MTA Liberado</fullName>
+                <default>false</default>
+                <label>Impressão MTA Liberada</label>
+            </value>
+            <value>
+                <fullName>Passageiros Prontos</fullName>
+                <default>false</default>
+                <label>Passageiros Prontos</label>
+            </value>
+            <value>
+                <fullName>Embarque Autorizado</fullName>
+                <default>false</default>
+                <label>Embarque Autorizado</label>
+            </value>
+            <value>
+                <fullName>Passageiros Embarcados</fullName>
+                <default>false</default>
+                <label>Passageiros Embarcados</label>
+            </value>
+            <value>
+                <fullName>Ajuste</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ajuste</label>
+            </value>
+            <value>
+                <fullName>Ajuste Realizado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ajuste Realizado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

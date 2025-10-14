@@ -1,0 +1,342 @@
+<apex:page standardController="Opportunity" renderAs="pdf" applyBodyTag="false" showHeader="false" extensions="GeraPDFOportunidadeController">
+    <apex:variable var="lineItems" value="{!Opportunity.OpportunityLineItems}" />
+    
+    <style>
+     div {
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+     
+     /* Logo do footer */
+     .logo-footer {
+         width: 120px !important;
+         height: auto !important;
+     }
+
+    /* Fix para larguras das colunas da tabela section-table-c */
+    .section-table-c table {
+        table-layout: fixed !important;
+        width: 100% !important;
+    }
+     
+     .section-table-c th,
+     .section-table-c td {
+         box-sizing: border-box !important;
+         width: 20% !important;
+     }
+     
+     .section-table-c th:first-child,
+     .section-table-c td:first-child {
+         width: 20% !important;
+     }
+     
+     .section-table-c th:nth-child(2),
+     .section-table-c td:nth-child(2) {
+         width: 20% !important;
+     }
+     
+     .section-table-c th:nth-child(3),
+     .section-table-c td:nth-child(3) {
+         width: 20% !important;
+     }
+     
+     .section-table-c th:nth-child(4),
+     .section-table-c td:nth-child(4) {
+         width: 20% !important;
+     }
+     
+     .section-table-c th:nth-child(5),
+     .section-table-c td:nth-child(5) {
+         width: 20% !important;
+     }
+
+    </style>
+
+    <div class="header" style="width: 100%;">
+        <div style="width: 100%; float: left; text-align: center;">
+            <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f; font-size: 22px;"> Proposta Comercial </h1>
+        </div>
+        <div>
+            <div style="width: 50%; float: left; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f; font-size: 12px;">
+                <h1 style="font-size: 12px;"> 
+                    Data de emissão: &nbsp; 
+                	<apex:outputText value="{0,date,dd/MM/yyyy}" style="font-size: 12px;">
+                        <apex:param value="{!TODAY()}" />
+                    </apex:outputText> 
+                </h1>
+            </div>
+            <div style="width: 50%; float: right; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f; font-size: 12px; text-align: right;">
+                <h1 style="font-size: 12px;"> 
+                    Validade da proposta: &nbsp;
+                    <apex:outputText value="{0,date,dd/MM/yyyy}" style="font-size: 12px;">
+                        <apex:param value="{!Opportunity.CloseDate}" />
+                    </apex:outputText> 
+                </h1>
+                
+            </div>
+            
+        </div>
+        <div class="logo-container" style="float: left; width: 40%; margin-top: 40px;">
+
+            <apex:image url="{!imageUrl}" style="width: 250px; height: auto; margin-left: -45px;" alt="Logo REVO" rendered="{!hasLogo}" />
+            
+            
+            <apex:outputText value="Logo Revo" styleClass="logo-placeholder" rendered="{!NOT(hasLogo)}" />
+        </div>
+
+        <div class="cliente-container" style="float: left; width: 60%; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 40px;">
+            <table style="width: 100%">
+                <tr>
+                    <th style="width: 100%; height: 45px; text-align: center; background: #e4e4e4; font-size: 20px; padding: 10px; color: #5f5f5f" colspan="2">Dados do cliente</th>
+                </tr>
+                <tr>
+                    <th style="width: 50%; height: 45px; background: #e4e4e4; padding: 10px; color: #5f5f5f; font-size: 13px;">Nome/Razão Social</th>
+                    <th style="width: 50%; height: 45px; background: #e4e4e4; padding: 10px; color: #5f5f5f; font-size: 13px;">CPF/CNPJ</th>
+                </tr>
+                <tr>
+                    <td style="width: 50%; height: 45px; padding: 10px; color: #5f5f5f; font-size: 13px; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc;">{!Opportunity.Account.Name}</td>
+                    <td style="width: 50%; height: 45px; padding: 10px; color: #5f5f5f; font-size: 13px; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc;">{!Opportunity.Account.NumeroDocumento__pc}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="sub-header" style="width: 100%; float: left; margin-top: 70px;">
+        <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f">Segue a proposta comercial com o valor para o serviço solicitado.</span><br/><br/>
+        <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f;">Importante lembrar que a confirmação do voo está sujeita a disponibilidade no momento do aceite formal das condições descritas abaixo.</span>
+    </div>
+
+    <!-- Tabela de Dados da Oportunidade -->
+    <div class="section-table-a" style="width: 100%; float: left;">
+        <apex:outputPanel rendered="{!hasH135Model}">
+            <table style="width: 100%; margin-top: 70px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                <tr style=" color: #5f5f5f">
+                    <th style="width: 50%; height: 45px; background: #e4e4e4; padding: 10px; color: #5f5f5f">Modelo: Airbus Helicopters H135</th>
+                    <th style="width: 50%; height: 45px; background: #e4e4e4; padding: 10px; color: #5f5f5f">Passageiros: 5</th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <apex:image url="{!h135ExteriorUrl}" style="width: 100%; height: auto;" alt="H135 Exterior" rendered="{!NOT(ISNULL(h135ExteriorUrl))}"/>
+                        <apex:outputText value="Imagem H135 Exterior" rendered="{!ISNULL(h135ExteriorUrl)}"/>
+                    </td>
+                    <td style="text-align: center;">
+                        <apex:image url="{!h135InteriorUrl}" style="width: 100%; height: auto;" alt="H135 Interior" rendered="{!NOT(ISNULL(h135InteriorUrl))}"/>
+                        <apex:outputText value="Imagem H135 Interior" rendered="{!ISNULL(h135InteriorUrl)}"/>
+                    </td>
+                </tr>
+            </table>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #3d3d3d; font-size: 9px;">* Imagens meramente ilustrativas</p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!hasH155Model}">
+            <table style="width: 100%; margin-top: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                <tr style=" color: #5f5f5f">
+                    <th style="width: 50%; height: 45px; background: #e4e4e4; padding: 10px; color: #5f5f5f">Modelo: Airbus Helicopters H155</th>
+                    <th style="width: 50%; height: 45px; background: #e4e4e4; padding: 10px; color: #5f5f5f">Passageiros: 8</th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <apex:image url="{!h155ExteriorUrl}" style="width: 100%; height: auto;" alt="H155 Exterior" rendered="{!NOT(ISNULL(h155ExteriorUrl))}"/>
+                        <apex:outputText value="Imagem H155 Exterior" rendered="{!ISNULL(h155ExteriorUrl)}"/>
+                    </td>
+                    <td style="text-align: center;">
+                        <apex:image url="{!h155InteriorUrl}" style="width: 100%; height: auto;" alt="H155 Interior" rendered="{!NOT(ISNULL(h155InteriorUrl))}"/>
+                        <apex:outputText value="Imagem H155 Interior" rendered="{!ISNULL(h155InteriorUrl)}"/>
+                    </td>
+                </tr>
+            </table>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #3d3d3d; font-size: 9px;">* Imagens meramente ilustrativas</p>
+        </apex:outputPanel>
+    </div>
+
+    <div class="section-table-b" style="width: 100%; float: left;">
+        <table style="width: 100%; margin-top: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <tr>
+                <th style="width: 20%; height: 50px; background: #e4e4e4; padding: 10px; color: #5f5f5f; font-size: 13px;">Data/Hora</th>
+                <th style="width: 30%; height: 50px; background: #e4e4e4; padding: 10px; color: #5f5f5f; font-size: 13px;">De</th>
+                <th style="width: 35%; height: 50px; background: #e4e4e4; padding: 10px; color: #5f5f5f; font-size: 13px;">Para</th>
+                <th style="width: 15%; height: 50px; background: #e4e4e4; padding: 10px; color: #5f5f5f; font-size: 13px;">Aeronave</th>
+            </tr>
+            <apex:repeat value="{!lineItems}" var="item">
+                <apex:outputPanel rendered="{!NOT(ISNULL(item.ModeloSelecionado__c))}">
+                    <tr style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                        <td style="width: 20%; height: 115px; padding: 10px; border-bottom: 1px solid #CCCCCC; background: #fafafa; color: #5f5f5f">
+                            <apex:outputText value="{0,date,dd/MM/yyyy}" style="font-size: 12px;">
+                                <apex:param value="{!item.PrevisaoEmbarque__c}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="width: 30%; height: 115px; padding: 10px; border-bottom: 1px solid #CCCCCC; background: #fafafa; color: #5f5f5f">
+                            <apex:outputText rendered="{!ISNULL(item.Origem__r.CodigoLocal__c)}" value="ZZZZ" style="font-size: 12px;" /> 
+                            <apex:outputText rendered="{!NOT(ISNULL(item.Origem__r.CodigoLocal__c))}" value="{!item.Origem__r.CodigoLocal__c}" style="font-size: 12px;" /> 
+                            &nbsp; - &nbsp; 
+                            <apex:outputText value="{!item.Origem__r.Name}" style="font-size: 12px;" />
+                        </td>
+                        <td style="width: 35%; height: 115px; padding: 10px; border-bottom: 1px solid #CCCCCC; background: #fafafa; color: #5f5f5f">
+                            <apex:outputText rendered="{!ISNULL(item.Destino__r.CodigoLocal__c)}" value="ZZZZ" style="font-size: 12px;" /> 
+                            <apex:outputText rendered="{!NOT(ISNULL(item.Destino__r.CodigoLocal__c))}" value="{!item.Destino__r.CodigoLocal__c}" style="font-size: 12px;" /> 
+                            &nbsp; - &nbsp; 
+                            <apex:outputText value="{!item.Destino__r.Name}" style="font-size: 12px;" />
+                        </td>
+                        <td style="width: 15%; height: 115px; padding: 10px; border-bottom: 1px solid #CCCCCC; background: #fafafa; color: #5f5f5f">
+                            <apex:outputText value="{!item.ModeloSelecionado__r.Name}" style="font-size: 12px;" />
+                        </td>
+                    </tr> 
+                </apex:outputPanel>
+            </apex:repeat>
+
+        </table>
+    </div>
+
+    <div class="section-table-c" style="width: 100%; float: left;">
+        <table style="width: 100%; margin-top: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <tr>
+                <th style="width: 70%; height: 50px; padding: 10px; box-sizing: border-box; background: #e4e4e4; color: #5f5f5f; font-size: 13px;">Descrição</th>
+                <th style="width: 30%; height: 50px; padding: 10px; box-sizing: border-box; background: #e4e4e4; color: #5f5f5f; font-size: 13px;">Qtde</th>
+            </tr>
+            <apex:repeat value="{!lineItems}" var="item">
+                <apex:outputPanel rendered="{!ISNULL(item.ModeloSelecionado__c)}">
+                    <tr style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                        <td style="width: 470px; height: 60px; padding: 10px; box-sizing: border-box; border-bottom: 1px solid #CCCCCC; background: #fafafa; color: #5f5f5f; font-size: 12px;">
+                            <apex:outputText value="{!item.Product2.Name}" />
+                        </td>
+                        <td style="width: 190px; height: 60px; padding: 10px; box-sizing: border-box; border-bottom: 1px solid #CCCCCC; background: #fafafa; color: #5f5f5f; font-size: 12px; text-align: center;">
+                            <apex:outputText value="{!item.Quantity}" />
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+            </apex:repeat>
+        </table>
+    </div>
+
+    <div class="section-price" style="margin-top: 30px; width: 100%; float: left; background: #fafafa; padding: 12px 0; text-align: right; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <h1 id="valor-total" style="font-size: 18px; padding-right: 20px; color: #5f5f5f;">Valor total: 
+            <apex:outputField value="{!Opportunity.Amount}"/>
+        </h1>
+    </div>
+
+    <div class="section-text-info" style="width: 100%; float: left; margin-top: 60px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f; font-size: 15px;">
+        
+        <h1 style="font-size: 19px; margin-top: 100px;">
+            Informações importantes
+        </h1>
+
+        <p> 
+            1) A disponibilidade da aeronave está sujeita a confirmação após o aceite da proposta.
+            <br/><br/>2) A lista de passageiros, com nomes e dados dos seus documentos, deve ser enviada para a CONTRATADA no mínimo de 24 (vinte e quatro) horas antes do horário de partida do voo.
+            <br/><br/>3) Os passageiros devem comparecer no local de embarque com antecedência mínima de 15 (quinze) minutos e portar documento de Identificação com fé pública no Brasil.
+            <br/><br/>4) Condições de cancelamento
+            <br/><br/><span style="padding-left:25px;">Reservas de Assentos em voos compartilhados:</span>
+            <br/><span style="padding-left:25px;"></span>a) Menos de 24 (vinte e quatro) horas antes da partida programada: não ensejará direito a qualquer reembolso.
+            <br/><span style="padding-left:25px;"></span>b) Entre 24 (vinte e quatro) horas e 48 (quarenta e olto) horas antes da partida programada: você terá direito ao reembolso de 60% (sessenta porcento) do valor pago pela reserva.
+            <br/><span style="padding-left:25px;"></span>c) Cancelamento superior a 48 (quarenta e olto) horas: reembolso integral da reserva.
+            <br/><br/><span style="padding-left:25px;"></span>Fretamento integral de aeronave:
+            <br/><span style="padding-left:25px;"></span>a) Até 24 (vinte e quatro) horas antes da partida programada: você terá direito ao reembolso de 10% do valor do fretamento.
+            <br/><span style="padding-left:25px;"></span>b) Mais de 24 (vinte e quatro) horas e até 48 (quarento e olto) horas antes da partida programada: você terá direito ao reembolso de 50% (cinquenta porcento) do valor pago pela reserva.
+            <br/><span style="padding-left:25px;"></span>c) Mais de 48 (quarenta e oito) horas e até 96 (noventa e sels) horas antes da partida programada: você terá direito ao reembolso de 80% (cinquenta porcento) do valor pago pela reserva.
+            <br/><span style="padding-left:25px;"></span>d) Mais de 96 (noventa e sels) horas antes da partida programada você pode cancelar sua reserva de voo e receber o reembolso do valor integral do seu pedido.
+            <br/><br/>5) Em função do voo contratado, a capacidade de transporte de passageiros e bagagens poderá ter de ser reduzida conforme os pesos dos passageiros e respetivas bagagens, local de decolagem e 
+            de pouso e das condições meteorológicas e operacionais do voo, conforme análise dos OPERADORES.
+            <br/><br/>6) O voo será planejado e a aeronave preparada em função da quantidade de passageiros informada pela CONTRATANTE no momento da confirmação do voo. 
+            Qualquer alteração deverá ser comunicada com um minimo de 12 (doze) horas à CONTRATADA. Alterações não informadas poderão comprometer a realização do voo.
+            <br/><br/>7) De acordo ao Regulamento Brasileiro da Aviação Civil (RBAC) 175 é proibido o transporte em aeronaves civis de substâncias suscetívels de explodir, 
+            reagir perigosamente, produzir chamas ou produzir de maneira perigosa calor ou emissões de gases ou vapores tóxicos, corrosivos ou inflamávels nas condições 
+            que se observam habitualmente durante o transporte; São proibidos os seguintes itens: (I) qualsquer armas de fogo e outros dispositivos que disparem projeteis; 
+            (II) dispositivos neutralizantes; (ii) objetos pontiagudos ou cortantes; (IV) ferramenta e objetos contundentes que possam causar ferimentos graves; 
+            (v) substâncias e dispositivos explosivos ou Incendiários; substâncias químicas, tóxicas e outros Itens perigosos; (vi) substâncias ilícitas
+        </p>
+        <table class="table-substancias" style="width: 100%; margin-top: 50px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <tr>
+                <th style="text-align: center;">
+                    <apex:image url="{!corrosivosUrl}" style="width: 50px; height: 50px;" alt="Corrosivos" rendered="{!NOT(ISNULL(corrosivosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!explosivosUrl}" style="width: 50px; height: 50px;" alt="Explosivos" rendered="{!NOT(ISNULL(explosivosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!gasesUrl}" style="width: 50px; height: 50px;" alt="Gases" rendered="{!NOT(ISNULL(gasesUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!radioativosUrl}" style="width: 50px; height: 50px;" alt="Radioativos" rendered="{!NOT(ISNULL(radioativosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!liquidosUrl}" style="width: 50px; height: 50px;" alt="Líquidos Inflamáveis" rendered="{!NOT(ISNULL(liquidosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!miscelaneosUrl}" style="width: 50px; height: 50px;" alt="Miscelâneos" rendered="{!NOT(ISNULL(miscelaneosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!solidosUrl}" style="width: 50px; height: 50px;" alt="Sólidos Inflamáveis" rendered="{!NOT(ISNULL(solidosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!toxicosUrl}" style="width: 50px; height: 50px;" alt="Tóxicos e Infecciosos" rendered="{!NOT(ISNULL(toxicosUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!oxidantesUrl}" style="width: 50px; height: 50px;" alt="Oxidantes e Peróxidos" rendered="{!NOT(ISNULL(oxidantesUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!facaUrl}" style="width: 50px; height: 50px;" alt="Armas Brancas" rendered="{!NOT(ISNULL(facaUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!armaUrl}" style="width: 50px; height: 50px;" alt="Armas de Fogo" rendered="{!NOT(ISNULL(armaUrl))}"/>
+                </th>
+                <th style="text-align: center;">
+                    <apex:image url="{!tesouraUrl}" style="width: 50px; height: 50px;" alt="Objetos" rendered="{!NOT(ISNULL(tesouraUrl))}"/>
+                </th>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Corrosivos</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Explosivos</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Gases</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Radioativos</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Líquidos Inflamáveis</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Miscelâneos</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Sólidos Inflamáveis</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Tóxicos e Infecciosos</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Oxidantes e Peróxidos</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Armas Brancas</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Armas de Fogo</td>
+                <td style="text-align: center; padding: 5px; font-size: 10px;">Objetos</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section-pagamento" style="float: left; width: 100%; width: 100%; float: left; margin-top: 60px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f; font-size: 15px;">
+        <h1 style="font-size: 20px;">Formas de pagamento</h1>
+        <p>
+            O pagamento deve ser realizado até 3h a partir da confirmação da efetivação da reserva. 
+        </p>
+        <p>
+            As formas de pagamento aceitas são:
+        </p>
+        <h1 style="font-size: 14px;">
+            Cartão de crédito <br/>
+            Pix (chave) 43.773.140/0001-05 <br/>
+            Boleto bancário* <br/>
+        </h1>
+        <p style="font-size: 10px;">
+            *Consulte condições com seu executivo de vendas.
+        </p>
+    </div>
+
+    <div class="section-footer" style="float: left; width: 100%; width: 100%; float: left; margin-top: 60px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #5f5f5f; font-size: 15px;">
+        
+        <br/><br/><br/><br/><br/>
+        Atenciosamente, <br/>
+        
+        <table class="table-footer" style="width: 40%; margin-top: 60px; margin-left: -45px;">
+            <tr>
+                <td style="width: 35%; text-align: left;">
+                    <apex:image url="{!footerLogoUrl}" alt="Logo REVO" rendered="{!hasFooterLogo}" />
+                    <apex:outputText value="Logo Revo" styleClass="logo-placeholder" rendered="{!NOT(hasFooterLogo)}" />
+                </td>
+                <td style="width: 65%; text-align: left; padding-left: 10px; border-left: 1px solid #cccccc;">
+                    <div style="text-align: left; font-style: italic;">
+                        <div><apex:outputText value="{!Opportunity.Owner.Name}" style="font-size: 12px;"/></div>
+                        <div><apex:outputText value="{!Opportunity.Owner.Title}" style="font-size: 12px;"/></div>
+                        <div><apex:outputText value="{!Opportunity.Owner.Email}" style="font-size: 12px;"/></div>
+                        <div><apex:outputText value="{!Opportunity.Owner.Phone}" style="font-size: 12px;"/>/<apex:outputText value="{!Opportunity.Owner.MobilePhone}" style="font-size: 12px;"/></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</apex:page>

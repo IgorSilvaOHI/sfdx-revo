@@ -1,0 +1,95 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName"
+                access="global" controller="CaseHighLightCardController">
+    <aura:attribute name="case" type="Object" />
+    <aura:attribute name="account" type="Object" />
+    <aura:attribute name="contact" type="Object" />
+    <aura:attribute name="tipoCliente" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-card card" aura:id="card">
+        <div class="header-image"></div>
+        
+        <!-- avatar and info-->
+        <div class="">
+            <!-- avatar -->
+            <div class="slds-media_figure avatar">
+                <div class="customer-image-container">
+                    <img src="/_slds/images/themes/lightning_lite/lightning_lite_profile_avatar_160.png"
+                         class="customer-avatar"/>
+                </div>
+            </div>
+            
+            <!-- Name and Address -->
+            <div class="slds-media_body slds-m-bottom_medium slds-m-top_medium nameadress">
+                <aura:if isTrue="{!and(empty(v.contact.Name))}">
+                    <div class="slds-text-heading_small title-weight ft-16">
+                        Sem contato
+                    </div>
+                    <aura:set attribute="else">
+                        <div class="slds-text-heading_small title-weight ft-16">
+                            {!v.contact.Name}
+                        </div>
+                    </aura:set>
+                </aura:if>
+                
+                <aura:if isTrue="{!and(not(v.account.IsPersonAccount))}">
+                    <aura:if isTrue="{!and(empty(v.account.Name))}">
+                        <div class="slds-text-color_weak ft-14">Sem informação da conta</div>
+                        <aura:set attribute="else">
+                            <div class="slds-text-color_weak ft-14">{!v.account.Name}</div>
+                        </aura:set>
+                    </aura:if>
+                </aura:if>
+            </div>
+            
+            <div class="slds-media_body slds-m-bottom_medium slds-m-top_medium select-humor">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem size="4"
+                                          padding="around-small"
+                                          class="text-center icon-border red">
+                        <a class="custom-box bd-red"
+                           onclick="{!c.setHumorCliente}"
+                           id="badId"
+                           aura:id="badId">
+                            <lightning:icon iconName="utility:sentiment_negative"
+                                            size="small"
+                                            alternativeText="Insatisfeito"
+                                            class="csat-icon-negative" />
+                        </a>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4"
+                                          padding="around-small"
+                                          class="text-center icon-border yellow" >
+                        <a class="custom-box bd-yellow"
+                           onclick="{!c.setHumorCliente}"
+                           id="neutroId"
+                           aura:id="neutroId">
+                            <div class="custom-box">
+                                <lightning:icon iconName="utility:sentiment_neutral"
+                                                size="small"
+                                                alternativeText="Neutro"
+                                                class="csat-icon-neutral"
+                                                name="neutro" />
+                            </div>
+                        </a>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4"
+                                          padding="around-small"
+                                          class="text-center icon-border green" >
+                        <a class="custom-box bd-green"
+                           onclick="{!c.setHumorCliente}"
+                           id="goodId"
+                           aura:id="goodId">
+                            <div class="custom-box">
+                                <lightning:icon iconName="utility:smiley_and_people"
+                                                size="small"
+                                                alternativeText="Satisfeito"
+                                                class="csat-icon-positive" />
+                            </div>
+                        </a>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </div>
+    </div>
+</aura:component>

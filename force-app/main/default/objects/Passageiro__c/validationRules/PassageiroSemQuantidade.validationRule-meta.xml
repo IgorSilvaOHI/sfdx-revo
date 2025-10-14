@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PassageiroSemQuantidade</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+CheckIn__c, 
+ISBLANK(Peso__c),
+TEXT(Trecho__r.StatusAtendimento__c) == &apos;Pesagem Finalizada&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Peso__c</errorDisplayField>
+    <errorMessage>Preencha o peso.</errorMessage>
+</ValidationRule>

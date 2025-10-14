@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>REH_VITORIA</label>
+    <protected>false</protected>
+    <values>
+        <field>Origem_da_Carta__c</field>
+        <value xsi:type="xsd:string">http://geoaisweb.decea.gov.br/geoserver/ICA/ows?service=WMS&amp;request=GetMap&amp;layers=REH_VITORIA&amp;width=2048&amp;height=1600&amp;format=image/png&amp;TRANSPARENT=true&amp;bbox=-40.583333333333236,-20.58333333333849,-39.91660592239991,-20.08323063360515</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:type="xsd:string">../../../resource/1696520513000/REH_VITORIA?width=2048&amp;height=1600&amp;format=image/png&amp;TRANSPARENT=true&amp;bbox=-40.583333333333236,-20.58333333333849,-39.91660592239991,-20.08323063360515</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bloquei_Pagamento_a_Maior</fullName>
+    <active>true</active>
+    <errorConditionFormula>ValorPago__c &gt; ValorTotal__c</errorConditionFormula>
+    <errorMessage>Pagamento do Serviço não pode ser superior ao Valor do Serviço!</errorMessage>
+</ValidationRule>

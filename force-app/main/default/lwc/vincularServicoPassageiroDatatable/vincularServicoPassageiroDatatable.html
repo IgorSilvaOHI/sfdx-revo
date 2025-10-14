@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-box slds-box-without-border slds-theme_default">
+        <lightning-card class="slds-size_1-of-1">
+            <div slot="title" class="slds-media slds-media_center slds-has-flexi-truncate slds-size_1-of-1 slds-p-horizontal_small slds-p-top_x-small">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="custom:custom15" alternative-text="Produto de oportunidade" title="Produto de oportunidade" size="small"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h3 class="slds-card__header-title">
+                        <span>Serviços ({servicosLength})</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="slds-size_1-of-1 slds-is-relative">
+                <template if:false={isGridLoadedEmpty}>
+                    <lightning-datatable
+                        key-field="id"
+                        data={servicosVoo}
+                        columns={getColums}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column="true"
+                        show-row-number-column
+                        onrowselection={onrowselected}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>

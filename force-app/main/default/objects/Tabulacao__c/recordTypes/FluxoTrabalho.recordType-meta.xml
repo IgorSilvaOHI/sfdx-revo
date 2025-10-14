@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FluxoTrabalho</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Personalizada</compactLayoutAssignment>
+    <label>FluxoTrabalho</label>
+    <picklistValues>
+        <picklist>PermiteAtendimento__c</picklist>
+        <values>
+            <fullName>Cliente - Pessoa Física</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cliente - Pessoa Jurídica</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PrioridadeCasoPadrao__c</picklist>
+        <values>
+            <fullName>Alta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baixa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Média</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoAtribuicao__c</picklist>
+        <values>
+            <fullName>Criador do Caso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fila Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proprietário da Conta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regra de Atribuição</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoCasoPadrao__c</picklist>
+        <values>
+            <fullName>Elogio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reclamação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitação</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TipoFluxo__c</picklist>
+        <values>
+            <fullName>Atendimento Comercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Não Tabulado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Padrão</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

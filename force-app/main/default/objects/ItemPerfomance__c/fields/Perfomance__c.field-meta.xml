@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perfomance__c</fullName>
+    <label>Perfomance</label>
+    <referenceTo>Perfomance__c</referenceTo>
+    <relationshipLabel>Itens de perfomance</relationshipLabel>
+    <relationshipName>ItensPerfomance</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

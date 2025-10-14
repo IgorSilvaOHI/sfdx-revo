@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DestinoNaoPodeSerAlterado</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				NOT(ISNEW()),
+				ISCHANGED(Destino__c)
+)</errorConditionFormula>
+    <errorMessage>Não é possível alterar o destino de uma aerovia. Para realizar esse tipo de operação, exclua a aerovia e crie uma nova.</errorMessage>
+</ValidationRule>

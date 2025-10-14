@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TrechoPax</label>
+    <protected>false</protected>
+    <values>
+        <field>Ativo__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>AtualizarAutomaticamente__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>CampoBackup__c</field>
+        <value xsi:type="xsd:string">PaxSIGBackup__c</value>
+    </values>
+    <values>
+        <field>CampoCopiaSIGOmni__c</field>
+        <value xsi:type="xsd:string">NumPaxSIG__c</value>
+    </values>
+    <values>
+        <field>CampoSigTrip__c</field>
+        <value xsi:type="xsd:string">Pax__c</value>
+    </values>
+    <values>
+        <field>CampoVoeOmni__c</field>
+        <value xsi:type="xsd:string">NumPaxSIG__c</value>
+    </values>
+    <values>
+        <field>ObjetoSigtrip__c</field>
+        <value xsi:type="xsd:string">TrechoSigtrip__c</value>
+    </values>
+    <values>
+        <field>ObjetoVoeOmni__c</field>
+        <value xsi:type="xsd:string">Trecho__c</value>
+    </values>
+    <values>
+        <field>Tipo__c</field>
+        <value xsi:type="xsd:string">Number</value>
+    </values>
+</CustomMetadata>

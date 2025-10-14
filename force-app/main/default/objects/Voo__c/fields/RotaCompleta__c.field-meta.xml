@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RotaCompleta__c</fullName>
+    <description>Rota de execução do voo. Local 1 &gt; Local 2 &gt; Local 3</description>
+    <inlineHelpText>Rota de execução do voo. Local 1 &gt; Local 2 &gt; Local 3</inlineHelpText>
+    <label>Rota (Completa)</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

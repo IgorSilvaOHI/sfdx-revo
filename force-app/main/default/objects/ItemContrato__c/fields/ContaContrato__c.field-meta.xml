@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContaContrato__c</fullName>
+    <description>Id da conta do contrato</description>
+    <externalId>false</externalId>
+    <formula>Contrato__r.AccountId</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Id da conta do contrato</inlineHelpText>
+    <label>Conta do contrato</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

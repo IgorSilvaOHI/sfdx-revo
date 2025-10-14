@@ -1,0 +1,11 @@
+<template>
+    <lightning-modal-header label={modalLabel}></lightning-modal-header>
+    <lightning-modal-body>
+        <div class="slds-is-relative">
+            <lightning-flow
+                flow-api-name={flowApiName}
+                onstatuschange={handleStatusChange}>
+            </lightning-flow>
+        </div>
+     </lightning-modal-body>
+</template>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_do_Abastecimento__c</fullName>
+    <label>Motivo do Abastecimento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-fuelling</fullName>
+                <default>false</default>
+                <label>Pre-fuelling</label>
+            </value>
+            <value>
+                <fullName>Post-fuelling</fullName>
+                <default>false</default>
+                <label>Post-fuelling</label>
+            </value>
+            <value>
+                <fullName>Fuel supplier issues</fullName>
+                <default>false</default>
+                <label>Fuel supplier issues</label>
+            </value>
+            <value>
+                <fullName>Maintenance issues</fullName>
+                <default>false</default>
+                <label>Maintenance issues</label>
+            </value>
+            <value>
+                <fullName>Additional route legs to cover</fullName>
+                <default>false</default>
+                <label>Additional route legs to cover</label>
+            </value>
+            <value>
+                <fullName>Fuel top-up to avoid fueling offshore</fullName>
+                <default>false</default>
+                <label>Fuel top-up to avoid fueling offshore</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

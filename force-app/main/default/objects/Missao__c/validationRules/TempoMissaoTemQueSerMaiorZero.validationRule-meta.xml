@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoMissaoTemQueSerMaiorZero</fullName>
+    <active>true</active>
+    <description>Tempo de missão não pode ser vazio nem menor ou igual a zero</description>
+    <errorConditionFormula>isNull(TempoMissao__c) || TempoMissao__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>TempoMissao__c</errorDisplayField>
+    <errorMessage>Tempo de missão não pode ser vazio nem menor ou igual a zero</errorMessage>
+</ValidationRule>

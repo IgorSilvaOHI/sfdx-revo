@@ -1,0 +1,33 @@
+<template>
+  <div class={listaGridClass}>
+    <c-lista-contatos
+      class="lista-principal"
+      style="height: inherit;"
+      oncontatoclicked={handleClickListaPrincipal}
+      onfilterfocus={handleFilterFocus}
+      onlistaprincipalconnected={handleListaPrincipalConnected}
+      trecho-index={trechoSelecionado}
+      lista-completa={listaPrincipal}
+      principal
+      header={headerPrincipal}
+      screen-size={screenSize}
+      onnovopassageiro={handleNovoPassageiro}
+      filter-loading={isLoading}
+      use-order-by={dontUseOrderby}
+    ></c-lista-contatos>
+    <template if:false={isLoading}>
+      <c-lista-contatos
+        class="lista-secundaria"
+        style="height: inherit;"
+        oncontatoclicked={handleClickListaSecundaria}
+        trecho-index={trechoSelecionado}
+        onlistasecundariaconnected={handleListaSecundariaConnected}
+        lista-completa={listaSecundaria}
+        header={headerSecundario}
+        screen-size={screenSize}
+        filter-loading={isLoading}
+        use-order-by={useOrderby}
+      ></c-lista-contatos>
+    </template>
+  </div>
+</template>

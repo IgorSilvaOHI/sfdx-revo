@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoVoadoFaturamento__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+
+	ISPICKVAL(TipoHoraFaturamento__c, &apos;Decolagem-Pouso Navegação&apos;)	
+	,
+	(UNIXTIMESTAMP(Pouso__c)-MOD(UNIXTIMESTAMP(Pouso__c),60)) - (UNIXTIMESTAMP(Decolagem__c)-MOD(UNIXTIMESTAMP(Decolagem__c),60))
+	,
+	IF(ISPICKVAL(TipoHoraFaturamento__c, &apos;Decolagem-Pouso Integral&apos;)		
+		,
+			(UNIXTIMESTAMP(Pouso__c)-MOD(UNIXTIMESTAMP(Pouso__c),60))
+			- IF(ISBLANK(PousoTrechoAnterior__c)
+				, 
+				(UNIXTIMESTAMP(Decolagem__c)-MOD(UNIXTIMESTAMP(Decolagem__c),60))
+				, IF(NOT(ISBLANK(Ligado__c))
+					, (UNIXTIMESTAMP(Ligado__c)-MOD(UNIXTIMESTAMP(Ligado__c),60))
+					, (UNIXTIMESTAMP(PousoTrechoAnterior__c)-MOD(UNIXTIMESTAMP(PousoTrechoAnterior__c),60))) 
+					)
+		, 
+			IF( NOT(ISBLANK(Cut__c))
+				, (UNIXTIMESTAMP(Cut__c)-MOD(UNIXTIMESTAMP(Cut__c),60))
+				, (UNIXTIMESTAMP(Pouso__c)-MOD(UNIXTIMESTAMP(Pouso__c),60))) 
+				
+			- IF(NOT(ISBLANK(Ligado__c))
+				, (UNIXTIMESTAMP(Ligado__c)-MOD(UNIXTIMESTAMP(Ligado__c),60))
+				, (UNIXTIMESTAMP(PousoTrechoAnterior__c)-MOD(UNIXTIMESTAMP(PousoTrechoAnterior__c),60)) 
+			)
+
+		)
+	)/60</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tempo Voado Faturamento</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

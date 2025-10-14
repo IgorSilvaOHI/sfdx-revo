@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ItemExclusivoMEDVAC</fullName>
+    <active>true</active>
+    <description>Valida que para ser exclusivo MEDVAC o item deve possuir MEDVAC marcado</description>
+    <errorConditionFormula>AND(
+    ExclusivoMEDVAC__c,
+				NOT(MEDVAC__c)
+)</errorConditionFormula>
+    <errorDisplayField>ExclusivoMEDVAC__c</errorDisplayField>
+    <errorMessage>Para ser exclusivo o item deve contemplar MEDVAC</errorMessage>
+</ValidationRule>

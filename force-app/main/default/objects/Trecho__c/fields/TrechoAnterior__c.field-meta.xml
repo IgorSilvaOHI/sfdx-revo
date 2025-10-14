@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrechoAnterior__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Referência ao trecho anterior</description>
+    <inlineHelpText>Referência ao trecho anterior</inlineHelpText>
+    <label>Trecho Anterior</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Voo__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Voo__c</valueField>
+        </filterItems>
+        <infoMessage>Só pode ser Trecho Anterior outro do mesmo voo</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Trecho__c</referenceTo>
+    <relationshipLabel>Trechos</relationshipLabel>
+    <relationshipName>TrechoAnterior</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

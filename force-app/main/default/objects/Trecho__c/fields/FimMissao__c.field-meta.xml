@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FimMissao__c</fullName>
+    <description>Campo utilizado para receber o fim da missão pelo skytrac</description>
+    <inlineHelpText>Campo utilizado para receber o fim da missão pelo skytrac</inlineHelpText>
+    <label>Fim da Missão</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

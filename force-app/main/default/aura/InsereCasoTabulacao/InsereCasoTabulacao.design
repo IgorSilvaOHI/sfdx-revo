@@ -1,0 +1,7 @@
+<design:component >
+     
+    <design:attribute name="NameHeader" required="false"/>
+    <design:attribute name="PlaceHolder" required="false"/>
+    <design:attribute name="Interno" required="false"/>
+
+</design:component>

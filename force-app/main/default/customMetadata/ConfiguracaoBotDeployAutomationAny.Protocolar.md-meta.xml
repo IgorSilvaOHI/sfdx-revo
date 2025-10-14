@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Protocolar</label>
+    <protected>false</protected>
+    <values>
+        <field>AmbienteExecucao__c</field>
+        <value xsi:type="xsd:string">HML</value>
+    </values>
+    <values>
+        <field>EmailTo__c</field>
+        <value xsi:type="xsd:string">ti.sistemas@omnibrasil.com.br.invalid</value>
+    </values>
+    <values>
+        <field>FileId__c</field>
+        <value xsi:type="xsd:string">2233</value>
+    </values>
+    <values>
+        <field>RunAsUserIds__c</field>
+        <value xsi:type="xsd:string">2</value>
+    </values>
+    <values>
+        <field>URIRequisicao__c</field>
+        <value xsi:type="xsd:string">https://rpa.omnibrasil.com.br:47443/v3/wlm/queues/5/workitems</value>
+    </values>
+    <values>
+        <field>UsarFaturamentoID__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

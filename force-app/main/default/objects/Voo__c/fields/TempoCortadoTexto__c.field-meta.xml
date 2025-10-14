@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoCortadoTexto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				NOT(ISBLANK(TempoCorte__c)),
+				IF(
+								CEILING(MOD(TempoCorte__c ,60)) = 0 ||
+								CEILING(MOD(TempoCorte__c ,60)) = 60,
+								IF(
+												CEILING(MOD(TempoCorte__c ,60)) = 0,
+												TEXT(FLOOR(TempoCorte__c / 60))&amp;&apos;h&apos;,
+												TEXT(FLOOR(TempoCorte__c / 60)+1)&amp;&apos;h&apos;
+								),
+								TEXT(FLOOR(TempoCorte__c / 60))&amp;&apos;h &apos;&amp;
+								TEXT(CEILING(MOD(TempoCorte__c ,60)))&amp;&apos;min&apos;
+				)
+				,
+				&apos;0h 0min&apos;
+)</formula>
+    <label>Tempo Cortado</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

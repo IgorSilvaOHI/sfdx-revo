@@ -1,0 +1,46 @@
+<template>
+  <div style="display: grid; grid-template-columns: 3fr 2fr 1fr;">
+    <div class="slds-truncate table-item nome" title={contato.Name}>
+      <template if:true={possuiEmpresa}>
+        <lightning-helptext content={contato.Empresa__c} style="margin-right: .5rem; margin-top: -5px"></lightning-helptext>
+      </template>
+      {contato.Name}
+    </div>
+    <div class="slds-truncate table-item documento">
+      <template if:true={smallScreen}>
+        <template if:true={mostrarDocumento}>
+          <span class="tipo-documento">{contato.TipoDocumento__c}</span><br />
+          <span class="numero-documento">{contato.NumeroDocumento__c}</span>
+        </template>
+        <template if:false={mostrarDocumento}>
+          {customLabel.naoDefinido}
+        </template>
+      </template>
+      <template if:false={smallScreen}>
+        {documento}
+      </template>
+    </div>
+    <div class="td-button table-item">
+      <template if:false={smallScreen}>
+        <lightning-button
+          icon-position="right"
+          icon-name={buttonIcon}
+          label={buttonLabel}
+          title={buttonTitle}
+          variant={buttonVariant}
+          onclick={handleClick}
+        ></lightning-button>
+      </template>
+      <template if:true={smallScreen}>
+        <div class={iconClass}>
+          <lightning-button-icon
+            icon-name={buttonIcon}
+            alternative-text={buttonLabel}
+            variant="bare-inverse"
+            onclick={handleClick}
+          ></lightning-button-icon>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

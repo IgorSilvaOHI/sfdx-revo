@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CondicaoPagamento__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Condição de pagamento a ser vinculada com a conta</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Condição de pagamento a ser vinculada com a conta</inlineHelpText>
+    <label>Condição de Pagamento</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

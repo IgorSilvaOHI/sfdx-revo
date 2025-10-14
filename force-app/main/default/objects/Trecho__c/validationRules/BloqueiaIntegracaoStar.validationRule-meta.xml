@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BloqueiaIntegracaoStar</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				$Setup.ConfiguracoesGerais__c.IdPerfilIntegracaoStar__c = $Profile.Id,
+				OR(			
+								StatusVoo__c = &apos;Em Faturamento&apos;, 
+								StatusVoo__c = &apos;Faturado&apos;
+								)
+				)</errorConditionFormula>
+    <errorMessage>Integração não permitida no Status atual</errorMessage>
+</ValidationRule>

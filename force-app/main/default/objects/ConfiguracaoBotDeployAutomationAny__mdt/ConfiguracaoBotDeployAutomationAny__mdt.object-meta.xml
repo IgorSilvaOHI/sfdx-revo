@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Configuração para chamada da api Bot Deploy do Automation Anywhere</description>
+    <label>Configuração Bot Deploy Automation Any</label>
+    <pluralLabel>Configurações Bot Deploy Automation Any</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

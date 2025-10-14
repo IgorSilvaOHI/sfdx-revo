@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConclusaoInformada__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check que marca se o interessado na conclusão do voo já foi enviado</description>
+    <label>Conclusão Informada</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

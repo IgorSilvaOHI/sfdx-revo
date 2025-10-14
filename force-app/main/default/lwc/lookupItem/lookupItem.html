@@ -1,0 +1,15 @@
+<template>
+    <li style="margin-top: .5rem;" role="presentation" class="slds-listbox__item" onclick={handleClick}>
+        <div style="display: flex; align-items: center;"
+            class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta lista-item"
+            role="option">
+            <span class="slds-media__figure slds-listbox__option-icon">
+                <lightning-icon icon-name="standard:account" alternative-text={customLabel.contaLabel}>
+                </lightning-icon>
+            </span>
+            <span class="slds-m-left_x-small">
+                {conta.Name}
+            </span>
+        </div>
+    </li>
+</template>

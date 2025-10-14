@@ -1,0 +1,19 @@
+<template>
+    <input type="file"
+           class="slds-file-selector__input slds-assistive-text"
+           id="file-upload-input-01"
+           accept={acceptedMimeTypes}
+           onchange={handleFilesUploaded} />
+
+    <label class="slds-file-selector__body point" for="file-upload-input-01">
+        <span class="slds-button slds-button_neutral span-button btn-label">
+            <lightning-icon
+                    icon-name="utility:upload"
+                    size="x-small"
+                    alternative-text="Upload"
+                    class="slds-icon-utility-upload slds-icon_container slds-m-right_x-small"
+            ></lightning-icon>
+            {uploadButtonLabel}
+        </span>
+    </label>
+</template>

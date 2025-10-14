@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataNotificacaoInicio__c</fullName>
+    <description>Pegar data/hora para usar no process builder e notificar o início do voo</description>
+    <formula>IF( 
+				ISPICKVAL(Tipo__c, &apos;Translado&apos;),
+				PrevisaoDecolagem__c + (60 - $Setup.ConfiguracaoTempo__c.NotificacaoInicioVooComTranslado__c )/1440,
+				PrevisaoDecolagem__c + (60 - $Setup.ConfiguracaoTempo__c.NotificacaoInicioVooSemTranslado__c )/1440
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Pegar data/hora para usar no process builder e notificar o início do voo</inlineHelpText>
+    <label>Data notificação início</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

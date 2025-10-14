@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DescontoMinimo__c</fullName>
+    <description>Desconto mínimo a ser exibido na tela de listagem de aeronaves</description>
+    <inlineHelpText>Desconto mínimo a ser exibido na tela de listagem de aeronaves</inlineHelpText>
+    <label>Desconto Mínimo</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

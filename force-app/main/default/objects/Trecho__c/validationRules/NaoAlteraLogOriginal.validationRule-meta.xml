@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NaoAlteraLogOriginal</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(ISCHANGED(LigadoBackup__c), NOT(ISNULL(PRIORVALUE(LigadoBackup__c)))),
+AND(ISCHANGED(DecolagemBackup__c), NOT(ISNULL(PRIORVALUE(DecolagemBackup__c)))),
+AND(ISCHANGED(PousoBackup__c), NOT(ISNULL(PRIORVALUE(PousoBackup__c)))),
+AND(ISCHANGED(CutBackup__c), NOT(ISNULL(PRIORVALUE(CutBackup__c)))))</errorConditionFormula>
+    <errorMessage>Depois de preenchidos, campos de log original não devem ser alterados</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ARC_VITORIA</label>
+    <protected>false</protected>
+    <values>
+        <field>Origem_da_Carta__c</field>
+        <value xsi:type="xsd:string">https://geoaisweb.decea.mil.br/geoserver/ICA/ows?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;layers=ARC_VITORIA&amp;bbox=-41.447232982401175,-21.359936369342286,-39.10870899412765,-19.15238234802336&amp;width=1440&amp;height=2560&amp;format=image/png&amp;transparent=true</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:type="xsd:string">../../../resource/1696539012000/ARC_VITORIA?bbox=-41.447232982401175,-21.359936369342286,-39.10870899412765,-19.15238234802336</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusObrigatorio</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(TEXT(Status__c))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>O Status do Voo é obrigatório</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+   <targets>
+      <target>lightning__FlowScreen</target>
+   </targets>
+    <targetConfigs>
+    <targetConfig targets="lightning__FlowScreen">
+        <property name="conta" label="ContaId" type="String" role="inputOnly" />
+        <property name="origem" label="OrigemId" type="String" role="inputOnly"/>
+        <property name="destino" label="DestinoId" type="String[]" role="inputOnly"/>
+        <property name="diaVoo" label="DataVoo" type="DateTime" role="inputOnly" />
+        <property name="quantidadeAssentos" label="QuantidadeAssentos" type="Integer" role="inputOnly" />
+        <property name="codigoPromocional" label="CodigoPromocional" type="String" role="inputOnly" />
+        <property name="tipoVoo" label="TipoVoo" type="String" role="inputOnly" />
+        <property name="vooSelecionado" label="VooSelecionado" type="@salesforce/schema/OpportunityLineItem" role="outputOnly" />
+        <property name="vooSelecionadoServicos" label="VooSelecionadoServicos" type="@salesforce/schema/OpportunityLineItem[]" role="outputOnly" />
+    </targetConfig>
+ </targetConfigs>
+</LightningComponentBundle>

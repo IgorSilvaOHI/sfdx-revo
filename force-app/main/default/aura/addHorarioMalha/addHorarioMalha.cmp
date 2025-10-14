@@ -1,0 +1,47 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForAllPageTypes" access="global" controller="AddHorarioMalhaController">
+    <aura:attribute name="productOptions" type="List"/>
+    <aura:attribute name="malhaOptions" type="List"/>
+    <aura:attribute name="selectedProductId" type="String"/>
+    <aura:attribute name="selectedMalhaId" type="String"/>
+    <aura:attribute name="selectedDataHora" type="DateTime"/>
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+
+    <lightning:card title="Adicionar Horário Extra da Malha">
+
+        <aura:if isTrue="{! v.isLoading }">
+            <lightning:spinner size="small"/>
+        </aura:if>
+
+    <div class="slds-p-around_medium">
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-size_1-of-1">
+                <lightning:select name="produto" label="Produto" value="{! v.selectedProductId }" onchange="{! c.onProductChange }">
+                    <option value="">-- Selecione --</option>
+
+                    <aura:iteration items="{! v.productOptions }" var="opt">
+                        <option value="{! opt.value }">{! opt.label }</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1">
+                <lightning:select name="malha" label="Malha de Voo" value="{! v.selectedMalhaId }">
+
+                <option value="">-- Selecione --</option>
+                    <aura:iteration items="{! v.malhaOptions }" var="opt">
+                        <option value="{! opt.value }">{! opt.label }</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            <div class="slds-col slds-size_1-of-1">
+                <lightning:input type="datetime-local" name="dataHora" label="Data e Hora" value="{! v.selectedDataHora }" required="true"/>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-p-top_small">
+                <lightning:button variant="brand" label="Criar horário extra" onclick="{! c.onCreate }" disabled="{! v.isLoading }"/>
+            </div>
+        </div>
+    </div>
+
+    </lightning:card>
+</aura:component>

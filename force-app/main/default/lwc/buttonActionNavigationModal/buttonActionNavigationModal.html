@@ -1,0 +1,49 @@
+<template>
+    <lightning-modal-header label={title}></lightning-modal-header>
+    <lightning-modal-body>
+        <lightning-record-edit-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            data-id="recordForm"
+            onsuccess={handleSuccess}
+            record-type-id={recordTypeId}>
+            <template for:each={sections} for:item="section">
+                <div key={section.key} class="slds-section slds-is-open">
+                    <template if:true={section.label}>
+                        <h3 class="slds-section__title slds-theme_shade">    
+                            <span class="slds-truncate slds-p-horizontal_small" title={section.label}>{section.label}</span>
+                        </h3>
+                    </template>
+                    <div class="slds-section__content slds-p-horizontal_large">
+                        <template for:each={section.rows} for:item="row">
+                            <div key={row.key} class="slds-grid slds-wrap">
+                                <template for:each={row.items} for:item="item">
+                                    <div key={item.fieldName} class={item.cssClass}>
+                                        <lightning-input-field field-name={item.fieldName} value={item.value} required={item.required}></lightning-input-field>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            <input type="submit" class="hidden" style="display:none"/>
+        </lightning-record-edit-form>
+     </lightning-modal-body>
+     <lightning-modal-footer>
+         <div class="slds-size_1-of-1 slds-align_absolute-center">
+             <lightning-button
+                 class="slds-p-horizontal_xx-small"
+                 label="Cancelar"
+                 onclick={handleCloseTab}
+             ></lightning-button>
+             <lightning-button
+                 class="slds-p-horizontal_xx-small"
+                 onclick={handleExternalSubmit}
+                 label="Salvar"
+                 variant="brand"
+                 disabled={isLoading}
+             ></lightning-button>
+         </div>
+     </lightning-modal-footer>
+</template>

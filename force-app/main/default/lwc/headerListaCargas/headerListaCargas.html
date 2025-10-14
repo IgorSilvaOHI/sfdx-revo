@@ -1,0 +1,24 @@
+<template>
+  <div class="header-lista-carga">
+    <div class="full-header">
+      <div class="slds-text-heading_small header">
+        {header}
+      </div>
+      <template if:true={showNovaCarga}>
+        <lightning-button class="nova-carga" variant="brand" label="Nova" icon-name="utility:add" icon-position="right"
+          onclick={handleNovaCarga}>
+        </lightning-button>
+      </template>
+    </div>
+    <div class="table-header">
+      <span>{customLabel.identificacao}</span>
+      <template if:false={showNovaCarga}>
+        <span>{customLabel.quantidade}</span>
+      </template>
+      <template if:true={showNovaCarga}>
+        <div></div>
+      </template>
+      <div></div>
+    </div>
+  </div>
+</template>

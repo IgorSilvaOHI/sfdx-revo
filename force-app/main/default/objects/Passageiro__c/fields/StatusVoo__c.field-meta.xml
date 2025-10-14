@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusVoo__c</fullName>
+    <description>Replica o status do voo em passageiro</description>
+    <externalId>false</externalId>
+    <formula>Trecho__r.StatusVoo__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Replica o status do voo em passageiro</inlineHelpText>
+    <label>Status do Voo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

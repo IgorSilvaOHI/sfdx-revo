@@ -1,0 +1,19 @@
+.card-withoutborder-aeronave {
+    --lwc-spacingMedium:0rem;
+    --lwc-tableCellSpacing:0rem;
+    --slds-g-spacing-4:0rem;
+}
+
+.card-voo {
+    width: 180px;
+    min-height: 115px;
+    font-weight: var(--slds-g-font-weight-6);
+}
+
+.card-voo:hover{
+    box-shadow: var(--slds-g-color-brand-base-15) 0 0 0 2px inset;
+}
+
+.slds-table .slds-th__action {
+    text-align: center;
+}

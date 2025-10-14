@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DadosInconsistentesSigtrip__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Este campo tem por objetivo marcar os vôos com inconsistências no número de trechos entre vôo Omni e vôo Sigtrip antes de efetuar as conciliações.</description>
+    <inlineHelpText>Este campo tem por objetivo marcar os vôos com inconsistências no número de trechos entre vôo Omni e vôo Sigtrip antes de efetuar as conciliações.</inlineHelpText>
+    <label>Dados Inconsistentes Sigtrip</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

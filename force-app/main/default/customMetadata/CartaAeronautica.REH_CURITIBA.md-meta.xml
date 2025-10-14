@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>REH_CURITIBA</label>
+    <protected>false</protected>
+    <values>
+        <field>Origem_da_Carta__c</field>
+        <value xsi:type="xsd:string">https://geoaisweb.decea.mil.br/geoserver/ICA/ows?service=WMS&amp;request=GetMap&amp;layers=REH_CURITIBA&amp;width=2048&amp;height=1600&amp;format=image/png&amp;TRANSPARENT=true&amp;bbox=-49.55572909260407,-25.694466944906498,-49.01477578891885,-25.271688614068697</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:type="xsd:string">../../../resource/1696520046000/REH_CURITIBA?width=2048&amp;height=1600&amp;format=image/png&amp;TRANSPARENT=true&amp;bbox=-49.55572909260407,-25.694466944906498,-49.01477578891885,-25.271688614068697</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PassageiroVoo</fullName>
+    <active>true</active>
+    <description>Passageiro voo (PS. NÃO ALTERAR O RÓTULO)</description>
+    <label>PassageiroVoo</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Configurado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removido</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

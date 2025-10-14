@@ -1,0 +1,85 @@
+.THIS {
+  /*background-color: #f3f2f2 !important;*/
+  border: var(--lwc-borderWidthThin, 1px) solid
+    var(--lwc-cardColorBorder, rgb(221, 219, 218)) !important;
+}
+
+.THIS .slds-icon-utility-add {
+  background: #e66208;
+  width: 24px;
+  height: 24px;
+  padding-left: 4px;
+  color: white;
+}
+                
+.THIS .slds-icon-text-default {
+  fill: white;
+}
+                
+.THIS .slds-card__header {
+  padding: var(--lwc-varSpacingVerticalMedium, 1rem)
+    var(--lwc-varSpacingHorizontalMedium, 1rem) !important;
+}
+
+                            
+.THIS .item-iteration {
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(243, 242, 242);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /*cursor: pointer;*/
+}
+
+.THIS .tfc-link {
+  color: black;
+  text-decoration: none;
+}
+
+.THIS .slds-form-element__label:empty {
+  display: none;
+}
+
+.THIS .item-iteration:last-child {
+  border-bottom: 0;
+}
+
+.THIS .item-iteration:hover {
+  background: #e7e7e7;
+}
+
+.THIS .slds-text-heading_small {
+  font-weight: none;
+  font-size: 20px;
+}
+
+.THIS .tfc-input {
+  padding: var(--lwc-varSpacingHorizontalMedium, 1rem);
+  padding-top: 0px;
+}
+
+
+.THIS .tfc-input input::placeholder {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.THIS .tfc-header {
+  margin: 0;
+  /*background: #ddd;*/
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: var(--lwc-borderWidthThin) solid var(--lwc-cardColorBorder);
+}
+
+.THIS h2.slds-card__header-title {
+  font-weight: none;
+  font-size: 16px;
+}
+
+/*.THIS .tfc-results {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 4px 8px -5px;
+	margin-top: -2px;
+}*/

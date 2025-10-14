@@ -1,0 +1,27 @@
+<template>
+  <header class="voo-info">
+    <span class="slds-text-body_regular"
+      >{customLabel.voo}: {vooWrapper.voo.Name}</span
+    >
+    <span class="slds-text-body_regular"
+      >{customLabel.modeloAeronave}: {vooWrapper.voo.Modelo__c} /
+      {customLabel.payload}: {vooWrapper.voo.Payload__c}kg</span
+    >
+    <span class="slds-text-body_regular">
+      <lightning-formatted-text value={dataLabel}></lightning-formatted-text
+      >&nbsp;
+      <lightning-formatted-date-time
+        value={data}
+        year="numeric"
+        month="numeric"
+        day="numeric"
+        hour="2-digit"
+        minute="2-digit"
+        time-zone-name="short"
+      ></lightning-formatted-date-time>
+    </span>
+    <span class="slds-text-body_regular"
+      >{customLabel.rota}: {vooWrapper.voo.Rota__c}</span
+    >
+  </header>
+</template>

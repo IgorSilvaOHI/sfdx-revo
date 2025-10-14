@@ -1,0 +1,3 @@
+<apex:page standardcontroller="Aeronave__c" extensions="EnvelopeAeronaveController" showHeader="false">
+    <c:envelopeAeronaveCMP envelopeList="{!envelopes}" fuelWeightList="{!fuelWeights}"/>
+</apex:page>

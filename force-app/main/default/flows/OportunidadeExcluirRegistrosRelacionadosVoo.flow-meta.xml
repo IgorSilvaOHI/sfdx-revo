@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>SePossuiLocalRelacionado</name>
+        <label>Se possui local relacionado</label>
+        <locationX>182</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>SePossuiProdutoPassageiroRelacionado</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>PossuiLocal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ObterLocaisRelacionados</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ExcluirLocaisRelacionados</targetReference>
+            </connector>
+            <label>Possuí local?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SePossuiProdutoPassageiroRelacionado</name>
+        <label>Se possui produto passageiro relacionado</label>
+        <locationX>182</locationX>
+        <locationY>803</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>PossuiProdutoPassageiro</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Obter_produto_passageiros</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ExcluirProdutoPassageirosRelacionados</targetReference>
+            </connector>
+            <label>Possuí produto passageiro?</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Oportunidade: Excluir registros relacionados voo {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Produto Oportunidade]: Excluir registros relacionados voo</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>ExcluirLocaisRelacionados</name>
+        <label>Excluir locais relacionados</label>
+        <locationX>50</locationX>
+        <locationY>611</locationY>
+        <connector>
+            <targetReference>SePossuiProdutoPassageiroRelacionado</targetReference>
+        </connector>
+        <inputReference>ObterLocaisRelacionados</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <name>ExcluirProdutoPassageirosRelacionados</name>
+        <label>Excluir produto passageiros relacionados</label>
+        <locationX>50</locationX>
+        <locationY>911</locationY>
+        <inputReference>Obter_produto_passageiros</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Obter_produto_passageiros</name>
+        <label>Obter produto passageiros</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SePossuiLocalRelacionado</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProdutoOportunidade__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ProdutoPassageiro__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>ObterLocaisRelacionados</name>
+        <label>Obter locais relacionados</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Obter_produto_passageiros</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProdutoOportunidade__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>LocalOportunidade__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ObterLocaisRelacionados</targetReference>
+        </connector>
+        <object>OpportunityLineItem</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

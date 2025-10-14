@@ -1,0 +1,87 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" controller="Case360HighlightCardController">
+    <lightning:empApi aura:id="empApi" />
+    
+    <aura:attribute name="account" type="Object" />
+    <aura:attribute name="contact" type="Object" />
+    <aura:attribute name="isPersonAccount" type="Boolean" default="true" />
+    <aura:attribute name="tipoCliente" type="String" />
+    <aura:attribute name="humorCinza" type="Boolean" default="false" />
+    <aura:attribute name="humorNeutro" type="Boolean" default="false" />
+    <aura:attribute name="humorInsatisfeito" type="Boolean" default="false" />
+    <aura:attribute name="humorSatisfeito" type="Boolean" default="false" />
+    <aura:attribute name="accountFields" type="String[]" default="['Name','OwnerId']" />
+    <aura:attribute name="personAccountFields" type="String[]" default="['Name','PersonMobilePhone','PersonEmail','Phone','MeioPreferidoContato__pc','PersonTitle']" />
+    <aura:attribute name="contactFields" type="String[]" default="['Name','MobilePhone','Email','Phone','MeioPreferidoContato__c','Title']" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-card card" aura:id="card">
+        <div class="header-image"></div>
+        
+        <!-- avatar and info-->
+        <div class="">
+            
+            <!-- avatar -->
+            <div class="slds-media_figure avatar">
+                <div class="customer-image-container">
+                    <img src="/_slds/images/themes/lightning_lite/lightning_lite_profile_avatar_160.png" class="customer-avatar" />
+                    <!-- satisfaction level -->
+                    <div class="csat-indicator slds-p-right_medium">
+                        <aura:if isTrue="{!v.humorCinza}">
+                            <lightning:icon iconName="utility:sentiment_neutral" class="csat-icon" size="small"></lightning:icon>
+                        </aura:if>
+                        <aura:if isTrue="{!v.humorNeutro}">
+                            <lightning:icon iconName="utility:sentiment_neutral" class="csat-icon csat-icon-neutral" size="small"></lightning:icon>
+                        </aura:if>
+                        <aura:if isTrue="{!v.humorSatisfeito}">
+                            <lightning:icon iconName="utility:smiley_and_people" class="csat-icon csat-icon-positive" size="small"></lightning:icon>
+                        </aura:if>
+                        <aura:if isTrue="{!v.humorInsatisfeito}">
+                            <lightning:icon iconName="utility:sentiment_negative" class="csat-icon csat-icon-negative" size="small"></lightning:icon>
+                        </aura:if>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-media_body slds-m-left_medium slds-m-right_medium slds-m-top_medium">
+                <aura:if isTrue="{!v.isPersonAccount}"> </aura:if>
+                
+                <lightning:card variant="Narrow" title="Conta" iconName="standard:account">
+                    <p class="slds-p-horizontal_small">
+                        <lightning:recordForm recordId="{!v.account.Id}" objectApiName="Account" columns="2" fields="{!not(v.isPersonAccount) ? v.accountFields : v.personAccountFields}" mode="view" />
+                    </p>
+                </lightning:card>
+            </div>
+            
+            <aura:if isTrue="{!not(v.isPersonAccount)}">
+                <div class="slds-media_body slds-m-left_medium slds-m-right_medium slds-m-top_medium">
+                    <lightning:card variant="Narrow" title="Contato" iconName="standard:contact">
+                        <p class="slds-p-horizontal_small">
+                            <lightning:recordForm recordId="{!v.contact.Id}" objectApiName="Contact" columns="2" fields="{!v.contactFields}" mode="view"/>
+                        </p>
+                    </lightning:card>
+                </div>
+            </aura:if>
+        </div>
+        
+        <!-- Customer Metrics -->
+        <lightning:layout horizontalAlign="center" class="slds-m-vertical_medium">
+            <lightning:layoutItem padding="" size="6" flexibility="auto,grow,shrink">
+                <div
+                     class="slds-media slds-media_center slds-media_large slds-p-left_large slds-p-right_medium"
+                     >
+                    <div class="slds-media_figure slds-m-right_x-small">
+                        <lightning:icon iconName="utility:ribbon" size="small" class="grey-icon"/>
+                    </div>
+                    <div class="slds-media_body">
+                        <div class="title-weight">
+                            <p class="ft-14">Cliente desde</p>
+                            <p class="ft-light">
+                                <lightning:formattedDateTime value="{!v.account.CreatedDate}" year="numeric" month="short" day="2-digit"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

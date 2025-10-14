@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MinutosExecucaoVincularSigOmni__c</fullName>
+    <description>Minutos para executar a classe agendada de vínculo entre os Voos do Voe Omni e Integrados do SIG Trip.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Minutos para executar a classe agendada de vínculo entre os Voos do Voe Omni e Integrados do SIG Trip.</inlineHelpText>
+    <label>Minutos Execução Vincular Sig Omni</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

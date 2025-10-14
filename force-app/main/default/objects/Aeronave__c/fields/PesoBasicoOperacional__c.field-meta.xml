@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PesoBasicoOperacional__c</fullName>
+    <description>Indica o peso básico de operação da aeronave incluindo a tripulação.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica o peso básico de operação da aeronave incluindo a tripulação.</inlineHelpText>
+    <label>Peso Básico Operacional (PBO)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

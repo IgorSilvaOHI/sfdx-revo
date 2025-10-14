@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoCorte</fullName>
+    <active>true</active>
+    <description>Se &apos;Tem Corte&apos; não for marcado, o tempo de corte não pode ser maior do que 0</description>
+    <errorConditionFormula>!TemCorte__c &amp;&amp; TempoCorteCliente__c &gt; 0</errorConditionFormula>
+    <errorDisplayField>TemCorte__c</errorDisplayField>
+    <errorMessage>Um Voo não pode ter &apos;Tempo de Corte&apos; maior do que 0, se não for definido que esse Voo &apos;Tem Corte&apos;</errorMessage>
+</ValidationRule>

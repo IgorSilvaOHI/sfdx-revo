@@ -1,0 +1,32 @@
+<template>
+  <footer>
+    <template if:true={mostrarNovo}>
+      <lightning-button
+        variant="brand"
+        label={labelNovo}
+        icon-name="utility:add"
+        icon-position="right"
+        onclick={handleNovo}
+      >
+      </lightning-button>
+    </template>
+    <div class="navegacao">
+      <template if:true={mostraVoltar}>
+        <lightning-button
+          class="voltar"
+          label={customLabel.voltar}
+          onclick={handleVoltar}
+        >
+        </lightning-button>
+      </template>
+      <button
+        disabled={avancarDisabled}
+        onclick={handleAvancar}
+        class={brandClass}
+        title={actionButtonLabel}
+      >
+        {actionButtonLabel}
+      </button>
+    </div>
+  </footer>
+</template>

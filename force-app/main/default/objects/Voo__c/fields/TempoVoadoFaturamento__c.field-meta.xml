@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoVoadoFaturamento__c</fullName>
+    <label>Tempo Voado Faturamento</label>
+    <summarizedField>Trecho__c.TempoVoadoFaturamento__c</summarizedField>
+    <summaryForeignKey>Trecho__c.Voo__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,14 @@
+.slds-box-without-border {
+    --slds-g-spacing-4:0rem 0rem 1rem 0rem ;
+    --slds-g-radius-border-2: 1.25rem;
+    --slds-c-card-header-spacing-blockstart: 0px;
+}
+
+.slds-grid-fix-radius {
+    --slds-g-spacing-4:0rem 0rem 1rem 0rem ;
+    --slds-g-radius-border-2: 0.5rem;
+}
+
+.slds-box{
+    padding:0px !important;
+}

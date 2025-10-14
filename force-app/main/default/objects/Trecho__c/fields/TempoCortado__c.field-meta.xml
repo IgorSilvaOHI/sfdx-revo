@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoCortado__c</fullName>
+    <description>Tempo entre o acionamento do motor nesse trecho e o corte do motor no trecho anterior.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+				TEXT(TrechoAnterior__r.Tipo__c) != &apos;Translado&apos; &amp;&amp; NOT(ISBLANK(TrechoAnterior__r.Cut__c)),
+				(Ligado__c - TrechoAnterior__r.Cut__c ) * 24 * 60,
+				0
+)</formula>
+    <inlineHelpText>Tempo entre o acionamento do motor nesse trecho e o corte do motor no trecho anterior.</inlineHelpText>
+    <label>Tempo cortado</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

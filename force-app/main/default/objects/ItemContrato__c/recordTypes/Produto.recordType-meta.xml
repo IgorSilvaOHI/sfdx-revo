@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produto</fullName>
+    <active>true</active>
+    <description>Produto vinculado ao contrato</description>
+    <label>Produto</label>
+    <picklistValues>
+        <picklist>Tipo_de_Aeronave__c</picklist>
+        <values>
+            <fullName>Backup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unidade__c</picklist>
+        <values>
+            <fullName>DAY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YEAR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

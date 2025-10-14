@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IdentificadorTaxa__c</fullName>
+    <description>Identificador da taxa de conversão</description>
+    <externalId>false</externalId>
+    <formula>MoedaOrigem__c  &amp;  MoedaDestino__c  &amp;  TEXT(Data__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Identificador da taxa de conversão</inlineHelpText>
+    <label>Identificador da taxa</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

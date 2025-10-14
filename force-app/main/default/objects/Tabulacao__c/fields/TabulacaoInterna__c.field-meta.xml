@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TabulacaoInterna__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>As tabulações internas não ficam visíveis para o componente de criação de casos de atendimento, mas somente para casos internos.</description>
+    <inlineHelpText>As tabulações internas não ficam visíveis para o componente de criação de casos de atendimento, mas somente para casos internos.</inlineHelpText>
+    <label>Tabulação Interna</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

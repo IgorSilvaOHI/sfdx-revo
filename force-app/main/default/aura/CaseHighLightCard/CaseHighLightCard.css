@@ -1,0 +1,244 @@
+.THIS .header-image {
+  height: 2.5rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  /*background-color: #ccc;*/
+  background: var(
+    --slds-g-color-neutral-base-95,
+    var(--lwc-pageHeaderColorBackground, rgb(243, 243, 243))
+  );
+}
+
+.THIS .slds-icon-standard-address {
+  background: none;
+}
+
+.THIS svg.slds-icon.slds-icon-text-default.slds-icon_small {
+  transition: ease 0.2s;
+}
+
+.THIS .vdg {
+  background-color: #ff502d;
+}
+
+.THIS .sgi {
+  background-color: #1f8b43;
+}
+
+.THIS .vde {
+  background-color: #86261a;
+}
+
+.THIS .vi {
+  background-color: #e58b04;
+}
+.THIS .customer-image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: -35px;
+}
+
+.THIS .slds-media_figure.avatar,
+.THIS .slds-media_body.nameadress {
+  text-align: center;
+}
+
+.THIS .clientsince {
+  float: right;
+}
+
+/*CARD*/
+
+.THIS .slds-card.card.cCase360HighlightCard {
+  border: none;
+  box-shadow: none;
+  padding-bottom: 10px;
+  background: #f3f2f2;
+}
+
+.THIS .custmetric {
+  margin: 30px 0;
+}
+
+/*FONTS*/
+
+.THIS .ft-20 {
+  font-size: 20px;
+}
+
+.THIS .ft-16 {
+  font-size: 16px;
+}
+
+.THIS .ft-14 {
+  font-size: 14px;
+}
+
+.THIS .ft-normal {
+  font-weight: normal;
+}
+
+.THIS .ft-v {
+  font-size: var(--lwc-fontSize3, 0.8125rem);
+}
+
+.THIS .ft-12 {
+  font-size: 12px;
+}
+
+.THIS .ft-light {
+  font-weight: normal;
+}
+
+.THIS .font-regular {
+  font-size: 13px;
+}
+
+.THIS .title-weight {
+  font-weight: 700;
+}
+
+/*AVATAR*/
+
+.THIS .customer-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.THIS .csat-icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  background-color: white;
+}
+.THIS .shade {
+  background-color: #e8e8e8;
+}
+.THIS .cust360-icon {
+  width: 48px;
+  height: 48px;
+}
+.THIS .ellie .slds-icon-ellie {
+  margin-top: 3px;
+}
+
+.THIS .light-grey {
+  color: #ccc;
+}
+
+.THIS .bg-light-grey {
+  background-color: #ccc;
+}
+
+.THIS .csat-icon-positive .slds-icon {
+  fill: #4bca81 !important;
+}
+.THIS .csat-icon-negative .slds-icon {
+  fill: #d4504c !important;
+}
+.THIS .csat-icon-neutral .slds-icon {
+  fill: #ffb75d !important;
+}
+.THIS .grey-icon .slds-icon {
+  fill: #706e6b !important;
+}
+.THIS .einstein-icon .slds-icon {
+  padding: 2px;
+  fill: #ffffff;
+}
+.THIS .churn-card {
+  border-bottom: 1px solid rgb(221, 219, 218) !important;
+}
+.THIS .progress-bar-green .slds-progress-bar__value {
+  background: #4bca81 !important;
+}
+.THIS .progress-bar-yellow .slds-progress-bar__value {
+  background: #ffb75d !important;
+}
+.THIS .progress-bar-red .slds-progress-bar__value {
+  background: #d4504c !important;
+}
+.THIS .progress-bar-value {
+  border-radius: 0.5rem;
+}
+
+.THIS.card-pull-margin {
+  margin-top: -1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.THIS .select-humor {
+  max-width: 165px;
+  height: 55px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.THIS .text-center {
+  text-align: center;
+}
+/*Icons*/
+.THIS .csat-icon-positive .slds-icon {
+  fill: #4bca81 !important;
+}
+.THIS .csat-icon-negative .slds-icon {
+  fill: #d4504c !important;
+}
+.THIS .csat-icon-neutral .slds-icon {
+  fill: #ffb75d !important;
+}
+.THIS .grey-icon .slds-icon {
+  fill: #706e6b !important;
+}
+/*.THIS a:hover.custom-box, .THIS a:focus.custom-box, .THIS a.active {
+    border-color: #999;
+}*/
+.THIS a.custom-box {
+  display: inline-block;
+  /*padding: 7px;*/
+  background: white;
+  border-radius: 100%;
+  /*transition: all linear .3s;
+    border: 1px solid #fff;*/
+}
+.THIS .icon-border {
+  display: inline-block;
+}
+
+/*ICONES HUMOR*/
+
+.THIS a.custom-box svg {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  cursor: pointer !important;
+}
+
+.THIS a:hover.custom-box svg,
+.THIS a.custom-box.active svg {
+  width: 33px;
+  border: 2px solid;
+  height: 33px;
+  margin-top: -5px;
+}
+
+.THIS a.custom-box.active svg {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.THIS .cCaseHighLightCard a:hover.custom-box {
+  border: none !important;
+}
+.THIS .bd-red:hover svg,
+.THIS .bd-red.active svg {
+  border-color: #d4504c !important;
+}
+.THIS .bd-yellow:hover svg,
+.THIS .bd-yellow.active svg {
+  border-color: #ffb75d !important;
+}
+.THIS .bd-green:hover svg,
+.THIS .bd-green.active svg {
+  border-color: #4bca81 !important;
+}

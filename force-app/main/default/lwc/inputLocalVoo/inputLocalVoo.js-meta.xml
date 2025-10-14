@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="useCoordenades" label="Usar coordenadas? OLD-NÃO UTILIZAR" type="Boolean"/>
+            <property name="tipoVoo" label="Tipo voo" type="String"/>
+            <property name="coordenadasSelecionado" label="Usar coordenadas?" type="Boolean"/>
+            <property name="value" label="Value" type="String" />
+            <property name="label" label="Label" type="String" role="inputOnly"/>
+            <property name="formattedValue" label="formattedValue" type="String" role="outputOnly"/>
+            <property name="usarCoordenadasSelecionado" label="Coordenadas selecionada?" type="Boolean"  role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

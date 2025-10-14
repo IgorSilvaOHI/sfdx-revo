@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CargaVoo__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Carga base que será transportada no trecho</description>
+    <inlineHelpText>Carga base que será transportada no trecho</inlineHelpText>
+    <label>Carga do Voo</label>
+    <referenceTo>CargaVoo__c</referenceTo>
+    <relationshipLabel>Cargas dos Trechos</relationshipLabel>
+    <relationshipName>Cargas</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

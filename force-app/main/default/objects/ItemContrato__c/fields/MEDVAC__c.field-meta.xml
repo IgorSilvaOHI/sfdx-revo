@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MEDVAC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica se há cobertura MEDVAC com a aeronave</description>
+    <inlineHelpText>Indica se há cobertura MEDVAC com a aeronave</inlineHelpText>
+    <label>MEDVAC</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

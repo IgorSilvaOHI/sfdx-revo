@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Peso__c</fullName>
+    <description>Define o peso em kg da carga</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Define o peso em kg da carga</inlineHelpText>
+    <label>Peso (kg)</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,36 @@
+<template>
+  <div class="header-lista-passageiro">
+    <div class={headerClass}>
+      <div class="slds-text-heading_small header">
+        {header}
+        <template if:true={numeroPassageiros}>
+          &nbsp;({numeroPassageiros})
+        </template>
+      </div>
+      <template if:true={showFilter}>
+        <div class="filtro">
+          <c-filtro
+            placeholder="Filtrar por nome ou documento"
+            onfilterchanged={handleFilterChanged}
+            onfilterfocus={handleFilterFocus}
+          ></c-filtro>
+        </div>
+      </template>
+      <template if:true={showFilter}>
+        <lightning-button
+          class="novo-passageiro"
+          variant="brand"
+          label="Novo"
+          icon-name="utility:add"
+          icon-position="right"
+          onclick={handleNovoPassageiro}
+        >
+        </lightning-button>
+      </template>
+    </div>
+    <div class="table-header">
+      <span>Nome</span>
+      <span>Documento</span>
+    </div>
+  </div>
+</template>

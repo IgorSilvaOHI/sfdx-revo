@@ -1,0 +1,59 @@
+.title {
+    padding: 24px;
+    background: #706F6D;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0;
+    height: 48px;
+}
+
+lightning-button-icon {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 1.1rem;
+}
+
+.voltar {
+    display: none;
+}
+
+.title-back {
+    white-space: nowrap;
+}
+
+.texto-central {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width: 1023px) {}
+
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 0;
+    }
+
+    .title-back {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .title-back lightning-button-icon {
+        margin-right: 12px;
+        ;
+    }
+
+    .texto-central {
+        display: none;
+    }
+
+    .voltar {
+        display: block;
+    }
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BaseMae__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Base Mãe da Aeronave</description>
+    <inlineHelpText>Base Mãe da Aeronave</inlineHelpText>
+    <label>Base Mãe</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Local__c.Base__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Local__c</referenceTo>
+    <relationshipLabel>Aeronaves Hospedadas</relationshipLabel>
+    <relationshipName>AeronaveLocal</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

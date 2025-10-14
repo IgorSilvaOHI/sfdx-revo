@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>CampoPesquisa</name>
+        <dataType>String</dataType>
+        <expression>IF(LEN({!CampoPesquisaFull}) &gt; 250 , LEFT({!CampoPesquisaFull},250), {!CampoPesquisaFull})</expression>
+    </formulas>
+    <formulas>
+        <name>CampoPesquisaFull</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.ContaComprador__r.Name} &amp; &quot; | &quot; &amp; TEXT({!$Record.DataServico__c}) &amp; &quot; | &quot; &amp; TEXT({!$Record.Status__c}) &amp; &quot; | &quot; &amp; {!$Record.Oportunidade__r.Name} &amp; &quot; | &quot; &amp; {!$Record.Voo__r.Name} &amp; &quot; | &quot; &amp; {!$Record.Trecho__r.Name} &amp; &quot; | &quot; &amp; {!$Record.Passageiro__r.Name}</expression>
+    </formulas>
+    <interviewLabel>[Serviço] Atualiza Campo Pesquisa {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Serviço] Atualiza Campo Pesquisa</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Atualiza_Campo_Pesquisa</name>
+        <label>Atualiza Campo Pesquisa</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>CampoPesquisa__c</field>
+            <value>
+                <elementReference>CampoPesquisa</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Atualiza_Campo_Pesquisa</targetReference>
+        </connector>
+        <object>Servico__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voo__c</fullName>
+    <description>Voo ao qual o trecho pertence</description>
+    <inlineHelpText>Voo ao qual o trecho pertence</inlineHelpText>
+    <label>Voo</label>
+    <referenceTo>Voo__c</referenceTo>
+    <relationshipLabel>Trechos</relationshipLabel>
+    <relationshipName>Trechos</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

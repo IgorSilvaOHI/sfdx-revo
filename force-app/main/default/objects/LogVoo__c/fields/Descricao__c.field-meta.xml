@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Descricao__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(PosnType__c) &amp;
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.Ligado__c, &quot; - Acionamento&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.LigadoManual__c, &quot; - Acionamento manual&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.LigadoISAT100__c, &quot; - Acionamento ISAT100&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.Decolagem__c, &quot; - Decolagem&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.Pouso__c, &quot; - Pouso&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.Cut__c, &quot; - Corte&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.CorteManual__c, &quot; - Corte manual&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.CorteISAT100__c, &quot; - Corte ISAT100&quot;,
+
+IF(
+PosnType__c == $Setup.ConfiguracoesIntegracaoSkyTrac__c.FimMissao__c, &quot; - Fim da Missao&quot;,
+&quot;&quot;)
+))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Descrição</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

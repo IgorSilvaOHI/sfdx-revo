@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrechosCorte__c</fullName>
+    <description>Indica quantos trechos tiveram corte. Define que caso exista mais de 1 corte por voo é possível que haja cobrança de Hora de Corte</description>
+    <inlineHelpText>Indica quantos trechos tiveram corte.</inlineHelpText>
+    <label>Trechos com Corte</label>
+    <summaryFilterItems>
+        <field>Trecho__c.Cut__c</field>
+        <operation>notEqual</operation>
+        <value></value>
+    </summaryFilterItems>
+    <summaryForeignKey>Trecho__c.Voo__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataObrigatoria</fullName>
+    <active>true</active>
+    <description>Se o status for diferente de cancelado e rascunho, é obrigatório definir uma data para o voo.</description>
+    <errorConditionFormula>AND(
+  TEXT(Status__c) != &apos;Cancelado&apos;,
+  TEXT(Status__c) != &apos;Rascunho&apos;,
+  ISNULL(DataVoo__c)
+)</errorConditionFormula>
+    <errorDisplayField>DataVoo__c</errorDisplayField>
+    <errorMessage>Se o status for diferente de cancelado e rascunho, é obrigatório definir uma data para o voo.</errorMessage>
+</ValidationRule>

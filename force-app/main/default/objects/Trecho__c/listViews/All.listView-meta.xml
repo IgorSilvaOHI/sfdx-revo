@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Voo__c</columns>
+    <columns>Origem__c</columns>
+    <columns>Destino__c</columns>
+    <columns>OrdemExecucao__c</columns>
+    <columns>Status__c</columns>
+    <columns>UltimoTrecho__c</columns>
+    <columns>TempoVoado__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TempoVoado__c</field>
+        <operation>greaterThan</operation>
+        <value>100</value>
+    </filters>
+    <label>Tudo</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aeronave__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Aeronave relacionada ao cálculo da missão</description>
+    <inlineHelpText>Aeronave relacionada ao cálculo da missão</inlineHelpText>
+    <label>Aeronave</label>
+    <referenceTo>Aeronave__c</referenceTo>
+    <relationshipName>Missoes</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

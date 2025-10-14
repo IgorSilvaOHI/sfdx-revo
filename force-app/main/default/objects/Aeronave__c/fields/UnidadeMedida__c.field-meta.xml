@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnidadeMedida__c</fullName>
+    <description>Unidade de medida utilizada nos dados da aeronave</description>
+    <inlineHelpText>Unidade de medida utilizada nos dados da aeronave</inlineHelpText>
+    <label>Unidade de Medida</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>UnidadeMedida</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-box card-withoutborder-aeronave slds-is-relative slds-text-color_inverse">
+        <div class="imagem-com-overlay">
+            <img src={typeAttributes.voo.modeloImagemUrl} class="card-image-aeronave"/>
+            <div class="overlay"></div>
+        </div>
+        <div class="slds-is-absolute" style="z-index: 1;top: 0; height:100%; width:100%">
+            <div class="slds-is-relative">
+                <div class="slds-grid slds-wrap slds-p-around_small">
+                    <div class="slds-grid slds-size_1-of-1">
+                        <div>
+                            <span class="slds-text-heading_medium">
+                                {typeAttributes.voo.modelo}
+                            </span>
+                        </div>
+                        <div class="slds-grid slds-col_bump-left" title="Capacidade de assentos da aeronave">
+                            <div class="slds-m-right_xx-small slds-align-middle">
+                                <c-custom-icons fill="#fff"></c-custom-icons>
+                            </div>
+                            <div class="slds-align-bottom">
+                                <span class="slds-text-heading_small">
+                                    {typeAttributes.voo.capacidadePassageiros}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <template lwc:if={typeAttributes.voo.isShuttle}>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-size_1-of-1 slds-p-top_large">
+                            <span class="slds-text-heading_small">
+                                Peso Disponível: {typeAttributes.voo.pesoDisponivel}kg
+                            </span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

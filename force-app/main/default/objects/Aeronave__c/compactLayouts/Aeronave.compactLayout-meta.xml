@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aeronave</fullName>
+    <fields>Name</fields>
+    <fields>ModeloAeronave__c</fields>
+    <fields>AnoFabricacao__c</fields>
+    <fields>VelocidadeCruzeiro__c</fields>
+    <fields>BaseMae__c</fields>
+    <label>Aeronave</label>
+</CompactLayout>

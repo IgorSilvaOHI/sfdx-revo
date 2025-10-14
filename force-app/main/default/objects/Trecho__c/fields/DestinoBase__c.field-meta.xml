@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DestinoBase__c</fullName>
+    <description>Replica se o destino é base Omni</description>
+    <formula>Destino__r.Base__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Replica se o destino é base Omni</inlineHelpText>
+    <label>Destino É Base</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConciliadoSIG__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag que indica se o campo foi atualizado com valores do SIG Trip.</description>
+    <inlineHelpText>Flag que indica se o campo foi atualizado com valores do SIG Trip.</inlineHelpText>
+    <label>Conciliado SIG</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

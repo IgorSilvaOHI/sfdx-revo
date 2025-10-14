@@ -1,0 +1,161 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 20px;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.data-label {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.buttonAnt, .buttonSeg {
+    background-color: #3d3d3d;
+    color: #fafafa;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    
+}
+
+.timeline-container {
+    overflow-x: auto;
+    border-top: 1px solid #ddd;
+}
+
+.timeline-header {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    min-width: 2700px; /* 180px + (140px * 18h) = 180 + 2520 = 2700px */
+}
+
+.linha-aeronave {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    min-width: 2700px; /* 180px + 2520px */
+    position: relative;
+}
+
+.aeronave-col {
+    box-sizing: border-box; 
+    font-weight: bold;
+    font-size: 1rem;
+    flex: 0 0 180px;             
+    width: 180px;                
+    padding: 4px 15px;           
+}
+
+.timeline-header .aeronave-col {
+    box-sizing: border-box;
+    flex: 0 0 180px;
+    width: 180px;
+    padding: 4px 15px;
+}
+
+.timeline-container {
+    overflow-x: auto;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    max-width: 100%; /* Limita a largura máxima */
+    box-sizing: border-box;
+}
+
+.timeline-header .horarios-col {
+    /* Linhas verticais no header para alinhar com as linhas das linhas de aeronaves */
+    background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.25) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0,0,0,0.25) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 1px 100%, 140px 100%, 70px 100%; /* 1º: linha final, 2º: hora, 3º: meia hora */
+    background-position: 100% 0, 0 0, 70px 0; /* inclui linha final no extremo direito */
+    background-repeat: no-repeat, repeat, repeat;
+}
+
+.horarios-col {
+    display: flex;
+    position: relative;
+    flex: 1 0 2520px;            /* grow 1, basis 2520px (18h * 140px), não shrink */
+    min-width: 2520px;           /* garante largura mínima */
+    padding: 0;                  /* remove padding que possa deslocar */
+    margin: 0;
+}
+
+.hora {
+    width: 140px;                /* 1h = 140px */
+    min-width: 140px;
+    max-width: 140px;
+    flex: 0 0 140px;             /* evita encolhimento */
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 15px 0 15px 6px;
+    font-weight: bold;
+    background-color: #3d3d3d;
+    color: #fafafa;
+    box-sizing: border-box;
+}
+
+.horarios-col-container {
+    flex: none; /* Não cresce no flexbox */
+    width: 2520px; /* Largura fixa para cobrir 18h * 140px */
+    overflow: hidden; /* Evita que o container expanda */
+    position: relative;
+}
+
+.linha-aeronave .horarios-col {
+    padding: 0;
+    margin: 0;
+    position: relative; 
+    height: 50px;
+    display: block !important; /* Força block para permitir posicionamento absoluto correto */
+    width: 100%; /* Ocupa toda a largura do container pai */
+    overflow: visible; /* Garante que os blocos absolutos sejam visíveis */
+    /* Linhas verticais: 1px sólida para hora cheia, 1px pontilhada para 30 minutos; e linha final da grade */
+    background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.25) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0,0,0,0.25) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 1px 100%, 140px 100%, 70px 100%; /* 1º: linha final, 2º: hora, 3º: meia hora */
+    background-position: 100% 0, 0 0, 70px 0; /* inclui linha final no extremo direito */
+    background-repeat: no-repeat, repeat, repeat;
+}
+
+
+.bloco-voo {
+    position: absolute;
+    background-color: #0070d2;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 20px;
+    height: 30px;
+    top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    padding: 5px 5px;
+    z-index: 10; /* Garante que apareça sobre outros elementos */
+    min-width: 20px; /* Largura mínima para garantir visibilidade */
+}
+
+.bloco-voo:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 200px;
+}

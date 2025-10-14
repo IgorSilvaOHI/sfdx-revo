@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identificacao__c</fullName>
+    <externalId>false</externalId>
+    <formula>Passageiro__r.FirstName + &apos; &apos; + Passageiro__r.LastName + &apos; - &apos; +  Passageiro__r.NumeroDocumento__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Identificacao</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

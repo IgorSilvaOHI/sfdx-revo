@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DataMenorQueHojeNaoExecutado</fullName>
+    <active>false</active>
+    <description>A data não pode ser inferior a data de hoje</description>
+    <errorConditionFormula>AND(
+				NOT(IgnorarTrigger__c),
+				OR(
+								ISCHANGED(DataVoo__c),
+								ISCHANGED(Status__c)
+				),				
+				NOT(ISNULL(DataVoo__c)),
+				DataVoo__c &lt; NOW(),
+				OR(
+								ISPICKVAL(Status__c, &apos;Pré-reservado&apos;),
+								ISPICKVAL(Status__c, &apos;Reservado&apos;)
+				)
+)</errorConditionFormula>
+    <errorDisplayField>DataVoo__c</errorDisplayField>
+    <errorMessage>A data não pode ser anterior ao momento atual</errorMessage>
+</ValidationRule>

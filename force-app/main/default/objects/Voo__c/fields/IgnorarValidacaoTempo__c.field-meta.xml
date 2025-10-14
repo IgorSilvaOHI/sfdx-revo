@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IgnorarValidacaoTempo__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ignora validação de tempo que impede atualizar a data do voo quando não há determinado tempo prévio</description>
+    <inlineHelpText>Ignora validação de tempo que impede atualizar a data do voo quando não há determinado tempo prévio</inlineHelpText>
+    <label>Ignorar validação tempo</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Impede_vincular_faturamento_fechado</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+				AND(ISCHANGED(Faturamento__c), OR(ISPICKVAL(Faturamento__r.Status__c, &quot;Fechado&quot;), ISPICKVAL(Faturamento__r.Status__c, &quot;Emitido&quot;))),
+			 AND(ISCHANGED(Faturamento__c), ISPICKVAL(Status__c, &apos;Faturado&apos;) ) 
+)</errorConditionFormula>
+    <errorDisplayField>Faturamento__c</errorDisplayField>
+    <errorMessage>Faturamento possui Status que não permite alteração</errorMessage>
+</ValidationRule>

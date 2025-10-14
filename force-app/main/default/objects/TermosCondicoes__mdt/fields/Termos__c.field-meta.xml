@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Termos__c</fullName>
+    <description>Salva os termos e condições para solicitar um voo.</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Salva os termos e condições para solicitar um voo.</inlineHelpText>
+    <label>Termos</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

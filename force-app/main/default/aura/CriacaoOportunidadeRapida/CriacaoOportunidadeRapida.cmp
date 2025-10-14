@@ -1,0 +1,4 @@
+<aura:component implements="lightning:actionOverride,flexipage:availableForAllPageTypes,lightning:isUrlAddressable,force:lightningQuickAction,force:hasRecordId,force:hasSObjectName" access="global">
+    <c:criarOportunidadeFlowLauncher flowApiName="OportunidadeCriacaoRapida" modalLabel="Nova oportunidade" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+</aura:component>

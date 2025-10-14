@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckinSemPesos</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(CheckIn__c) ,
+CheckIn__c,
+OR(
+OR(Peso__c &lt;= 0, ISNULL(Peso__c), ISBLANK(Peso__c)),
+AND(Bagagem__c &gt; 0, QtdBagagem__c &lt;= 0),
+AND(QtdBagagem__c &gt; 0,Bagagem__c&lt;= 0)
+)
+)</errorConditionFormula>
+    <errorDisplayField>CheckIn__c</errorDisplayField>
+    <errorMessage>Preencha os dados de peso e bagagem</errorMessage>
+</ValidationRule>

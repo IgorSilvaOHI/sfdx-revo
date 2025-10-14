@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoVoado__c</fullName>
+    <description>Tempo voado nesse trecho</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    DescontarTrecho__c,   
+	    0,
+    IF(
+        AND(NOT(ISBLANK(Ligado__c)), NOT(ISBLANK(Cut__c))),
+        (Cut__c - Ligado__c)*24*60,
+								IF(
+												AND(NOT(ISBLANK(Ligado__c)), ISBLANK(Cut__c)),
+												(Pouso__c - Ligado__c)*24*60,
+												IF(
+																AND(ISBLANK(Ligado__c), NOT(ISBLANK(Cut__c))),
+																(Cut__c - TrechoAnterior__r.Pouso__c)*24*60,
+																(Pouso__c - TrechoAnterior__r.Pouso__c)*24*60
+            )
+        )
+    )
+)</formula>
+    <inlineHelpText>Time flown on this leg</inlineHelpText>
+    <label>Tempo Voado</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

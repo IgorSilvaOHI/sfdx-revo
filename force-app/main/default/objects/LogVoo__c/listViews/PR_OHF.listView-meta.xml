@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR_OHF</fullName>
+    <columns>NAME</columns>
+    <columns>PosnTimeDatetime__c</columns>
+    <columns>Aeronave__c</columns>
+    <columns>Voo__c</columns>
+    <columns>Coordenadas__Latitude__s</columns>
+    <columns>Coordenadas__Longitude__s</columns>
+    <columns>PosnType__c</columns>
+    <columns>Local__c</columns>
+    <columns>Latitude__c</columns>
+    <columns>Longitude__c</columns>
+    <columns>PosnTime__c</columns>
+    <columns>LicenseKey__c</columns>
+    <columns>ErroIntegracao__c</columns>
+    <columns>Erro__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Aeronave__c</field>
+        <operation>equals</operation>
+        <value>PR-OHF</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>PR-OHF</label>
+</ListView>

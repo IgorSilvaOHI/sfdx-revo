@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ManifestoOK__c</fullName>
+    <formula>(TEXT(StatusAtendimento__c) == &apos;MTA Liberado&apos;
+                                                || TEXT(StatusAtendimento__c)== &apos;Embarque Autorizado&apos;
+                                                || TEXT(StatusAtendimento__c)== &apos;Passageiros Prontos&apos;
+|| TEXT(StatusAtendimento__c)== &apos;Passageiros Embarcados&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ManifestoOK</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

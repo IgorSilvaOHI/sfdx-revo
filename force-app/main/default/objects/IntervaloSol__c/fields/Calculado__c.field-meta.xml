@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>&quot;True&quot; para registros com nascer e pôr do sol calculados e &quot;False&quot; para dados que chegaram via API</description>
+    <inlineHelpText>&quot;True&quot; para registros com nascer e pôr do sol calculados e &quot;False&quot; para dados que chegaram via API</inlineHelpText>
+    <label>Calculado</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

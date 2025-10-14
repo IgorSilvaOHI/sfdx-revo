@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TabulacaoOculta__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>As tabulações ocultas não ficam visíveis para os componentes de criação de casos.</description>
+    <inlineHelpText>As tabulações ocultas não ficam visíveis para os componentes de criação de casos.</inlineHelpText>
+    <label>Tabulação Oculta</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

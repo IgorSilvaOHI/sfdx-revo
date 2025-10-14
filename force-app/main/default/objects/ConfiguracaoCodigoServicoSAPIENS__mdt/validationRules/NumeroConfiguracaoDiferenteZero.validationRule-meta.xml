@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumeroConfiguracaoDiferenteZero</fullName>
+    <active>true</active>
+    <description>O número zero será o padrão, onde há apenas uma linha com o código de serviço</description>
+    <errorConditionFormula>NumeroConfiguracao__c = 0</errorConditionFormula>
+    <errorDisplayField>NumeroConfiguracao__c</errorDisplayField>
+    <errorMessage>A configuração 0 é a padrão e não podem ser criados metadados para ela</errorMessage>
+</ValidationRule>

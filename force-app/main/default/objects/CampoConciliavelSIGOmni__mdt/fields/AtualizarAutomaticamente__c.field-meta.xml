@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AtualizarAutomaticamente__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Caso marcado a atualização do campo será realizada de maneira automática</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Caso marcado a atualização do campo será realizada de maneira automática</inlineHelpText>
+    <label>Atualizar Automaticamente</label>
+    <type>Checkbox</type>
+</CustomField>

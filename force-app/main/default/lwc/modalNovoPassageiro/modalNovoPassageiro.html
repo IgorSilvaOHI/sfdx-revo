@@ -1,0 +1,126 @@
+<template>
+  <section
+    role="dialog"
+    tabindex="-1"
+    class="slds-modal slds-fade-in-open slds-modal_small center-modal"
+    aria-labelledby="modal-heading-01"
+    aria-modal="true"
+    aria-describedby="modal-content-id-1"
+  >
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <lightning-button-icon
+          onclick={fecharModal}
+          class="slds-modal__close"
+          icon-name="utility:close"
+          size="medium"
+          alternative-text={customLabel.fechar}
+          variant="bare-inverse"
+        ></lightning-button-icon>
+        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">
+          {customLabel.novoPassageiro}
+        </h2>
+      </header>
+      <div
+        class="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+        <template if:true={loading}>
+          <div class="spinner-container">
+            <lightning-spinner
+              style="background: none;"
+              class="slds-spinner_container slds-align_absolute-center"
+              variant="brand"
+              size="small"
+              alternative-text={customLabel.carregando}
+            >
+            </lightning-spinner>
+          </div>
+        </template>
+        <template if:false={loading}>
+          <lightning-record-edit-form
+            object-api-name="Contact"
+            record-type-id={recordTypeId}
+            onsubmit={handleSubmit}
+            onerror={handleError}
+            onsuccess={handleSuccess}
+          >
+            <lightning-messages> </lightning-messages>
+            <div class="record-inputs">
+              <!-- <template if:false={smallScreen}>
+                <lightning-input-field value={contaVoo} required field-name="AccountId">
+                </lightning-input-field>
+              </template>
+              <template if:true={smallScreen}>
+                <c-mobile-lookup account-id={contaVoo} oncontaselecionada={handleContaSelecionada}></c-mobile-lookup>
+              </template> -->
+              <lightning-input-field
+                value={contato.FirstName}
+                required
+                field-name="FirstName"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                value={contato.LastName}
+                required
+                field-name="LastName"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                value={contato.TipoDocumento__c}
+                required
+                field-name="TipoDocumento__c"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                value={contato.NumeroDocumento__c}
+                required
+                field-name="NumeroDocumento__c"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                value={contato.Email}
+                required
+                field-name="Email"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                required
+                value={nacionalidade}
+                field-name="Nacionalidade__c"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                value={contato.Empresa__c}
+                field-name="Empresa__c"
+              >
+              </lightning-input-field>
+              <lightning-input-field
+                value={contato.Department}
+                field-name="Department"
+              >
+              </lightning-input-field>
+            </div>
+            <lightning-button
+              class="hidden-submit"
+              type="submit"
+            ></lightning-button>
+          </lightning-record-edit-form>
+        </template>
+      </div>
+      <footer class="slds-modal__footer">
+        <button onclick={fecharModal} class="slds-button slds-button_neutral">
+          {customLabel.cancelar}
+        </button>
+        <button
+          disabled={loading}
+          onclick={submitNovoPassageiro}
+          class="slds-button slds-button_brand"
+        >
+          {customLabel.salvar}
+        </button>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+</template>

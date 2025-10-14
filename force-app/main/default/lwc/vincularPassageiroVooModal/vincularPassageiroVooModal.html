@@ -1,0 +1,14 @@
+<template>
+    <lightning-modal-header label="Configurar passageiros"></lightning-modal-header>
+    <lightning-modal-body>
+        <template if:true={hasRecordId}>
+            <div class="slds-is-relative">
+                <lightning-flow
+                    flow-api-name='OportunidadeGerenciarPassageirosVoo'
+                    flow-input-variables={getParameters}
+                    onstatuschange={handleStatusChange}>
+                </lightning-flow>
+            </div>
+        </template>
+     </lightning-modal-body>
+</template>

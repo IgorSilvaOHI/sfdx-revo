@@ -1,0 +1,39 @@
+:host {
+  height: inherit;
+  max-height: inherit;
+}
+
+.lista-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: inherit;
+  max-height: inherit;
+}
+.botaoAvancar {
+  float: right;
+}
+
+.lista-secundaria {
+  border-left: 2px solid var(--dark-blue, #006196);
+}
+
+@media screen and (max-width: 767px) {
+  .lista-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+  }
+  .lista-unica {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    max-height: inherit;
+  }
+
+  .lista-primaria {
+    border-bottom: 2px solid var(--dark-blue, #006196);
+  }
+
+  .lista-secundaria {
+    border-left: none;
+  }
+}

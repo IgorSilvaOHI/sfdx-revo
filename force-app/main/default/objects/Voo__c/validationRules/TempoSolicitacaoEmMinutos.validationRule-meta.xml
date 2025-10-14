@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoSolicitacaoEmMinutos</fullName>
+    <active>true</active>
+    <description>O cliente só pode solicitar um voo a partir da hora atual mais o tempo em minutos cadastrado pelo administrador do sistema.</description>
+    <errorConditionFormula>AND(
+				NOT(IgnorarValidacaoTempo__c),
+				NOT(IgnorarTrigger__c),
+				NOT(MEDVAC__c),
+				(NOW() + (($Setup.ConfiguracaoTempo__c.TempoMinutos__c - 1)/1440)) &gt; DataVoo__c,
+				OR(
+								NOT(ISPICKVAL(Status__c,&apos;Rascunho&apos;)),
+								NOT(ISNEW())
+				),
+				AND(
+								ISCHANGED(DataVoo__c),
+								NOT(ISPICKVAL(Status__c,&apos;Rascunho&apos;))
+				)
+)</errorConditionFormula>
+    <errorDisplayField>DataVoo__c</errorDisplayField>
+    <errorMessage>Entre em contato com a equipe do comercial. Você deve agendar voos com um mínimo de tempo a partir da hora do agendamento.</errorMessage>
+</ValidationRule>

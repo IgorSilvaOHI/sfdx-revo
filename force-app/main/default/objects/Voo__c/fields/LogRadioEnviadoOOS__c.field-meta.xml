@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LogRadioEnviadoOOS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marcado quando as informações de Log de Radio foram enviadas para o OOS.
+Informações: &quot; &apos;Data do envio da Informação&apos; , &apos;VoeOmni&apos;, &apos;Data do Acionamento&apos;, &apos;Datahora da Decolagem&apos;</description>
+    <label>Log de Radio Enviado OOS</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

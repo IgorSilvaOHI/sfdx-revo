@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Define em que momento o voo se encontra</description>
+    <inlineHelpText>Define em que momento o voo se encontra</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <label>Cancelado</label>
+            </value>
+            <value>
+                <fullName>Rascunho</fullName>
+                <default>true</default>
+                <label>Rascunho</label>
+            </value>
+            <value>
+                <fullName>Pré-reservado</fullName>
+                <default>false</default>
+                <label>Pré-reservado</label>
+            </value>
+            <value>
+                <fullName>Reservado</fullName>
+                <default>false</default>
+                <label>Reservado</label>
+            </value>
+            <value>
+                <fullName>Confirmado</fullName>
+                <default>false</default>
+                <label>Confirmado</label>
+            </value>
+            <value>
+                <fullName>Rota</fullName>
+                <default>false</default>
+                <label>Em Rota</label>
+            </value>
+            <value>
+                <fullName>LogPendente</fullName>
+                <default>false</default>
+                <label>Concluindo o Voo</label>
+            </value>
+            <value>
+                <fullName>Executado</fullName>
+                <default>false</default>
+                <label>Executado</label>
+            </value>
+            <value>
+                <fullName>Em Faturamento</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Em Faturamento</label>
+            </value>
+            <value>
+                <fullName>Faturado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Faturado</label>
+            </value>
+            <value>
+                <fullName>Pronto pra Voar</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pronto pra Voar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

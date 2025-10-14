@@ -1,0 +1,21 @@
+.card-modelo-aeronave {
+    width:  280px;
+    height: 115px;
+}
+
+.card-voo {
+    width:  200px;
+    height: 115px;
+}
+
+.slds-table .slds-th__action {
+    text-align: center;
+}
+
+.card-image-aeronave{
+    border-radius: var(--slds-g-radius-border-2);
+  }
+
+  .table-hover > tbody > tr.hidden-table:hover > td {
+    background-color: white;
+}

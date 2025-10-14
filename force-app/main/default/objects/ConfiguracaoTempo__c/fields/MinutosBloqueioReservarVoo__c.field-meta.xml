@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MinutosBloqueioReservarVoo__c</fullName>
+    <description>Minutos de bloqueio na pré-reserva para reservar o voo na última etapa (carrinho de voos)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Minutos de bloqueio na pré-reserva para reservar o voo na última etapa (carrinho de voos)</inlineHelpText>
+    <label>Minutos de bloqueio para reservar o voo</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

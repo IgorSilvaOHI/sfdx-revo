@@ -1,0 +1,16 @@
+.voo-info {
+  display: flex;
+  flex-flow: column;
+  background: #706f6d;
+  color: white;
+  padding: 0px 1rem 1rem;
+}
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  .voo-info {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

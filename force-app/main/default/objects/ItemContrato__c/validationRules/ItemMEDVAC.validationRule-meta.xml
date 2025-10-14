@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ItemMEDVAC</fullName>
+    <active>true</active>
+    <description>Valida que caso o item possua MEDVAC o contrato deve estar marcado como MEDVAC</description>
+    <errorConditionFormula>AND(
+     NOT(Contrato__r.PossuiMEDVAC__c),
+				 MEDVAC__c 
+)</errorConditionFormula>
+    <errorDisplayField>MEDVAC__c</errorDisplayField>
+    <errorMessage>O contrato não possui MEDVAC</errorMessage>
+</ValidationRule>

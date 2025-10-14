@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IdPerfilComercial__c</fullName>
+    <description>Id do perfil do Comercial</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Id do Perfil do Comercial</inlineHelpText>
+    <label>Id Perfil Comercial</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

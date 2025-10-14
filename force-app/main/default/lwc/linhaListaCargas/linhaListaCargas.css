@@ -1,0 +1,28 @@
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.linha-lista-cargas {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr;
+  gap: .5rem;
+}
+
+.table-item {
+  display: flex;
+  align-items: center;
+}
+
+.quantidade {
+  display: flex;
+  align-self: center;
+  height: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .action-button {
+    justify-content: center;
+  }
+}

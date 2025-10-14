@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProdutoMalhaHorarioNaoEncontrados</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND
+(
+ HasPMH__c = False
+)</errorConditionFormula>
+    <errorMessage>Não encontramos Produto/Malha para a origem e o destino informados, ou voo disponível para o horário informado.</errorMessage>
+</ValidationRule>

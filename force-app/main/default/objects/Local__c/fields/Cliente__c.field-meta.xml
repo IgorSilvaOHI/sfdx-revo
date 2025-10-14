@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cliente__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Referência para um cliente caso este local seja de uso específico dele</description>
+    <inlineHelpText>Referência para um cliente caso este local seja de uso específico dele</inlineHelpText>
+    <label>Conta</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Locais</relationshipLabel>
+    <relationshipName>Locais</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,33 @@
+<template>
+  <template if:true={primeiraTela}>
+    <c-lista-cargas-voo
+      style="height: inherit;"
+      cargas-voo={listaPrincipal}
+      onnovacarga={handleNovaCarga}
+      oneditcarga={handleEditCarga}
+      ondeletecarga={handleDeleteCarga}
+      screen-size={screenSize}
+    ></c-lista-cargas-voo>
+  </template>
+  <template if:false={primeiraTela}>
+    <div class="lista-grid">
+      <c-cargas-trecho
+        class="lista-principal"
+        screen-size={screenSize}
+        header={headerPrincipal}
+        onnovacarga={handleNovaCarga}
+        oncargaclicked={handleClickListaPrincipal}
+        principal
+        lista-completa={listaPrincipal}
+      ></c-cargas-trecho>
+      <c-cargas-trecho
+        class="lista-secundaria"
+        screen-size={screenSize}
+        header={headerSecundario}
+        lista-completa={listaSecundaria}
+        oncargaclicked={handleClickListaSecundaria}
+        onquantidademudou={handleQuantidade}
+      ></c-cargas-trecho>
+    </div>
+  </template>
+</template>

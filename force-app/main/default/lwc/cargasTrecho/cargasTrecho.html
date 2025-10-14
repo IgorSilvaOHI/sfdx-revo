@@ -1,0 +1,14 @@
+<template>
+    <div class={listaCargasClass}>
+        <c-header-lista-cargas class="header-lista" onnovacarga={handleNovaCarga} show-nova-carga={principal}
+            header={header}>
+        </c-header-lista-cargas>
+        <div class="cargas-grid">
+            <template for:each={listaCompleta} for:item="item">
+                <c-linha-lista-cargas key={item.Id} carga={item} oncargaclicked={handleCargaClicked}
+                    onquantidademudou={handleQuantidade} principal={principal} trecho-index={trechoIndex}
+                    screen-size={screenSize}></c-linha-lista-cargas>
+            </template>
+        </div>
+    </div>
+</template>

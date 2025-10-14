@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidadeInvalida</fullName>
+    <active>true</active>
+    <errorConditionFormula>Validade__c &lt; TODAY() &amp;&amp;  Ativo__c</errorConditionFormula>
+    <errorDisplayField>Validade__c</errorDisplayField>
+    <errorMessage>A validade não pode ser inferior à data atual.</errorMessage>
+</ValidationRule>

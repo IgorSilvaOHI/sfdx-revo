@@ -1,0 +1,17 @@
+.slds-table .slds-th__action {
+    text-align: center;
+}
+
+.fix-column {
+    position:sticky;
+    z-index: 1
+}
+
+.grid-area-height{
+    height: 180px;
+}
+
+.custom-datatable-no-hover { 
+    --slds-s-table-row-color-background-selected: #fff !important;
+    --slds-s-table-cell-shadow-selected: var(--slds-g-color-brand-base-15) 0 0 0 0px inset;
+}

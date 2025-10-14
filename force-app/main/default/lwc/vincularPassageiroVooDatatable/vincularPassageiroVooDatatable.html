@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-box slds-box-without-border slds-theme_default">
+        <lightning-card class="slds-size_1-of-1">
+            <div slot="title" class="slds-media slds-media_center slds-has-flexi-truncate slds-size_1-of-1 slds-p-horizontal_small slds-p-top_x-small">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="custom:custom15" alternative-text="Produto de oportunidade" title="Produto de oportunidade" size="small"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h3 class="slds-card__header-title">
+                        <span>Passageiros do Voo ({passageirosLength})</span>
+                    </h3>
+                </div>
+            </div>
+            <div slot="actions" class=" slds-p-horizontal_small slds-p-top_x-small">
+                <lightning-button label="Adicionar" title="Vincular passageiro ao Voo" onclick={handleInserirRegistro}></lightning-button>
+            </div>
+            <div class="slds-size_1-of-1 slds-is-relative">
+                <template if:false={isGridLoadedEmpty}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={passageirosSelecionados}
+                        columns={getColums}
+                        onrowaction={handleRowAction}
+                        max-row-selection="1"
+                        show-row-number-column
+                        onrowselection={onrowselected}
+                        selected-rows={selectedRows}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>

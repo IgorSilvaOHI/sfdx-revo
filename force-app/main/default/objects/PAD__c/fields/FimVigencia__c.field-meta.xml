@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FimVigencia__c</fullName>
+    <description>Data de término da vigência do PAD.</description>
+    <inlineHelpText>Data de término da vigência do PAD.</inlineHelpText>
+    <label>Fim da Vigência</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

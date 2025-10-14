@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HoraNotificacaoVencimentoTarefa__c</fullName>
+    <description>A hora que vai ser salva para lembrete da tarefa</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A hora que vai ser salva para lembrete da tarefa</inlineHelpText>
+    <label>Hora notificação vencimento de tarefa</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

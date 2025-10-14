@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmRotaExecutadoNaoAlterar</fullName>
+    <active>true</active>
+    <description>Voo em Rota ou Executado não pode sofrer alteração de data, hora, aeronave e trechos</description>
+    <errorConditionFormula>AND(
+				NOT(IgnorarTrigger__c),
+$Profile.Name !=  $Label.AdministradorDoSistema,
+				OR(
+								ISPICKVAL(Status__c, &apos;Rota&apos;), 
+								ISPICKVAL(Status__c, &apos;Executado&apos;),
+								ISPICKVAL(Status__c, &apos;Em Faturamento&apos;),
+								ISPICKVAL(Status__c, &apos;Faturado&apos;)
+				), 
+				OR(
+								ISCHANGED(DataVoo__c),
+								ISCHANGED(Prefixo__c),
+							
+								ISCHANGED(RevalidarAprovacoes__c),
+								AND(ISCHANGED( RotaAbreviada__c ), NOT(ISBLANK(RelatorioVoo__c)) )
+				)
+)</errorConditionFormula>
+    <errorMessage>Alguns campos não podem ser alterados nesse status</errorMessage>
+</ValidationRule>

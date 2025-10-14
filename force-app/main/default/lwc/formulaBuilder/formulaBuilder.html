@@ -1,0 +1,45 @@
+<template>
+    <div class="container">
+        <div class="flexContainer">
+            <p>Inserir</p>
+            <lightning-combobox
+                name="field"
+                label="Field"
+                variant="label-hidden"
+                placeholder="Campo"
+                options={contextFields}
+                onchange={selectField}
+            >
+            </lightning-combobox>
+            <lightning-combobox
+                name="function"
+                label="Function"
+                variant="label-hidden"
+                placeholder="Função"
+                options={functions}
+                onchange={selectFunction}
+            >
+            </lightning-combobox>
+            <lightning-combobox
+                name="recordDetail.htmloperator"
+                label="Operator"
+                variant="label-hidden"
+                placeholder="Operador"
+                options={operators}
+                onchange={selectOperator}
+            >
+            </lightning-combobox>
+        </div>
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <textarea
+                    class="slds-textarea"
+                    onchange={changeFormula}
+                    onblur={formulaChangedFlowEvent}
+                >
+                    {formulaString}
+                </textarea>
+            </div>
+        </div>
+    </div>
+</template>

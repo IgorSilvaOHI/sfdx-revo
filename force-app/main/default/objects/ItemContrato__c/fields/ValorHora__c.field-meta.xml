@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValorHora__c</fullName>
+    <description>Valor hora da aeronave no contrato em dólar para ser exibido na tela de criação de voo</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor hora da aeronave no contrato em dólar para ser exibido na tela de criação de voo</inlineHelpText>
+    <label>Valor Hora para Exibição(USD)</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

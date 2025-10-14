@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LogsIntegracaoErro</fullName>
+    <columns>NAME</columns>
+    <columns>Endpoint__c</columns>
+    <columns>Method__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>StatusCode__c</field>
+        <operation>notEqual</operation>
+        <value>200</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <filters>
+        <field>ResponseBodyText__c</field>
+        <operation>notEqual</operation>
+        <value>{&quot;error&quot;:&quot;An error occurred while updating the entries. See the inner exception for details.&quot;,errorType</value>
+    </filters>
+    <filters>
+        <field>ResponseBodyText__c</field>
+        <operation>notContain</operation>
+        <value>{&quot;error&quot;:&quot;An error occurred while updating the entries. See the inner exception for details.&quot;,errorType</value>
+    </filters>
+    <label>Logs de Integração com Erro esta semana</label>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UrgenciaAlta__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identifica se a urgência padrão que será usada ao salvar um registro de indisponibilidade será alta ou não</description>
+    <inlineHelpText>Identifica se a urgência padrão que será usada ao salvar um registro de indisponibilidade será alta ou não</inlineHelpText>
+    <label>Urgência Alta?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,90 @@
+.THIS .divPai
+{
+    height:100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background: black;
+}
+
+.THIS .buttonClass
+{
+    margin: 0px;
+    max-width: 140px;
+    align-self: center;
+}
+
+.THIS .conta-bloqueada
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+    background-color: white;
+    flex-flow: column;
+}
+.THIS .conta-bloqueada-header
+{
+    margin-bottom: 1rem;
+}
+
+.THIS .modal-content
+{
+    min-height: 100px;
+    display: grid;
+    width:100%;
+    grid-auto-flow: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.THIS .showAllButtons
+{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.THIS .showOnlyVoo
+{
+    grid-template-columns: 1fr;
+}
+
+.THIS .showButtonPassageiroCargas
+{
+    grid-template-columns: 1fr 1fr;
+}
+.THIS .sectionClass
+{
+    display: flex; 
+    justify-content: center; 
+    background: rgba(0,0,0,0.3);
+}
+
+.THIS .button-container
+{
+    display:flex; 
+    justify-content: center
+}
+
+.THIS .divSectionClass
+{
+    max-width: max-content;
+}
+
+.THIS .spinnerClass
+{
+    background-color:transparent;
+}
+
+@media screen and (max-width: 767px) {
+    .THIS .modal-content
+    {
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+    }
+    
+    .THIS .showOnlyVoo .button-container
+    {
+        min-width: 100px;
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AeronavePadraoCalculo__c</fullName>
+    <description>Id da aeronave padrão a ser utilizada no cálculo da missão</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Id da aeronave padrão a ser utilizada no cálculo da missão</inlineHelpText>
+    <label>Aeronave Padrão Cálculo</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

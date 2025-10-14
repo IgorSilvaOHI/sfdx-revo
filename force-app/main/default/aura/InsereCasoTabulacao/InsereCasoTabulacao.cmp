@@ -1,0 +1,63 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="InsereCasoTabulacaoController" access="global">
+
+    <!--AURA HANDLERS-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!--AURA ATTRIBUTES-->
+    <aura:attribute name="recordId" type="String" default=""/>
+    <aura:attribute name="PlaceHolder" type="String" default="Escreva o assunto para encontrar a tabulação..." description="Placeholder da Busca"/>
+    <aura:attribute name="lstResultSearch" type="List" default="[]"/>
+    <aura:attribute name="tabulationTypeSelectd" type="String" default="Atendimento" description="Cabeçalho do Componente"/>
+    <aura:attribute name="NameHeader" type="String" default="Atendimento" description="Cabeçalho do Componente"/>
+    <aura:attribute name="Interno" type="Boolean" default="false" description="Fluxo de Trabalho Interno?"/>
+    <aura:attribute name="textParam" type="String" default=""/>
+
+    <lightning:card>    
+        <aura:set attribute="title">
+            <lightning:icon class="slds-m-right_small" iconName="utility:add" size="x-small"/>
+            {!v.NameHeader}
+        </aura:set>        
+    
+        <div class="slds-card__body">
+    
+          <div class="">
+    
+            <div>
+    
+              <lightning:input
+              placeholder="{!v.PlaceHolder}"
+              type="search"
+              value="{!v.textParam}"
+              onchange="{!c.search}"
+              aura:id="inputSearch"
+              class="tfc-input"
+              />
+    
+            </div>
+          </div>
+    
+          <div id="tfc-results">
+    
+            <div class="listContect">
+    
+              <aura:iteration items="{! v.lstResultSearch }" var="item" indexVar="i">
+    
+              <div class="item-iteration">
+                <a onclick="{! c.createCase }" tabindex="-1" data-record="{!i}" class="tfc-link">
+                  <p class="slds-p-horizontal_x-large">
+                    <b>{!item.Name}</b>
+                  </p>
+                  <p class="slds-p-horizontal_x-large">
+                    {!item.Descricao__c}
+                  </p>
+                </a>
+              </div>
+            </aura:iteration>
+          </div>
+        </div>
+            
+      </div>        
+        
+    </lightning:card>
+    
+</aura:component>

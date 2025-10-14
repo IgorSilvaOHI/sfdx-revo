@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoCasoPadrao__c</fullName>
+    <label>Tipo Caso Padrão</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solicitação</fullName>
+                <default>false</default>
+                <label>Solicitação</label>
+            </value>
+            <value>
+                <fullName>Reclamação</fullName>
+                <default>false</default>
+                <label>Reclamação</label>
+            </value>
+            <value>
+                <fullName>Informação</fullName>
+                <default>false</default>
+                <label>Informação</label>
+            </value>
+            <value>
+                <fullName>Elogio</fullName>
+                <default>false</default>
+                <label>Elogio</label>
+            </value>
+            <value>
+                <fullName>Resolução</fullName>
+                <default>false</default>
+                <label>Resolução</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

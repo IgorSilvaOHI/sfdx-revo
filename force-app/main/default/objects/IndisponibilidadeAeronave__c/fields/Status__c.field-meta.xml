@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Campo de Integração com o SIG.</description>
+    <inlineHelpText>Campo de Integração com o SIG.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Em andamento</fullName>
+                <default>false</default>
+                <label>Em andamento</label>
+            </value>
+            <value>
+                <fullName>Aguardando Finalização</fullName>
+                <default>false</default>
+                <label>Aguardando Finalização</label>
+            </value>
+            <value>
+                <fullName>Finalizado</fullName>
+                <default>false</default>
+                <label>Finalizado</label>
+            </value>
+            <value>
+                <fullName>Aguardando Aprovação Comercial</fullName>
+                <default>false</default>
+                <label>Aguardando Aprovação Comercial</label>
+            </value>
+            <value>
+                <fullName>Aprovado - Comandante</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aprovado - Comandante</label>
+            </value>
+            <value>
+                <fullName>Aprovado - Comercial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aprovado - Comercial</label>
+            </value>
+            <value>
+                <fullName>Aprovado - Coordenação</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aprovado - Coordenação</label>
+            </value>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cancelado</label>
+            </value>
+            <value>
+                <fullName>Rascunho</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rascunho</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotificacaoNovoLocal__c</fullName>
+    <defaultValue>&quot;Um novo local foi criado. Favor cadastrar aerovias.&quot;</defaultValue>
+    <description>Campo utilizado na notificação de novo local (process builder)</description>
+    <label>Notificação Novo Local</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

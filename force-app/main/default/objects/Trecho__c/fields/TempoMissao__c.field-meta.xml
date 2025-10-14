@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempoMissao__c</fullName>
+    <description>Tempo de missão para o trecho</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tempo de missão para o trecho</inlineHelpText>
+    <label>Tempo de missão</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

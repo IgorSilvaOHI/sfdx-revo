@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LayoutCompactoVoo</fullName>
+    <fields>Rota__c</fields>
+    <fields>RotaAbreviada__c</fields>
+    <fields>Name</fields>
+    <fields>DataVoo__c</fields>
+    <fields>TempoMissaoFormula__c</fields>
+    <fields>Payload__c</fields>
+    <label>Voo Compacto</label>
+</CompactLayout>

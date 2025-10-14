@@ -1,0 +1,46 @@
+<template>
+  <div class={listaContatosClass}>
+    <c-header-listas-passageiros
+      numero-passageiros={numeroPassageiros}
+      class="header-lista"
+      onfilterchanged={handleFilterChanged}
+      onfilterfocus={handleFilterFocus}
+      onnovopassageiro={handleNovoPassageiro}
+      show-filter={principal}
+      header={header}
+    >
+    </c-header-listas-passageiros>
+
+    <template if:true={isLoading}>
+      <div class="spinner-container">
+        <lightning-spinner style="background: none;" class="slds-spinner_container"
+          variant="brand" size="small" alternative-text={customLabel.carregando}>
+        </lightning-spinner>
+      </div>
+    </template>
+    <template if:false={isLoading}>
+      <div class="contatos-grid">
+        <template if:true={listaVazia}>
+          <div class="mensagem-lista-vazia">
+            {mensagemAjudaListaVazia}
+            <div class="trecho-mensagem-ajuda">
+              {rotaTrecho}
+            </div>
+          </div>
+        </template>
+        <template if:false={listaVazia}>
+          <template for:each={listaFiltrada} for:item="item">
+            <c-linha-lista-contatos
+              key={item.Id}
+              contato={item}
+              oncontatoclicked={handleContatoClicked}
+              selected={secundaria}
+              trecho-index={trechoIndex}
+              screen-size={screenSize}
+            ></c-linha-lista-contatos>
+            </template>
+          </template>
+        </div>
+    </template>
+  </div>
+</template>

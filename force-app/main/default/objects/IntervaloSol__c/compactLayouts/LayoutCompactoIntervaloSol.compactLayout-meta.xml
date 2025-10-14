@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LayoutCompactoIntervaloSol</fullName>
+    <fields>CodigoICAO__c</fields>
+    <fields>Date__c</fields>
+    <fields>Sunrise__c</fields>
+    <fields>Sunset__c</fields>
+    <fields>WeekDay__c</fields>
+    <label>Por do Sol Compacto</label>
+</CompactLayout>

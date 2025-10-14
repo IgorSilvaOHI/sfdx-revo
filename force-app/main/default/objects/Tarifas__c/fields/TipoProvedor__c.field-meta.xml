@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoProvedor__c</fullName>
+    <label>Tipo de provedor</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>airspace_responsible</fullName>
+                <default>false</default>
+                <label>Responsável pelo espaço aéreo</label>
+            </value>
+            <value>
+                <fullName>airport_operator</fullName>
+                <default>false</default>
+                <label>Operador de aeroporto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimeiroTrecho__c</fullName>
+    <description>Resumo de totalização com o número da ordem de execução do primeiro trecho do voo</description>
+    <inlineHelpText>Resumo de totalização com o número da ordem de execução do primeiro trecho do voo</inlineHelpText>
+    <label>Primeiro Trecho</label>
+    <summarizedField>Trecho__c.OrdemExecucao__c</summarizedField>
+    <summaryFilterItems>
+        <field>Trecho__c.Tipo__c</field>
+        <operation>notEqual</operation>
+        <value>Translado</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Trecho__c.Voo__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-record-edit-form record-id={getParentRecordId} object-api-name={objectApiName} class="slds-size_1-of-1">
+        <template if:true={useCustomLabel}>
+            <label for={fieldApiName}>
+                <template if:true={getRequired}>
+                    <abbr class="slds-required" title="required">* </abbr>
+                </template>
+                {label}
+            </label>
+        </template>
+        <lightning-input-field required={getRequired} variant={inputVariant} 
+                onchange={handleInputChange} name={fieldApiName} class="slds-input-sem-padding"
+                field-name={fieldApiName} value={getInputValue}>
+        </lightning-input-field>
+    </lightning-record-edit-form>
+    <template if:true={isReference}>
+        <c-get-record object-api-name={recordObjectApiName} record-id={recordId} onselectedrecord={handleSelectedRecord}></c-get-record>
+    </template>
+</template>

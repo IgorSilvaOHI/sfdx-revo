@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisparaNotificacaoDestino__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag para Disparar notificação quando destino do último trecho não for base</description>
+    <inlineHelpText>Flag para Disparar notificação quando destino do último trecho não for base</inlineHelpText>
+    <label>Dispara Notificação Destino</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

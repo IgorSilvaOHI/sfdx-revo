@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trabalho__c</fullName>
+    <description>Trabalho que gerou o log</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Trabalho que gerou o log</inlineHelpText>
+    <label>Trabalho</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

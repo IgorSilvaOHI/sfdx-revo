@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RastreamentoVoo__c</fullName>
+    <description>Campo que verifica se o Skytrac deve ser verificado</description>
+    <formula>AND(
+				NOW() &gt;= DataInicioRastreamentoVoo__c,
+				NOW() &lt;= DataFimRastreamentoVoo__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Campo que verifica se o Skytrac deve ser verificado</inlineHelpText>
+    <label>Rastreamento Voo</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

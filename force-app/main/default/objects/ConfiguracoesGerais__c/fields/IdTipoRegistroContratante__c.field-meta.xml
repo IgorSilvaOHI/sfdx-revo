@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IdTipoRegistroContratante__c</fullName>
+    <description>Armazena o Id do tipo de registro contratante do contato</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Armazena o Id do tipo de registro contratante do contato</inlineHelpText>
+    <label>Id do Tipo de Registro Contratante</label>
+    <length>20</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

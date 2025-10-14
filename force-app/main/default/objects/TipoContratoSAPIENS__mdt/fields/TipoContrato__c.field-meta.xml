@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TipoContrato__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>Tipo de contrato no SAPIENS vinculado ao contrato</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Tipo de contrato no SAPIENS vinculado ao contrato</inlineHelpText>
+    <label>Tipo de contrato</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disponibilidade__c</fullName>
+    <description>Tempo total de disponibilidade contratual.</description>
+    <externalId>false</externalId>
+    <formula>FimDisponibilidadeContratual__c - InicioDisponibilidadeContratual__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Tempo total de disponibilidade contratual.</inlineHelpText>
+    <label>Disponibilidade</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

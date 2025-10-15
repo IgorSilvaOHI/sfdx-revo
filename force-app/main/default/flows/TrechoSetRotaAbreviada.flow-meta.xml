@@ -238,14 +238,7 @@
         <connector>
             <targetReference>getTrechos</targetReference>
         </connector>
-        <filterLogic>(1 AND 2) OR 3 OR 4</filterLogic>
-        <filters>
-            <field>PrimeiroTrecho__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
+        <filterLogic>1 OR 2 OR 3</filterLogic>
         <filters>
             <field>Origem__c</field>
             <operator>IsChanged</operator>

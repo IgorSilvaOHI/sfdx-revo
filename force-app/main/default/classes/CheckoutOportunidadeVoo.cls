@@ -1,4 +1,4 @@
-public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutOportunidade {
+public without sharing class CheckoutOportunidadeVoo {
 
     // #region Variaveis Publicas
 
@@ -316,10 +316,17 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
 
         uow.registerDirty(this.oportunidade);
 
+        // Collect ShuttleSeat flight IDs for later deletion
+        Set<Id> shuttleSeatVooIds = new Set<Id>();
+
         for (Servico__c servico : this.oportunidade.Servicos__r) {
 
             if (this.oportunidade.type == 'ShuttleSeat' && servico.Passageiro__r != null) {
                 uow.registerDeleted(servico.Passageiro__r);
+                // Collect the flight ID for this passenger
+                if (servico.Voo__c != null) {
+                    shuttleSeatVooIds.add(servico.Voo__c);
+                }
             }
 
             if (this.oportunidade.type == 'FullCabin' && servico.Voo__r != null) {
@@ -328,6 +335,41 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
 
             if (this.oportunidade.type == 'Charter' && servico.Voo__r != null) {
                 uow.registerDeleted(servico.Voo__r);
+            }
+        }
+
+        // For ShuttleSeat: Delete flights only if they will have no remaining passengers after this cancellation
+        if (!shuttleSeatVooIds.isEmpty()) {
+            // Query current passenger count and all passengers for these flights
+            List<Voo__c> voos = [
+                SELECT Id, ContadorPassageiros__c,
+                    (SELECT Id, Trecho__r.Voo__c FROM Passageiros__r)
+                FROM Voo__c
+                WHERE Id IN :shuttleSeatVooIds
+            ];
+
+            // Build set of passengers being deleted
+            Set<Id> passageirosToDelete = new Set<Id>();
+            for (Servico__c servico : this.oportunidade.Servicos__r) {
+                if (servico.Passageiro__c != null) {
+                    passageirosToDelete.add(servico.Passageiro__c);
+                }
+            }
+
+            // Check which flights will have zero passengers after deletion
+            for (Voo__c voo : voos) {
+                Integer remainingPassengers = 0;
+                for (Passageiro__c passageiro : voo.Passageiros__r) {
+                    if (!passageirosToDelete.contains(passageiro.Id)) {
+                        remainingPassengers++;
+                    }
+                }
+
+                // If no passengers will remain, delete the flight directly
+                // No need to change status first - just delete it
+                if (remainingPassengers == 0) {
+                    uow.registerDeleted(voo);
+                }
             }
         }
 
@@ -366,7 +408,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
             Passageiro__c passageiroVoo = Voos.criarPassageiro(uow, trechoValido, passageiro.PassageiroOportunidade__r.Passageiro__c, this.oportunidade.CodigoReserva__c);
             contatoPassageiro.put(passageiro.PassageiroOportunidade__r.Passageiro__c, passageiroVoo);
        
-            Servicos.criarServicoOportunidade(uow, this.oportunidade, item, novoVoo, trechoValido, passageiroVoo, item.TotalPrice / item.Quantity, item.TotalRevoSeats__c / item.Quantity,
+            Servicos.criarServicoOportunidade(uow, this.oportunidade, item, novoVoo, trechoValido, passageiroVoo, item.TotalPrice / item.Quantity,
                     passageiro.Observacoes__c, passageiro.EnderecoServico__c, passageiro.CidadeServico__c, passageiro.EstadoServico__c, passageiro.PaisServico__c, 
                     passageiro.ComplementoEndereco__c, passageiro.CEPServico__c, passageiro.CompanhiaAerea__c,
                     passageiro.NumeroVoo__c, passageiro.QtdsMalasGrandes__c, passageiro.QtdsMalasMedias__c, 
@@ -380,7 +422,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
                     for (ProdutoPassageiro__c passageiro : servico.ProdutosPassageiro__r) {
                         if(passageiro.Status__c == 'Configurado'){
                             Passageiro__c passageiroVoo = contatoPassageiro.get(passageiro.PassageiroOportunidade__r.Passageiro__c);
-                            Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, passageiroVoo, servico.TotalPrice / servico.Quantity, servico.TotalRevoSeats__c / servico.Quantity,
+                            Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, passageiroVoo, servico.TotalPrice / servico.Quantity,
                             passageiro.Observacoes__c, passageiro.EnderecoServico__c, passageiro.CidadeServico__c, passageiro.EstadoServico__c, passageiro.PaisServico__c, 
                             passageiro.ComplementoEndereco__c, passageiro.CEPServico__c, passageiro.CompanhiaAerea__c,
                             passageiro.NumeroVoo__c, passageiro.QtdsMalasGrandes__c, passageiro.QtdsMalasMedias__c, 
@@ -388,7 +430,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
                         }
                     }
                 } else if(!servico.ServicaoPorPassageiro__c){
-                    Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, null, servico.TotalPrice, servico.TotalRevoSeats__c);
+                    Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, null, servico.TotalPrice);
                 }
             }
         }
@@ -410,7 +452,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
             contatoPassageiro.put(passageiro.PassageiroOportunidade__r.Passageiro__c, passageiroVoo);
         }
 
-        Servicos.criarServicoOportunidade(uow, this.oportunidade, item, novoVoo, trechoValido, null, item.TotalPrice, item.TotalRevoSeats__c);
+        Servicos.criarServicoOportunidade(uow, this.oportunidade, item, novoVoo, trechoValido, null, item.TotalPrice);
 
         if (this.ServicosTaxas.containskey(item.Id)) {
             
@@ -420,7 +462,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
                     for (ProdutoPassageiro__c passageiro : servico.ProdutosPassageiro__r) {
                         if(passageiro.Status__c == 'Configurado'){
                             Passageiro__c passageiroVoo = contatoPassageiro.get(passageiro.PassageiroOportunidade__r.Passageiro__c);
-                            Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, passageiroVoo, servico.TotalPrice / servico.Quantity, servico.TotalRevoSeats__c / servico.Quantity,
+                            Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, passageiroVoo, servico.TotalPrice / servico.Quantity,
                             passageiro.Observacoes__c, passageiro.EnderecoServico__c, passageiro.CidadeServico__c, passageiro.EstadoServico__c, passageiro.PaisServico__c, 
                             passageiro.ComplementoEndereco__c, passageiro.CEPServico__c, passageiro.CompanhiaAerea__c,
                             passageiro.NumeroVoo__c, passageiro.QtdsMalasGrandes__c, passageiro.QtdsMalasMedias__c, 
@@ -430,11 +472,11 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
                     }
 
                     for (Integer i = 0; i < servico.Quantity - totalConfigurado; i++) {
-                        Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, null, servico.TotalPrice / servico.Quantity, servico.TotalRevoSeats__c / servico.Quantity);
+                        Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, null, servico.TotalPrice / servico.Quantity);
                     }
 
                 } else {
-                    Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, null, servico.TotalPrice, servico.TotalRevoSeats__c);
+                    Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, trechoValido, null, servico.TotalPrice);
                 }
             }
         }
@@ -491,7 +533,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
 
         Trecho__c primeiroTrecho = trechosComPassageiros[0];
 
-        Servicos.criarServicoOportunidade(uow, this.oportunidade, item, novoVoo, primeiroTrecho, null, item.TotalPrice, item.TotalRevoSeats__c);
+        Servicos.criarServicoOportunidade(uow, this.oportunidade, item, novoVoo, primeiroTrecho, null, item.TotalPrice);
 
         for (Trecho__c trecho : trechosComPassageiros) {
 
@@ -509,7 +551,7 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
                     for (ProdutoPassageiro__c passageiro : servico.ProdutosPassageiro__r) {
                         if(passageiro.Status__c == 'Configurado'){
                             Passageiro__c passageiroVoo = contatoPassageiro.get(passageiro.PassageiroOportunidade__r.Passageiro__c);
-                            Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, primeiroTrecho, passageiroVoo, servico.TotalPrice / servico.Quantity, servico.TotalRevoSeats__c / servico.Quantity,
+                            Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, primeiroTrecho, passageiroVoo, servico.TotalPrice / servico.Quantity,
                             passageiro.Observacoes__c, passageiro.EnderecoServico__c, passageiro.CidadeServico__c, passageiro.EstadoServico__c, passageiro.PaisServico__c, 
                             passageiro.ComplementoEndereco__c, passageiro.CEPServico__c, passageiro.CompanhiaAerea__c,
                             passageiro.NumeroVoo__c, passageiro.QtdsMalasGrandes__c, passageiro.QtdsMalasMedias__c, 
@@ -519,10 +561,10 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
                     }
 
                     for (Integer i = 0; i < servico.Quantity - totalConfigurado; i++) {
-                        Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, primeiroTrecho, null, servico.TotalPrice / servico.Quantity, servico.TotalRevoSeats__c / servico.Quantity);
+                        Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, primeiroTrecho, null, servico.TotalPrice / servico.Quantity);
                     }
                 } else {
-                    Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, primeiroTrecho, null, servico.TotalPrice, servico.TotalRevoSeats__c);
+                    Servicos.criarServicoOportunidade(uow, this.oportunidade, servico, novoVoo, primeiroTrecho, null, servico.TotalPrice);
                 }                
             }
         }
@@ -573,8 +615,6 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
         
         item.PrecoUnitario__c = malha.precoUnitario;
         item.UnitPrice = malha.precoFinal / malha.quantidade;
-        item.PrecoRevoSeats__c = malha.precoRevoSeats;
-        item.TotalRevoSeats__c = malha.precoFinalRevoSeats;
         item.DescontoValor__c = malha.descontoValor;
         item.DescontoPercentual__c = malha.descontoPerc;
     }
@@ -609,8 +649,6 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
         
         item.PrecoUnitario__c = fullcabin.precoUnitario;
         item.UnitPrice = fullcabin.precoFinal;
-        item.PrecoRevoSeats__c = fullcabin.precoRevoSeats;
-        item.TotalRevoSeats__c = fullcabin.precoFinalRevoSeats;
         item.DescontoValor__c = fullcabin.descontoValor;
         item.DescontoPercentual__c = fullcabin.descontoPerc;        
     }
@@ -637,8 +675,6 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
 
         item.PrecoUnitario__c = charter.precoUnitario;
         item.UnitPrice = charter.precoFinal / item.Quantity;
-        item.PrecoRevoSeats__c = charter.precoRevoSeats;
-        item.TotalRevoSeats__c = charter.precoFinalRevoSeats;
         item.DescontoValor__c = charter.descontoValor;
         item.DescontoPercentual__c = charter.descontoPerc;            
     }
@@ -676,8 +712,6 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
         
             item.PrecoUnitario__c = servico.precoUnitario;
             item.UnitPrice = servico.precoFinal / servico.quantidade;
-            item.PrecoRevoSeats__c = servico.precoRevoSeats;
-            item.TotalRevoSeats__c = servico.precoFinalRevoSeats;
             item.DescontoValor__c = servico.descontoValor;
             item.DescontoPercentual__c = servico.descontoPerc;                               
         }        
@@ -1315,6 +1349,6 @@ public without sharing class CheckoutOportunidadeVoo implements INucleoCheckoutO
             super('CKV-0030','Promocao Modelo não encontrada!');
         }
     }           
-
+    
     // #endregion
 }
